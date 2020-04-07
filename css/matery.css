@@ -255,11 +255,11 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #ec7cb8 0%, #e6368e 100%);
+    background-image: linear-gradient(to right, #f37eda 0%, #f146e9 100%);
 }
 
 .text-color {
-    color: #e6368e !important;
+    color: #f146e9 !important;
 }
 
 .white-color {
@@ -424,6 +424,27 @@ header .side-nav .social-link {
 }
 
 @-moz-keyframes scroll-down {
+    0% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+    50% {
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+        top: -16px;
+    }
+    100% {
+        opacity: 0.4;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        top: 0;
+    }
+}
+
+@-webkit-keyframes scroll-down {
     0% {
         opacity: 0.4;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
