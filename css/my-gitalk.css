@@ -14,18 +14,18 @@
 #gitalk-container .gt-container .gt-btn,
 #gitalk-container .gt-btn-login,
 #gitalk-container .gt-container .gt-header-controls .gt-btn {
-    border: 1px solid #4caf50;
-    background-color: #4caf50;
+    border: 1px solid #ff66cc;
+    background-color: #ff99cc;
     box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
 }
 
 #gitalk-container .gt-container .gt-link {
-    color: #42b983;
+    color: #ff66cc;
     text-decoration: underline;
 }
 
 #gitalk-container .gt-container .gt-btn-preview {
-    color: #4caf50;
+    color: #ff99cc;
     background-color: #fff !important;
     box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
 }
@@ -36,13 +36,13 @@
 }
 
 #gitalk-container .gt-container .gt-svg svg {
-    fill: #42b983;
+    fill: #ff66cc;
 }
 
 #gitalk-container .gt-container .gt-header-controls-tip,
 #gitalk-container .gt-container a,
 #gitalk-container .gt-container .gt-comment-username {
-    color: #42b983;
+    color: #ff66cc;
 }
 
 #gitalk-container .gt-container .gt-ico-text {
@@ -70,7 +70,7 @@
 
 .markdown-body a {
     padding: 0 2px;
-    color: #42b983;
+    color: #ff66cc;
     font-weight: 500;
     text-decoration: underline;
 }
@@ -107,16 +107,21 @@ ol li {
     list-style-type: circle;
 }
 
-.markdown-body table, th, td {
+.markdown-body table,
+th,
+td {
     padding: 12px 13px;
     border: 1px solid #dfe2e5;
 }
 
-.markdown-body table, th, td {
+.markdown-body table,
+th,
+td {
     border: 0;
 }
 
-table tr:nth-child(2n), thead {
+table tr:nth-child(2n),
+thead {
     background-color: #fafafa;
 }
 
@@ -216,7 +221,8 @@ pre[class*="language-"] {
     color: #e8eaf6;
 }
 
-.markdown-body [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+.markdown-body [type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
     position: inherit;
     margin-left: -1.3rem;
     margin-right: 0.4rem;
