@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://yoursite.com/2020/04/10/jQuery/</loc>
+    
+    <lastmod>2020-04-10T06:52:50.206Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/04/06/js%E9%AB%98%E7%BA%A7/</loc>
+    
+    <lastmod>2020-04-10T06:50:46.219Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/04/10/vue%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2020-04-10T06:45:24.548Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/friends/index.html</loc>
+    
+    <lastmod>2020-04-08T13:02:15.797Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/contact/index.html</loc>
+    
+    <lastmod>2020-04-08T13:00:58.441Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2020-04-08T12:59:50.241Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2020-04-08T12:58:58.164Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2020-04-08T12:54:45.821Z</lastmod>
+    
+  </url>
+  
+</urlset>
