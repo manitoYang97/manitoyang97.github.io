@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="初识vue, XiaoQi&#39;s Blog">
+    <meta name="keywords" content="hexo+github搭建博客, XiaoQi&#39;s Blog">
     <meta name="description" content="woshuoguniang">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>初识vue | XiaoQi&#39;s Blog</title>
+    <title>hexo+github搭建博客 | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初识vue</h1>
+                    <h1 class="description center-align post-title">hexo+github搭建博客</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/vue/">
-                                <span class="chip bg-color">vue</span>
+                            <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                                <span class="chip bg-color">博客搭建</span>
+                            </a>
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
                             </a>
                         
                     </div>
@@ -447,8 +451,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                博客搭建
+                            </a>
+                        
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/" class="post-category">
+                                hexo
                             </a>
                         
                     </div>
@@ -460,7 +468,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-10
+                    2020-04-11
                 </div>
                 
 
@@ -477,345 +485,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="vue模块语法"><a href="#vue模块语法" class="headerlink" title="vue模块语法"></a>vue模块语法</h1><h2 id="Vue概述"><a href="#Vue概述" class="headerlink" title="Vue概述"></a>Vue概述</h2><p>声明式渲染&gt;组件系统&gt;客户端路由&gt;集中式状态管理&gt;项目构建</p>
-<p>优点：易用、灵活、高效</p>
-<h2 id="Vue基本使用"><a href="#Vue基本使用" class="headerlink" title="Vue基本使用"></a>Vue基本使用</h2><p>目标：能够说出Vue基本用法</p>
-<h3 id="vue的基本使用步骤"><a href="#vue的基本使用步骤" class="headerlink" title="vue的基本使用步骤"></a>vue的基本使用步骤</h3><ol>
-<li>提供标签填充数据</li>
-<li>引入vue.js库文件</li>
-<li>可以使用vue的语法做功能</li>
-<li>把vue提供的数据填充到标签中</li>
-</ol>
-<pre><code>  &lt;div id=&quot;app&quot;&gt;
-        &lt;div&gt;{{msg}} &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                msg: &#39;Hello Vue&#39; //在页面中打印这段字符
-            }
-        });
-    &lt;/script&gt;</code></pre><h3 id="细节分析："><a href="#细节分析：" class="headerlink" title="细节分析："></a>细节分析：</h3><ol>
-<li>实例参数分析</li>
-</ol>
-<ul>
-<li>el：元素的挂载位置（值可以是css选择器，也可以是DOM元素）</li>
-<li>data：模型数据（值是一个对象）</li>
-</ul>
-<ol start="2">
-<li>插值表达式用法</li>
-</ol>
-<ul>
-<li>将数据填充到HTML标签中</li>
-<li>插值表达式支持基本计算</li>
-</ul>
-<ol start="3">
-<li>vue代码运行原理分析</li>
-</ol>
-<ul>
-<li>vue代码通过可以通过vue框架编译成原生js代码</li>
-</ul>
-<h2 id="Vue模板语法"><a href="#Vue模板语法" class="headerlink" title="Vue模板语法"></a>Vue模板语法</h2><p>目标：能够说出Vue的模板语法</p>
-<h3 id="模板语法概述"><a href="#模板语法概述" class="headerlink" title="模板语法概述"></a>模板语法概述</h3><h4 id="如何理解前端渲染："><a href="#如何理解前端渲染：" class="headerlink" title="如何理解前端渲染："></a>如何理解前端渲染：</h4><p>把数据填充得HTML中</p>
-<h4 id="前端渲染的方式"><a href="#前端渲染的方式" class="headerlink" title="前端渲染的方式"></a>前端渲染的方式</h4><ul>
-<li>原生js拼接字符串</li>
-<li>使用前端模板引擎</li>
-<li>使用vue特有的模板语法</li>
-</ul>
-<h4 id="模板语法概述-1"><a href="#模板语法概述-1" class="headerlink" title="模板语法概述"></a>模板语法概述</h4><ul>
-<li>插值表达式</li>
-<li>指令</li>
-<li>事件绑定</li>
-<li>属性绑定</li>
-<li>样式绑定</li>
-<li>分支循环结构</li>
-</ul>
-<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h4 id="什么是指令"><a href="#什么是指令" class="headerlink" title="什么是指令"></a>什么是指令</h4><ul>
-<li>指令的本质就是自定义属性</li>
-<li>指令的格式:以v-开始</li>
-</ul>
-<h4 id="v-cloak指令用法"><a href="#v-cloak指令用法" class="headerlink" title="v-cloak指令用法"></a>v-cloak指令用法</h4><p>先提供样式,再在插值表达式中添加v-cloak指令</p>
-<pre><code>    &lt;style&gt;
-        [v-cloak] {
-            display: none;
-        }
-    &lt;/style&gt;</code></pre><pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div v-cloak&gt;{{msg}}&lt;/div&gt;
-    &lt;/div&gt;</code></pre><ul>
-<li>插值表达式存在的问题:闪动</li>
-<li>如何解决该问题:使用v-cloak指令</li>
-<li>解决问题的原理:先隐藏,替换好值之后显示最终的值</li>
-</ul>
-<h4 id="数据绑定指令"><a href="#数据绑定指令" class="headerlink" title="数据绑定指令"></a>数据绑定指令</h4><ul>
-<li>v-text填充纯文本   相比插值表达式更加简洁</li>
-<li>v-html填充HTMl片段  存在安全问题  只能本网站内部可以用</li>
-<li>v-pre填充原始信息  显示原始信息,跳过编译过程</li>
-</ul>
-<h4 id="数据的响应式"><a href="#数据的响应式" class="headerlink" title="数据的响应式"></a>数据的响应式</h4><ul>
-<li>如何理解响应式?  h5中的响应式就是屏幕尺寸变化导致的样式变化,数据的响应式就是数据的变化导致页面内容的变化</li>
-<li>什么是数据绑定?将数据填充到标签中</li>
-<li>v-once 只编译一次,显示内容之后不再具有响应式功能</li>
-</ul>
-<pre><code>        &lt;div v-once&gt;{{info}} &lt;/div&gt;</code></pre><h3 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h3><h4 id="什么是双向数据绑定"><a href="#什么是双向数据绑定" class="headerlink" title="什么是双向数据绑定?"></a>什么是双向数据绑定?</h4><p>当在表单输入域输入字符是页面的内容也会有所变化.</p>
-<h4 id="双向数据绑定分析"><a href="#双向数据绑定分析" class="headerlink" title="双向数据绑定分析"></a>双向数据绑定分析</h4><p>v-model指令</p>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div v-text=&#39;uname&#39;&gt;&lt;/div&gt;
-        &lt;input type=&quot;text&quot; v-model=&#39;uname&#39;&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                uname: &#39;&#39;
-            }
-        })
-    &lt;/script&gt;</code></pre><h4 id="MVVM设计思想"><a href="#MVVM设计思想" class="headerlink" title="MVVM设计思想"></a>MVVM设计思想</h4><p>M(model)  模型  js对象</p>
-<p>V(view)    视图  页面的DOM</p>
-<p>VM(View-Madel)  视图模型  Vue DOM监听+数据绑定</p>
-<p>视图和模型可以通过视图模型相互访问,也就是DOM元素和js对象通过Vue相互转换</p>
-<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><h4 id="vue如何处理事件"><a href="#vue如何处理事件" class="headerlink" title="vue如何处理事件"></a>vue如何处理事件</h4><p>用v-on指令实现事件绑定</p>
-<h4 id="事件函数的调用方式"><a href="#事件函数的调用方式" class="headerlink" title="事件函数的调用方式"></a>事件函数的调用方式</h4><h4 id="事件函数参数的传递"><a href="#事件函数参数的传递" class="headerlink" title="事件函数参数的传递"></a>事件函数参数的传递</h4><pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div&gt;{{num}} &lt;/div&gt;
-        &lt;button v-on:click=&#39;num++&#39;&gt;点击3&lt;/button&gt;
-        &lt;!-- 事件绑定简写形式 --&gt;
-        &lt;button @click=&#39;num++&#39;&gt;点击4&lt;/button&gt;
-        &lt;!-- 事件绑定函数名 默认会传递事件对象  它为第一个参数 --&gt;
-        &lt;button v-on:click=handle1&gt;点击1&lt;/button&gt;
-        &lt;!-- 事件绑定函数调用 可以传递参数 事件对象必须是最后一个参数 参数名必须是$event --&gt;
-        &lt;button v-on:click=handle2(123,456,$event)&gt;点击2&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                num: 0
-            },
-            methods: {
-                handle1: function(event) {
-                    console.log(event.target.innerHTML);
-                },
-                handle2: function(a, b, event) {
-                    // 调用参数必须写this，它指向实例对象
-                    this.num++
-                        console.log(a, b, event.target.innerHTML);
-                }
-            }
-        });
-    &lt;/script&gt;</code></pre><h4 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h4><p>.stop阻止冒泡</p>
-<pre><code>&lt;a v-on:click.stop=&#39;handle&#39;&gt;&lt;/a&gt;</code></pre><p>.prevent 阻止默认行为</p>
-<pre><code>&lt;a v-on:click.prevent=&#39;handle&#39;&gt;&lt;/a&gt;</code></pre><h4 id="按键修饰符"><a href="#按键修饰符" class="headerlink" title="按键修饰符"></a>按键修饰符</h4><p>.enter回车键</p>
-<pre><code>&lt;input v-on:keyup.enter=&#39;submit&#39;&gt;</code></pre><p>.delete删除键</p>
-<pre><code>&lt;input v-on:keyup.delete=&#39;handle&#39;&gt;</code></pre><h4 id="自定义按键修饰符"><a href="#自定义按键修饰符" class="headerlink" title="自定义按键修饰符"></a>自定义按键修饰符</h4><p>全局config.keyCodes对象</p>
-<pre><code>Vue.config.keyCodes.f1=112</code></pre><h3 id="属性绑定"><a href="#属性绑定" class="headerlink" title="属性绑定"></a>属性绑定</h3><h4 id="Vue如何动态处理数据"><a href="#Vue如何动态处理数据" class="headerlink" title="Vue如何动态处理数据"></a>Vue如何动态处理数据</h4><p>v-bind指令实现动态绑定数据</p>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;!-- v-bind动态绑定属性:是它的缩写 --&gt;
-        &lt;a v-bind:href=&quot;url&quot;&gt;百度&lt;/a&gt;
-        &lt;!-- &lt;a :href=&quot;url&quot;&gt;百度&lt;/a&gt; --&gt;
-        &lt;button v-on:click=&#39;handle&#39;&gt;切换&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                url: &#39;http//www.baidu.com&#39;
-            },
-            methods: {
-                handle: function() {
-                    this.url = &#39;http://itcast.cn&#39;;
-                }
-            }
-        })
-    &lt;/script&gt;</code></pre><h4 id="v-madel的底层实现原理"><a href="#v-madel的底层实现原理" class="headerlink" title="v-madel的底层实现原理"></a>v-madel的底层实现原理</h4><pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div&gt;{{msg}} &lt;/div&gt;
-        &lt;input type=&quot;text&quot; v-bind:value=&quot;msg&quot; v-on:input=&quot;handle&quot;&gt;  //v-bind v-on
-    &lt;/div&gt;
-    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                msg: &#39;hello&#39;
-            },
-            methods: {
-                handle: function(event) {
-                    this.msg = event.target.value;
-                }
-            }
-        })
-    &lt;/script&gt;</code></pre><pre><code>        &lt;input type=&quot;text&quot; v-bind:value=&quot;msg&quot; v-on:input=&#39;msg=$event.target.value&#39;&gt;</code></pre><pre><code>        &lt;input type=&quot;text&quot; v-model=&#39;msg&#39;&gt;</code></pre><h3 id="样式绑定"><a href="#样式绑定" class="headerlink" title="样式绑定"></a>样式绑定</h3><h4 id="class样式处理"><a href="#class样式处理" class="headerlink" title="class样式处理"></a>class样式处理</h4><p>对象语法</p>
-<pre><code>&lt;div v-bind:class=&quot;{active:isActive}&quot;&gt;&lt;/div&gt;</code></pre><p>数组语法</p>
-<pre><code>&lt;div v-bind:class=&quot;[activeClass,errorClass]&quot;&gt;&lt;/div&gt;</code></pre><h4 id="style样式处理"><a href="#style样式处理" class="headerlink" title="style样式处理"></a>style样式处理</h4><p>对象语法</p>
-<pre><code>&lt;div v-bind:style=&quot;{color:activeColor,fontSize:fontSize} &quot;&gt;&lt;/div&gt;</code></pre><p>数组语法</p>
-<pre><code>&lt;div v-bind:style=&quot;[beseStyle,overrideingStyles]&quot;&gt;&lt;/div&gt;</code></pre><h3 id="分支循环结构"><a href="#分支循环结构" class="headerlink" title="分支循环结构"></a>分支循环结构</h3><h4 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h4><h4 id="v-if和v-show的区别"><a href="#v-if和v-show的区别" class="headerlink" title="v-if和v-show的区别"></a>v-if和v-show的区别</h4><h4 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h4><p>v-for遍历数组</p>
-<pre><code>&lt;li v-for=&#39;item in list&#39;&gt;{{item}}+{{index}}&lt;/li&gt;</code></pre><p>key的作用：帮助Vue区分不同的元素，从而提高性能</p>
-<pre><code>&lt;li :key=&#39;item.id&#39; v-for=&#39;{item,index} in list&#39;&gt;{{item}}+{{index}}&lt;/li&gt;</code></pre><h2 id="基础案例"><a href="#基础案例" class="headerlink" title="基础案例"></a>基础案例</h2><h3 id="简易计算器"><a href="#简易计算器" class="headerlink" title="简易计算器"></a>简易计算器</h3><ul>
-<li>通过v-nodel指令实现数值a和数值b的绑定</li>
-<li>给计算按钮绑定事件,实现计算逻辑</li>
-<li>将计算结果绑定到对应位置</li>
-</ul>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;h1&gt;简单计算器&lt;/h1&gt;
-        数字1：&lt;input type=&quot;text&quot; v-model=&#39;a&#39;&gt;&lt;br&gt; 数字2：
-        &lt;input type=&quot;text&quot; v-model=&#39;b&#39;&gt;&lt;br&gt;
-        &lt;button v-on:click=&#39;handle&#39;&gt;计算&lt;/button&gt;
-        &lt;span v-text=&#39;result&#39;&gt;计算结果：&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                a: &#39;&#39;,
-                b: &#39;&#39;,
-                result: &#39;&#39;
-            },
-            methods: {
-                handle: function() {
-                    this.result = parseInt(this.a) + parseInt(this.b);
-                }
-            }
-        })
-    &lt;/script&gt;</code></pre><h3 id="tab栏切换"><a href="#tab栏切换" class="headerlink" title="tab栏切换"></a>tab栏切换</h3><ul>
-<li>实现静态dUI效果： 用传统的方式实现标签结构和样式</li>
-<li>基于数据重构UI效果：将静态的结构和样式重构基于Vue模板语法的形式，处理事件绑定和逻辑控制</li>
-</ul>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div class=&quot;tab&quot;&gt;
-            &lt;ul&gt;
-                &lt;li v-on:click=&#39;change(index)&#39; :class=&#39;currentIndex==index?&quot;active&quot;:&quot;&quot;&#39; :key=&#39;item.id&#39; v-for=&#39;(item,index) in list&#39;&gt;{{item.title}} &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;div :class=&#39;currentIndex==index?&quot;current&quot;:&quot;&quot;&#39; :key=&#39;item.id&#39; v-for=&#39;(item,index) in list&#39;&gt;
-                &lt;img :src=&quot;item.path&quot;&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                currentIndex: 0, //选项卡的当前索引
-                list: [{
-                    id: 1,
-                    title: &#39;apple&#39;,
-                    path: &#39;images/01.jpg&#39;
-                }, {
-                    id: 2,
-                    title: &#39;orange&#39;,
-                    path: &#39;images/02.jpg&#39;
-                }, {
-                    id: 3,
-                    title: &#39;lemon&#39;,
-                    path: &#39;images/03.jpg&#39;
-                }]
-            },
-            methods: {
-                change: function(index) {
-                    this.currentIndex = index;
-                }
-            }
-        })
-    &lt;/script&gt;</code></pre><p>声明式编程：模板的结构和最终显示的效果基本一致</p>
-<h2 id="Vue常用特性"><a href="#Vue常用特性" class="headerlink" title="Vue常用特性"></a>Vue常用特性</h2><p>目标：能够说出Vue的常用特性</p>
-<h3 id="表单操作"><a href="#表单操作" class="headerlink" title="表单操作"></a>表单操作</h3><ul>
-<li>input单行文本   直接值文本域中添加v-model=’uname’,然后再到data里面给uname初始值</li>
-<li>textarea多行文本   直接值文本域中添加v-model=’dect’,然后再到data里面给dect初始值</li>
-<li>select下拉多选   单选方式 v-model=”occupation” 再到data里给一个初始值，多选方式 v-model=”occupation” multiple 数组的形式给初始值（给每个选项一个单独的value值）</li>
-<li>redio单选框  v-model=”gender  ，data中给初始值（每个选项给一个value值）</li>
-<li>checkbox多选框   v-model=”hobby” data里以数组的方式给一个初始值（每个选项给一个单独的value值）</li>
-</ul>
-<h4 id="表单修饰符"><a href="#表单修饰符" class="headerlink" title="表单修饰符"></a>表单修饰符</h4><ul>
-<li>number：转化为数值</li>
-<li>trim：去掉开始和结尾空格</li>
-<li>lazy：将input事件切换为change事件</li>
-</ul>
-<pre><code>&lt;input type=&quot;text&quot; v-model.number=&#39;age&#39;&gt;</code></pre><h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><p>当内置指令不满足要求时我们需要自定义指令</p>
-<h4 id="自定义的语法规则"><a href="#自定义的语法规则" class="headerlink" title="自定义的语法规则"></a>自定义的语法规则</h4><pre><code>        //自定义获得焦点指令 
-        Vue.directive(&#39;focus&#39;, {
-            inserted: function(el) {
-                //el表示指令所绑定的元素
-                el.focus();
-            }
-        });</code></pre><h4 id="自定义的指令用法"><a href="#自定义的指令用法" class="headerlink" title="自定义的指令用法"></a>自定义的指令用法</h4><pre><code>        &lt;input type=&quot;text&quot; v-focus&gt;</code></pre><h4 id="带参数的自定义属性"><a href="#带参数的自定义属性" class="headerlink" title="带参数的自定义属性"></a>带参数的自定义属性</h4><pre><code>            directives: {
-                color: {
-                    bind: function(el, binding) {
-                        el.style.backgroundColor = binding.value;
-                    }
-                },
-                focus: {     //定义在实例中的局部指令
-                    inserted: function(el) {
-                        el.focus();
-                    }
-                }
-            }</code></pre><h4 id="指令的用法"><a href="#指令的用法" class="headerlink" title="指令的用法"></a>指令的用法</h4><pre><code>        &lt;input type=&quot;text&quot; v-color=&quot;msg&quot;&gt;
-        &lt;input type=&quot;text&quot; v-focus&gt;</code></pre><h3 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h3><p>表达式可能比较复杂的时候，使用计算属性可以使模板内容更加简洁</p>
-<p>计算属性的用法</p>
-<pre><code>            computed: {
-                reverseString: function() {
-                    return this.msg.split(&#39;&#39;).reverse().join(&#39;&#39;); //反转字符串
-                }
-            }</code></pre><h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><p>格式化数据，比如将字符串格式转换为首字符大写，将日期格式 转化为指定的格式</p>
-<h4 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h4><pre><code>      Vue.filter(&#39;upper&#39;, function(val) {
-            return val.charAt(0).toUpperCase() + val.slice(1); //将第一个字母转换为大写slice字符截取
-        });</code></pre><h4 id="过滤器的用法"><a href="#过滤器的用法" class="headerlink" title="过滤器的用法"></a>过滤器的用法</h4><pre><code>        &lt;div&gt;{{msg|upper}}&lt;/div&gt;
-        &lt;div&gt;{{msg|upper|lower}}&lt;/div&gt;
-        &lt;div :abc=&quot;msg|upper&quot;&gt;测试&lt;/div&gt;</code></pre><h4 id="局部过滤器"><a href="#局部过滤器" class="headerlink" title="局部过滤器"></a>局部过滤器</h4><pre><code>            filters: {
-                upper: function(val) {
-                    return val.charAt(0).toUpperCase() + val.slice(1);
-                }
-            }</code></pre><h4 id="带参数的过滤器"><a href="#带参数的过滤器" class="headerlink" title="带参数的过滤器"></a>带参数的过滤器</h4><pre><code>Vue.filter(&#39;format&#39;,function(Value,arg)){
-    //value就是过滤器传过来的参数
-}</code></pre><h4 id="过滤器的使用"><a href="#过滤器的使用" class="headerlink" title="过滤器的使用"></a>过滤器的使用</h4><pre><code>&lt;div&gt;{{data|format('yyyy-MM-dd')}}&lt;/div&gt;</code></pre><h3 id="侦听器"><a href="#侦听器" class="headerlink" title="侦听器"></a>侦听器</h3><p>在数据变化使执行异步或开销较大的操作可以使用侦听器</p>
-<p>侦听器的用法</p>
-<pre><code>            methods: {
-                checkName: function(uname) {
-                    //使用定时任务模拟接口调用
-                    var that = this;
-                    setTimeout(function() {
-                        if (uname == &#39;admin&#39;) {
-                            that.tip = &#39;用户名已存在，请更换一个&#39;;
-                        } else {
-                            that.tip = &#39;用户名可以使用&#39;;
-                        }
-                    }, 1000);
-                }
-            },
-            watch: {
-                uname: function(val) {
-                    //调用后台接口验证用户名的合法性
-                    this.checkName(val);
-                    //修改提示信息
-                    this.tip = &#39;用户名正在验证…&#39;;
-                }
-            }</code></pre><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><h4 id="主要阶段"><a href="#主要阶段" class="headerlink" title="主要阶段"></a>主要阶段</h4><ul>
-<li>挂载（初始化相关属性）</li>
-</ul>
-<ol>
-<li>beforeCreate   在实例初始化之后，数据观测和事件配置之前被调用</li>
-<li>created    在实例创建完成后立即被调用</li>
-<li>beforeMount   在挂载开始之前被调用</li>
-<li>mounted   被新创建的vm.$el替换，并挂载到实例上去时候调用该钩子</li>
-</ol>
-<ul>
-<li>更新（元素或组件的变更操作）</li>
-</ul>
-<ol>
-<li>beforeUpdate  数据更新使调用，发生在虚拟DOM打补丁之前</li>
-<li>updated 由于数据更改导致虚拟DOM重新渲染和打补丁在这之后会调用该钩子</li>
-</ol>
-<ul>
-<li>销毁（销毁相关属性）关属性）</li>
-</ul>
-<ol>
-<li>beforeDestroy  实例销毁之前调用</li>
-<li>destroyed  实例销毁之后调用</li>
-</ol>
-<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p>目标：能够基于Vue实现案例效果</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>作为一个一直追随大佬脚步的小菜鸟，一直都想有一个属于自己的博客，但是一直没有付诸行动（主要是不会），但是偶然的一天看到一篇公众号文章标题大概是这样“十分钟带你搭建一个博客”嗯就是这样一个标题激起了我心中的博客之念想，开始蠢蠢欲动跟着步骤来开始了我的踩坑之路。</p>
+<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><p>0.注册/登录一个<a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">GitHub</a>账户，建立一个公开的仓库并且仓库名一定要是：<code>用户名.github.io</code></p>
+<p>1.下载<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node</a>并配置好环境变量（我的第一个坑就是node没有配置环境变量）安装直接一直下一步即可</p>
+<p>2.下载<a href="https://gitforwindows.org" target="_blank" rel="noopener">git</a>配置好环境变量（如果不太了解可以看一下<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰的教程</a>）</p>
+<h2 id="二、搭建过程"><a href="#二、搭建过程" class="headerlink" title="二、搭建过程"></a>二、搭建过程</h2><h3 id="为git配置信息"><a href="#为git配置信息" class="headerlink" title="为git配置信息"></a>为git配置信息</h3><p><code>window+r</code>打开<code>cmd</code>打开终端配置<code>git</code>信息输入如下信息：</p>
+<pre><code>git config -g user.name &quot;你的github用户名&quot;</code></pre><pre><code>git config -g user.emil &quot;你注册github的邮箱&quot;</code></pre><h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><p>在终端输入如下命令：</p>
+<pre><code>ssh -keygen -t rda -C &quot;你注册github的邮箱&quot;</code></pre><p>之后不管内容三个回车即可</p>
+<h3 id="复制密钥并且粘贴到github"><a href="#复制密钥并且粘贴到github" class="headerlink" title="复制密钥并且粘贴到github"></a>复制密钥并且粘贴到github</h3><p>上面的密钥会生成到c盘的用户文件夹里面，如果找不到就在c盘搜索<code>id_rsa.hub</code>，然后打开把里面的内容都复制下来，登录到你的<code>github</code>点击右上角你头像，会出现一个下拉菜单找到<code>setting</code>，选择<code>SSH and GPG keys</code>,点击<code>new ssh key</code>，然后只需要把你复制的密钥粘贴上去即可，名字随意取。</p>
+<p>此时可以来测试一下你的密钥是否配置成功  输入如下命令：</p>
+<pre><code>ssh -T git@github.com</code></pre><p>选择<code>yes</code>，如果看到<code>...successfull..</code>那就是成功了</p>
+<h3 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h3><p><code>hexo</code>是一个集成的博客框架，可以快速根据主题生成静态网页</p>
+<p>此时我们可以<strong>选择盘符新建一个空文件夹名为为<code>blog</code></strong>，鼠标右键选择<strong><code>git bach here</code></strong> 安装hexo在里面执行如下语句：</p>
+<pre><code>npm i -g hexo-cil</code></pre><p>这里时间可能会久一点，因为是在外网下载，如果时间太久或者下载失败的话可以用淘宝的镜像下载  如下</p>
+<pre><code>npm i -g cnpm --registry=https:registry.npm.taobao.org</code></pre><pre><code>cnpm i -g hexo-cil</code></pre><pre><code>cnpm i hexo --save</code></pre><p>如果下载安装好了可以用<code>hexo -v</code>来查看如果看到版本信息就算安装成功如<code>hexo-cil:4.1.0</code></p>
+<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><pre><code>hexo init</code></pre><p>然后进入<code>blog</code>文件夹 如果你看到有<code>source</code> <code>themes</code>和<code>_config.yml</code>等文件夹就说明你操作成功</p>
+<h3 id="在本地服务器上查看"><a href="#在本地服务器上查看" class="headerlink" title="在本地服务器上查看"></a>在本地服务器上查看</h3><pre><code>hexo s</code></pre><p>接着打开<strong>浏览去器输入<code>locahost:4000</code></strong>，就可以查看了，实际上这时候你的博客已经搭建成功了</p>
+<p>嗯快一定的话网速好一点的话（最好是在科学上网的情况下）确实是十分钟，但是后面完善特别是我这种追求主题美观（花里胡哨）的人并且喜欢魔改主题又费了老大劲了，也是踩坑无数，主题魔改可单独一篇讲。</p>
+<h2 id="三、发布文章"><a href="#三、发布文章" class="headerlink" title="三、发布文章"></a>三、发布文章</h2><p>发布一篇文章可以用命令</p>
+<pre><code>hexo new  &lt;标题&gt;</code></pre><p>但是强烈推荐里用<code>Typora软件</code>直接写拖到<strong><code>soruce</code>的<code>_posts</code>文件夹</strong>里，这个文件夹是专门放你的博客文章的，但是只是放进去在网上还是不能看到你的文章，用命令<strong>生成网页</strong>在这之前最好先<strong>清理缓存</strong></p>
+<pre><code>hexo clean</code></pre><pre><code>hexo g</code></pre><p>你可以先预览一下</p>
+<pre><code>hexo s</code></pre><p>和之前一样在浏览器上输入<strong><code>locahost:4000</code></strong>就可以看到你的文章  </p>
+<p>现在只是在本地能看到想要传到网上首先你需要在之前创建的<strong><code>blog</code>文件夹里面找到<code>_config.yml</code>这个站点配置文件</strong></p>
+<p>打开滑倒最下面找到<code>deploy</code>下面的<code>type</code>后面写上<code>git</code> （<strong>注意<code>type</code>和<code>git</code>之间一点要有空格</strong>）</p>
+<p>然后就可以<strong>部署</strong>到<code>github</code>上去，输入如下命令</p>
+<pre><code>hexo d</code></pre><h2 id="四、主题配置"><a href="#四、主题配置" class="headerlink" title="四、主题配置"></a>四、主题配置</h2><p>你可能对默认的主题很不满意，你可以去<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo的主题库</a>去挑选，下载的话建议直接点进github克隆主题仓库下载快一点，下载好之后将文件解压把文件发在theme这个文件夹里，然后点进根目录也就是刚才的<strong><code>blog</code>文件下的站点配置文件<code>--config.yml</code>里找到<code>theme</code>在后面修改为你刚刚下载的<code>主题文件夹名</code>（也要注意theme和主题名之间的空格）</strong></p>
+<p>在这推荐几个功能完善好看的主题：<code>nexT 极简风格</code>，<code>yilia  简单优雅</code></p>
+<p>还有我的博客是主题目前是<code>matery</code> 想看可以点<a href="www.iamys.club">这里</a></p>
 
             </div>
             <hr/>
@@ -841,7 +537,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/04/10/vue%E5%9F%BA%E7%A1%80/">http://yoursite.com/2020/04/10/vue%E5%9F%BA%E7%A1%80/</a>
+                    <a href="http://yoursite.com/2020/04/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">http://yoursite.com/2020/04/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -879,8 +575,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/vue/">
-                                    <span class="chip bg-color">vue</span>
+                                <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                                    <span class="chip bg-color">博客搭建</span>
+                                </a>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
                                 </a>
                             
                         </div>
@@ -1070,9 +770,68 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/04/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="hexo+github搭建博客">
+                        
+                        <span class="card-title">hexo+github搭建博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言作为一个一直追随大佬脚步的小菜鸟，一直都想有一个属于自己的博客，但是一直没有付诸行动（主要是不会），但是偶然的一天看到一篇公众号文章标题大概是这样“十分钟带你搭建一个博客”嗯就是这样一个标题激起了我心中的博客之念想，开始蠢蠢欲动跟着步骤
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
+                                    博客搭建
+                                </a>
+                            
+                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                        <span class="chip bg-color">博客搭建</span>
+                    </a>
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/04/10/jQuery/">
                     <div class="card-image">
@@ -1090,9 +849,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1110,61 +869,6 @@
                     
                     <a href="/tags/jQuery/">
                         <span class="chip bg-color">jQuery</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/06/js%E9%AB%98%E7%BA%A7/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JavaScript进阶">
-                        
-                        <span class="card-title">JavaScript进阶</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            1.面向对象和类的继承什么是面向对象面向对象是把事务分解成一个一个对象，以对象来划分问题，然后对象之间分工与合作。
-面向对象的程序思维中，每一个对象都是功能中心，具有明确的分工。
-面向对象编程具有灵活，代码可复用、容易维护和开发大的优点，适
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
-                    <a href="/tags/EC6/">
-                        <span class="chip bg-color">EC6</span>
                     </a>
                     
                 </div>
