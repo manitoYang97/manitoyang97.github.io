@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="初识jQuery, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="Express框架, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>初识jQuery | XiaoQi&#39;s Blog</title>
+    <title>Express框架 | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初识jQuery</h1>
+                    <h1 class="description center-align post-title">Express框架</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/jQuery/">
-                                <span class="chip bg-color">jQuery</span>
+                            <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
+                                <span class="chip bg-color">Express框架</span>
                             </a>
                         
                     </div>
@@ -447,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
+                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
+                                前后端交互
                             </a>
                         
                     </div>
@@ -460,28 +460,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-10
+                    2020-04-20
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-11
+                    2020-04-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.6k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    6 分
                 </div>
                 
 
@@ -497,294 +497,117 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="初始jQuery"><a href="#初始jQuery" class="headerlink" title="初始jQuery"></a>初始jQuery</h1><h2 id="什么是jQuery"><a href="#什么是jQuery" class="headerlink" title="什么是jQuery"></a>什么是jQuery</h2><p>jQuery是一个快速、简洁的javascript库，它里面封装了JavaScript常用大的功能代码，优化了DOM操作、事件处理、动画设计和Ajax交互，学习jQuery的本质就是学习调用这些函数（方法）；</p>
-<h2 id="jQuery的优点"><a href="#jQuery的优点" class="headerlink" title="jQuery的优点"></a>jQuery的优点</h2><ul>
-<li>轻量级。核心文件才几十kb，不会影响页面大的加载速度</li>
-<li>跨浏览器兼容。基本兼容了现在主流大的浏览器</li>
-<li>链式编程，隐式迭代 ( 隐式迭代就是把匹配的所有元素内部进行遍历循环)</li>
-<li>对事件、样式、动画支持，大大简化大的DOM操作</li>
-<li>支持插件扩展开发。有着丰富大的第三方插件，如树形菜单、日期控件、轮播图等</li>
-<li>免费、开源</li>
+                <p>Express是一个基于Node平台的web应用开放框架，他提供了一系列的强大特性，帮助你创建各种web应用。我们可以使用npm install express 命令下载</p>
+<h2 id="Express框架特性"><a href="#Express框架特性" class="headerlink" title="Express框架特性"></a>Express框架特性</h2><ul>
+<li>提供了方便简洁的路由定义方式</li>
+<li>对获取HTTP请求参数进行了简化处理</li>
+<li>对模板引擎支持程度高，方便渲染动态HTML页面</li>
+<li>提供中间件机制有效控制HTTP请求</li>
+<li>拥有大量中间件对功能进行扩展</li>
 </ul>
-<h2 id="简单的使用jQuery"><a href="#简单的使用jQuery" class="headerlink" title="简单的使用jQuery"></a>简单的使用jQuery</h2><p>1.jQuery的入口函数</p>
-<pre><code>    $(function() {
-       $(&#39;div&#39;).hide();//此处是DOM加载完成的入口，相当与原生的DOMContentLoaded
-     })</code></pre><p>2.jQuery的顶级对象$</p>
-<p>​     $是jQuery的别称，在代码中jQuery和$可以互换</p>
-<p>​     $是jQuery的顶级对象，相当于原生的的window，帮元素利用$包装成jQuery对象，就可以调用jQuery的方法。</p>
-<h2 id="DOM对象和jQuery对象的区别"><a href="#DOM对象和jQuery对象的区别" class="headerlink" title="DOM对象和jQuery对象的区别"></a>DOM对象和jQuery对象的区别</h2><ol>
-<li><p>用原生js获取来的对象就是DOM对象</p>
-<pre><code>var myDiv = document.querySelector(&#39;div&#39;); // myDiv 是DOM对象</code></pre></li>
-<li><p>jQuery方法获取的元素就是jQuery对象</p>
-<pre><code>$(&#39;div&#39;); // $(&#39;div&#39;)是一个jQuery 对象</code></pre></li>
-<li><p>jQuery对象的本质是：利用$对DOM对象大的包装后生产的对象（伪数组形式储存）</p>
-</li>
-<li><p>DOM对象和jQuery对象之间是可以相互转换的</p>
-</li>
-<li><p>因为原生js比jQuery更大，原生的一些属性和方法jQuery没有给我们封装。要是想要这些属性和方法需要把和jQuery对象转换成DOM对象才能使用</p>
-<ul>
-<li>DOM对象转换为jQuery对象 $(DOM对象)</li>
-</ul>
-<pre><code>$(&#39;div&#39;)</code></pre><ul>
-<li>jQuery对象转换为DOM对象(两种方式)</li>
-</ul>
-<pre><code>$(&#39;div&#39;)[index]   //index是索引号</code></pre><pre><code>$(&#39;div&#39;).get(index)</code></pre><h1 id="jQuery的基本操作"><a href="#jQuery的基本操作" class="headerlink" title="jQuery的基本操作"></a>jQuery的基本操作</h1><h2 id="能写出常用的jQuery选择器"><a href="#能写出常用的jQuery选择器" class="headerlink" title="能写出常用的jQuery选择器"></a>能写出常用的jQuery选择器</h2><h3 id="基础选择器"><a href="#基础选择器" class="headerlink" title="基础选择器"></a>基础选择器</h3><pre><code>$(&quot;选择器&quot;)   //直接写css选择器，但是一定要加双引号</code></pre><table>
-<thead>
-<tr>
-<th>用法</th>
-<th align="left">名称</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>$(“#id”)</td>
-<td align="left">Id选择器</td>
-<td>获取指定ID元素</td>
-</tr>
-<tr>
-<td>$(“*”)</td>
-<td align="left">全选选择器</td>
-<td>匹配所有元素</td>
-</tr>
-<tr>
-<td>$(“.class”)</td>
-<td align="left">类选择器</td>
-<td>获取同一类元素</td>
-</tr>
-<tr>
-<td>$(“div”)</td>
-<td align="left">标签选择器</td>
-<td>获取同一类标签的所有元素</td>
-</tr>
-<tr>
-<td>$(“div,p,li”)</td>
-<td align="left">并集选择器</td>
-<td>选取多个元素</td>
-</tr>
-<tr>
-<td>$(“li.current”)</td>
-<td align="left">交集选择器</td>
-<td>交集元素</td>
-</tr>
-</tbody></table>
-<h3 id="层级选择器"><a href="#层级选择器" class="headerlink" title="层级选择器"></a>层级选择器</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>用法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>子代选择器</td>
-<td>$(“ul&gt;li”)</td>
-<td>使用&gt;号，获取亲儿子层级的元素；注意不会获取到孙子层级的元素</td>
-</tr>
-<tr>
-<td>后代选择器</td>
-<td>$(“ul li”)</td>
-<td>使用空格，代表后代选择器，获取ul下的所有li元素，包括孙子</td>
-</tr>
-</tbody></table>
-<h3 id="筛选选择器"><a href="#筛选选择器" class="headerlink" title="筛选选择器"></a>筛选选择器</h3><table>
-<thead>
-<tr>
-<th>语法</th>
-<th>用法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>:first</td>
-<td>$(“li:first”)</td>
-<td>获取第一个li元素</td>
-</tr>
-<tr>
-<td>:last</td>
-<td>$(“li:last”)</td>
-<td>获取最后一个li元素</td>
-</tr>
-<tr>
-<td>:ed(index)</td>
-<td>$(“li:ed(2)”)</td>
-<td>获取li元素中，选择索引号为2的元素</td>
-</tr>
-<tr>
-<td>:odd</td>
-<td>$(“li:odd”)</td>
-<td>获取li元素中，选择索引号为奇数的元素</td>
-</tr>
-<tr>
-<td>:even</td>
-<td>$(“li:even”)</td>
-<td>获取li元素中,选择索引号为偶数的元素</td>
-</tr>
-</tbody></table>
-<h3 id="筛选方法-重点"><a href="#筛选方法-重点" class="headerlink" title="筛选方法(重点)"></a>筛选方法(重点)</h3><table>
-<thead>
-<tr>
-<th>语法</th>
-<th>用法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>parent()</td>
-<td>$(“li”).parent();</td>
-<td>查找父级</td>
-</tr>
-<tr>
-<td>children(selector)</td>
-<td>$(“ul”).children(“li”);</td>
-<td>相当于$(“ul&gt;li”),最近一级(亲儿子)</td>
-</tr>
-<tr>
-<td>find(selector)</td>
-<td>$(“ul”).find(“li”);</td>
-<td>相当于$(“ul li”),后代选择器</td>
-</tr>
-<tr>
-<td>siblings(selector)</td>
-<td>$(“.first”).siblings(“li”);</td>
-<td>查找兄弟节点。不包括自己</td>
-</tr>
-<tr>
-<td>nextAll([expr])</td>
-<td>$(“.first”).nextAll()</td>
-<td>查找当前元素之后所有的同辈元素</td>
-</tr>
-<tr>
-<td>prevtAll([expr])</td>
-<td>$(“.last”).pravAll()</td>
-<td>查找当前元素之前所有的同辈元素</td>
-</tr>
-<tr>
-<td>hasClass(class)</td>
-<td>$(“div”).hasClass(“protected”)</td>
-<td>查找当前元素是否含有某个特定的类，如果有则返回true</td>
-</tr>
-<tr>
-<td>eq(index)</td>
-<td>$(“li”).eq(2)</td>
-<td>相当于$(“li:eq(2)”),index从0开始</td>
-</tr>
-</tbody></table>
-<p>重点记住：parent()  children()  find()  siblings()  eq()</p>
-<h2 id="能够操作jQuery样式"><a href="#能够操作jQuery样式" class="headerlink" title="能够操作jQuery样式"></a>能够操作jQuery样式</h2><h3 id="操作css方法"><a href="#操作css方法" class="headerlink" title="操作css方法"></a>操作css方法</h3><p>jQuery可以使用css方法来修改简单元素样式；也可以操作类，修改多个样式。</p>
-<p>1.参数只写属性名，则返回属性值</p>
-<pre><code>$(this).css(&quot;color&quot;);</code></pre><p>2.参数是属性名，属性值，逗号分隔，是设置一组样式，属性必须加引号，值如果是数字可以不用单位和引号</p>
-<pre><code>$(this.css(&quot;color&quot;,&quot;red&quot;);</code></pre><p>3.参数可以是对象形式，方便设置多组样式。属性名和属性值用冒号隔开，属性可以不加引号</p>
-<pre><code>$(this).css(&quot;color&quot;:&quot;white&quot;,&quot;font-size&quot;:&quot;20px&quot;)</code></pre><h3 id="设置类样式方法"><a href="#设置类样式方法" class="headerlink" title="设置类样式方法"></a>设置类样式方法</h3><p>作用等同于以前的classList，可以操作类样式，注意操作类里面的参数不要加点</p>
-<p>1.添加类</p>
-<pre><code>$(&quot;div&quot;).addClass(&quot;current&quot;);</code></pre><p>2.移除类</p>
-<pre><code>$(&quot;div&quot;).removeClass(&quot;current&quot;);</code></pre><p>3.切换类</p>
-<pre><code>$(&quot;div&quot;).toggleClass(&quot;current&quot;);</code></pre><h3 id="类操作与ClassName区别"><a href="#类操作与ClassName区别" class="headerlink" title="类操作与ClassName区别"></a>类操作与ClassName区别</h3><p>原生js中的ClassName会覆盖原先里面的类名</p>
-<p>jQuery里面的类操作只是对指定类进行操作，不会影响原先的类名。</p>
-<h2 id="能够写出常用的jQuery动画"><a href="#能够写出常用的jQuery动画" class="headerlink" title="能够写出常用的jQuery动画"></a>能够写出常用的jQuery动画</h2><h5 id="1-显示隐藏-show-hide-toggle"><a href="#1-显示隐藏-show-hide-toggle" class="headerlink" title="1.显示隐藏 show()  hide()  toggle()"></a>1.显示隐藏 show()  hide()  toggle()</h5><pre><code>show([speed,[easing],[fn]])
-//(1) 参数都可以省略，无动画直接显示
-  (2)speed：三种预定速度之一的字符串(&quot;slow&quot;,&quot;narmal&quot;,&quot;fast&quot;)或者表示动画时长的毫秒数值
-  (3)easing:(Optional)用来指定切换效果，默认是&quot;swing&quot;，可用参数&quot;linear&quot;.
-  (4) fn:回调函数，在动画完成时执行的函数，每个元素执行一次
-  下面的相同</code></pre><h5 id="2-滑动-sideDown-sideUp-sideToggle"><a href="#2-滑动-sideDown-sideUp-sideToggle" class="headerlink" title="2.滑动 sideDown()  sideUp()  sideToggle()"></a>2.滑动 sideDown()  sideUp()  sideToggle()</h5><h5 id="3-淡入淡出-fadeIn-fadeOut-fadeToggle-fadeTo"><a href="#3-淡入淡出-fadeIn-fadeOut-fadeToggle-fadeTo" class="headerlink" title="3.淡入淡出 fadeIn()  fadeOut()  fadeToggle()  fadeTo()"></a>3.淡入淡出 fadeIn()  fadeOut()  fadeToggle()  fadeTo()</h5><pre><code>fadeTo(speed,opacity,[easing],[fn])
-//(1)opacity 透明度必须写，取值0-1之间
-  (2)speed 三种预定速度之一的字符串(&quot;slow&quot;,&quot;narmal&quot;,&quot;fast&quot;)或者表示动画时长的毫秒数值必须写</code></pre><h5 id="4-自定义动画-animate"><a href="#4-自定义动画-animate" class="headerlink" title="4.自定义动画  animate()"></a>4.自定义动画  animate()</h5><pre><code>animate(params,[speed],[easing],[fn])
-//params 想要更改的属性，以对象的形式传递，必须写，属性名可以不写引号，复合属性采用驼峰命名方式</code></pre><h5 id="5-动画或效果队列及其停止排队方法"><a href="#5-动画或效果队列及其停止排队方法" class="headerlink" title="5.动画或效果队列及其停止排队方法"></a>5.动画或效果队列及其停止排队方法</h5><p>动画或者效果一旦触发就会执行，如果多次触发，就会造成多个动画或者效果排队执行。</p>
-<pre><code>stop()  //用于停止动画或者效果，一定要写到动画前面，相当于停止结束上一次的动画</code></pre><h2 id="能够操作jQuery属性"><a href="#能够操作jQuery属性" class="headerlink" title="能够操作jQuery属性"></a>能够操作jQuery属性</h2><h4 id="设置获取元素固有属性值prop"><a href="#设置获取元素固有属性值prop" class="headerlink" title="设置获取元素固有属性值prop()"></a>设置获取元素固有属性值prop()</h4><p>所谓元素固有属性就是元素本身自带的属性；</p>
-<h5 id="1-获取属性的语法"><a href="#1-获取属性的语法" class="headerlink" title="1.获取属性的语法"></a>1.获取属性的语法</h5><pre><code>prop(&quot;属性&quot;)</code></pre><h5 id="2-设置属性语法"><a href="#2-设置属性语法" class="headerlink" title="2.设置属性语法"></a>2.设置属性语法</h5><pre><code>prop(&quot;属性&quot;，&quot;属性值&quot;)</code></pre><h4 id="设置或获取元素自定义属性attr"><a href="#设置或获取元素自定义属性attr" class="headerlink" title="设置或获取元素自定义属性attr()"></a>设置或获取元素自定义属性attr()</h4><p>用户给元素添加大的属性；</p>
-<h5 id="1-获取属性语法"><a href="#1-获取属性语法" class="headerlink" title="1.获取属性语法"></a>1.获取属性语法</h5><pre><code>attr(&quot;属性&quot;)   //类似原生getAttribute</code></pre><h5 id="2-设置属性语法-1"><a href="#2-设置属性语法-1" class="headerlink" title="2.设置属性语法"></a>2.设置属性语法</h5><pre><code>attr(&quot;属性&quot;,&quot;属性值&quot;)   //类似原生setAttribute</code></pre><h4 id="数据缓存data"><a href="#数据缓存data" class="headerlink" title="数据缓存data()"></a>数据缓存data()</h4><p>data() 方法可以在指定的元素上存取数据，并不会修改DOM元素结构。一旦页面刷新，之前存放的数据都会移除。</p>
-<h5 id="1-附加数据语法"><a href="#1-附加数据语法" class="headerlink" title="1.附加数据语法"></a>1.附加数据语法</h5><pre><code>data(&quot;name&quot;,&quot;value&quot;)  //向被选元素附加数据</code></pre><h5 id="2-获取数据语法"><a href="#2-获取数据语法" class="headerlink" title="2.获取数据语法"></a>2.获取数据语法</h5><pre><code>data(&quot;name&quot;)  //向被选元素获取数据</code></pre><p>同时还可以读取HTML5自定义属性data-index，得到的是数字型</p>
-<h2 id="能够操作jQuery元素"><a href="#能够操作jQuery元素" class="headerlink" title="能够操作jQuery元素"></a>能够操作jQuery元素</h2><h4 id="内容文本值"><a href="#内容文本值" class="headerlink" title="内容文本值"></a>内容文本值</h4><p>主要针对元素的内容还有表单的值操作</p>
-<h5 id="1-普通元素内容html-相当于原生inneHTML"><a href="#1-普通元素内容html-相当于原生inneHTML" class="headerlink" title="1.普通元素内容html()(相当于原生inneHTML)"></a>1.普通元素内容html()(相当于原生inneHTML)</h5><pre><code>html()  //获取元素的内容</code></pre><pre><code>html(&quot;内容&quot;) //设置元素的内容</code></pre><h5 id="2-普通元素文本内容text-相当与原生innerText"><a href="#2-普通元素文本内容text-相当与原生innerText" class="headerlink" title="2.普通元素文本内容text() (相当与原生innerText)"></a>2.普通元素文本内容text() (相当与原生innerText)</h5><pre><code>text()   //获取元素文本内容</code></pre><pre><code>text(&quot;文本内容&quot;)  //设置元素文本内容</code></pre><h5 id="3-表单的值val-相当于原生value"><a href="#3-表单的值val-相当于原生value" class="headerlink" title="3.表单的值val()(相当于原生value)"></a>3.表单的值val()(相当于原生value)</h5><h4 id="遍历元素"><a href="#遍历元素" class="headerlink" title="遍历元素"></a>遍历元素</h4><p>jQuery隐式迭代是对同一类元素作了同样的操作，如果想要给同一类做不同的操作，就要用到遍历</p>
-<h5 id="语法1"><a href="#语法1" class="headerlink" title="语法1"></a>语法1</h5><pre><code>$(&quot;div&quot;).each(function(index,domEle){xxx;})</code></pre><p>1.each()方法遍历匹配的每一个元素。主要用DOM处理。each每一个</p>
-<p>2.里面大的回调函数有两个参数：index是每个元素的索引号；domEle是每隔DOM元素对象不是jQuery对象</p>
-<p>3.所以想要使用jQuery方法，需要给这个dom元素转换为jQuery对象$(domEle)</p>
-<h5 id="语法2"><a href="#语法2" class="headerlink" title="语法2"></a>语法2</h5><pre><code>$.each(object,function(index,element){xxx;})</code></pre><p>1.$.each()方法可用于遍历任何对象，主要是数据处理。比如数组对象</p>
-<p>2.里面的函数有2个参数：index是每个元素的索引号；element遍历内容</p>
-<h4 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h4><h5 id="1-内部添加"><a href="#1-内部添加" class="headerlink" title="1.内部添加"></a>1.内部添加</h5><pre><code>element.append(&quot;内容&quot;)</code></pre><p>把内容放入匹配元素内部最后面，类似原生appendChild</p>
-<pre><code>element.prapend(&quot;内容&quot;)</code></pre><h5 id="2-外部添加"><a href="#2-外部添加" class="headerlink" title="2.外部添加"></a>2.外部添加</h5><pre><code>element.after(&quot;内容&quot;)   //把内容放入目标元素后面</code></pre><pre><code>element.before(&quot;内容&quot;)   //把内容放入目标元素前面</code></pre><p>内部添加元素，生成之后，他们是父子关系</p>
-<p>外部添加元素，生成之后，他们是兄弟关系</p>
-<h4 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h4><pre><code>element.remove()  //删除匹配的元素（本身）</code></pre><pre><code>element.empty()  //删除匹配的元素集合中的所有子节点</code></pre><pre><code>element.html(&quot;&quot;)   //清空匹配的元素内容</code></pre><h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><h4 id="事件处理on-绑定事件"><a href="#事件处理on-绑定事件" class="headerlink" title="事件处理on()绑定事件"></a>事件处理on()绑定事件</h4><p>on()方法在匹配元素上绑定一个或多个事件处理函数</p>
-<pre><code>element.on(events,[selector],fn)</code></pre><p>1.events:一个或多个空格分隔的事件类型，如click或者keydown</p>
-<p>2.selector：元素的子元素选择器</p>
-<p>3.fn：回调函数，即绑定在元素身上的侦听函数</p>
-<h4 id="on-方法的优势"><a href="#on-方法的优势" class="headerlink" title="on()方法的优势"></a>on()方法的优势</h4><h5 id="1-可以绑定多个事件-多个事件处理程序"><a href="#1-可以绑定多个事件-多个事件处理程序" class="headerlink" title="1.可以绑定多个事件 多个事件处理程序"></a>1.可以绑定多个事件 多个事件处理程序</h5><pre><code>$(&quot;div&quot;).on({
-mouseover:function(){},
-mouseout:function(){},
-click:function(){}
-});</code></pre><p>如果事件处理程序相同</p>
-<pre><code>$(&quot;div&quot;).on(&quot;mouseover mouseout&quot;,function(){
-$(this).toggleClass(&quot;current&quot;);
-});</code></pre><h5 id="2-可以事件委派操作，事件委派的定义就是，把原来加给子元素事件绑定在父元素身上，就是把事件委派给父元素"><a href="#2-可以事件委派操作，事件委派的定义就是，把原来加给子元素事件绑定在父元素身上，就是把事件委派给父元素" class="headerlink" title="2.可以事件委派操作，事件委派的定义就是，把原来加给子元素事件绑定在父元素身上，就是把事件委派给父元素"></a>2.可以事件委派操作，事件委派的定义就是，把原来加给子元素事件绑定在父元素身上，就是把事件委派给父元素</h5><pre><code>$(&#39;ul&#39;).on(&#39;click&#39;,&#39;li&#39;,function(){
-    alert(&#39;hello world!&#39;);
-});</code></pre><p>在此之前有bind(),live() delegate()等方法来处理事件绑定或者事件委派，最新版用on代替他们</p>
-<h5 id="3-动态创建的元素，click-没有办法绑定事件，on-可以给动态生成的元素绑定事件"><a href="#3-动态创建的元素，click-没有办法绑定事件，on-可以给动态生成的元素绑定事件" class="headerlink" title="3.动态创建的元素，click()没有办法绑定事件，on()可以给动态生成的元素绑定事件"></a>3.动态创建的元素，click()没有办法绑定事件，on()可以给动态生成的元素绑定事件</h5><h4 id="事件处理off-解绑事件"><a href="#事件处理off-解绑事件" class="headerlink" title="事件处理off()解绑事件"></a>事件处理off()解绑事件</h4><p>off()方法可以移除通过on()方法添加的事件处理程序</p>
-<pre><code>$(&quot;p&quot;).off()   //解绑p元素所有事件处理程序
-$(&quot;p&quot;).off(&quot;click&quot;)   //解绑p元素上面的点击事件
-$(&quot;ul&quot;).off(&quot;click&quot;,&quot;li&quot;);   //解绑事件委托</code></pre><p>如果事件只想触发一次，可以使用one()来绑定事件</p>
-<h4 id="自动触发事件trigger"><a href="#自动触发事件trigger" class="headerlink" title="自动触发事件trigger()"></a>自动触发事件trigger()</h4><p>有些时间希望自动触发，比如轮播图自动播放功能跟点击右侧按钮一致，可以利用定时器自动触发右侧按钮的点击事件，不必鼠标点击触发</p>
-<pre><code>element.click()  //第一种简写方式</code></pre><pre><code>element.trigger(&quot;type&quot;)  //第二种自动触发模式</code></pre><pre><code>$(&quot;p&quot;).on(&quot;click&quot;,function(){
-alert(&quot;hi~&quot;);
-});
-$(&quot;p&quot;).trigger(&quot;click&quot;);    //此时自动触发点击事件，不需要鼠标点击</code></pre><h4 id="jQuery事件对象"><a href="#jQuery事件对象" class="headerlink" title="jQuery事件对象"></a>jQuery事件对象</h4><p>事件被触发，就会有事件对象的产生。</p>
-<pre><code>element.on(events,[selector],function(event){})</code></pre><p>阻止默认行为：event.preventDefault()  或者 return false</p>
-<p>阻止冒泡：event.stopPropagation</p>
-<h4 id="jQuery对象拷贝"><a href="#jQuery对象拷贝" class="headerlink" title="jQuery对象拷贝"></a>jQuery对象拷贝</h4><p>如果想要把某个对象拷贝（合并）给另外一个对象使用，此时可以使用$.extend()方法</p>
-<pre><code>$.extend([deep],target,object,[objectN])</code></pre><p>1.deep:如果设为true为深拷贝，默认false为浅拷贝</p>
-<p>2.target：要拷贝的目标对象</p>
-<p>3.object1：代拷贝到第一个对象的对象</p>
-<p>4.objectN：待拷贝到第N个对象的对象</p>
-<p>5.浅拷贝是把被拷贝的对象复杂数据类型中的地址拷贝给目标对象，修改目标对象会影响被拷贝对象</p>
-<p>6.深拷贝，前面加true，完全克隆（拷贝的对象，而不是地址），修改的目标对象不会影响被拷贝的对象。</p>
-<h4 id="jQuery多库共存"><a href="#jQuery多库共存" class="headerlink" title="jQuery多库共存"></a>jQuery多库共存</h4><p>jQuery使用$作为标识符随着jQuery的流行，其他js库也用这$作为标识符，这样一来就会引起冲突。需要一个解决方案，让jQuery和其他的js和其他的js库不存在冲突，可以同时存在。这就叫做多库共存。</p>
-<h5 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h5><p>1.把里面的$符号统一改为jQuery。比如jQuery(“div”)</p>
-<p>2.jQuery变量规定新的名称：$.noConflict()  如： var  xxx =$.noConflict();</p>
-<h4 id="jQuery插件"><a href="#jQuery插件" class="headerlink" title="jQuery插件"></a>jQuery插件</h4><p>1.jQuery插件库 <a href="http://www.jq22.com/" target="_blank" rel="noopener">http://www.jq22.com/</a></p>
-<p>2.jQuery之家<a href="http://www.htmleaf.com/" target="_blank" rel="noopener">http://www.htmleaf.com/</a></p>
-<h5 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h5><p>1.引入相关文件（jQuery文件和插件文件）</p>
-<p>2.复制相关的html，css，js（调用插件）</p>
-<h5 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h5><p>1.瀑布流</p>
-<p>2.图片懒加载(图片使用延迟加载在可提高网页下载速度，它也能帮助减轻服务器负载)</p>
-<p>当我们页面滑动得到可视区域，在显示图片，使用插件库的EasyLazyload，注意此时引入的文件和js调用必须写在DOM元素（图片）最后面</p>
-<p>3.全屏滚动（fullpage.js)</p>
-<p>GitHub：<a href="https://github.com/alvarotrigo/fullPage.js" target="_blank" rel="noopener">https://github.com/alvarotrigo/fullPage.js</a></p>
-<p>中文翻译网：<a href="http://www.dowebok.com/demo/2014/77/" target="_blank" rel="noopener">http://www.dowebok.com/demo/2014/77/</a></p>
-<p>bootstrap中文文档<a href="https://v3.bootcss.com" target="_blank" rel="noopener">https://v3.bootcss.com</a></p>
-<h2 id="能够操作jQuery元素尺寸、位置"><a href="#能够操作jQuery元素尺寸、位置" class="headerlink" title="能够操作jQuery元素尺寸、位置"></a>能够操作jQuery元素尺寸、位置</h2><h4 id="jQuery尺寸"><a href="#jQuery尺寸" class="headerlink" title="jQuery尺寸"></a>jQuery尺寸</h4><table>
-<thead>
-<tr>
-<th>语法</th>
-<th>用法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>width()/height()</td>
-<td>取得匹配元素宽度和高度值  只算width/height</td>
-</tr>
-<tr>
-<td>innerWidth() /innerHeight()</td>
-<td>取得匹配元素宽度和高度值 包含padding</td>
-</tr>
-<tr>
-<td>outerWidth()/outerheight()</td>
-<td>取得匹配元素的宽度和高度值  包含padding、border</td>
-</tr>
-<tr>
-<td>outerWidth(ture)/outerHeight(ture)</td>
-<td>取得匹配元素宽度和高度值 包含padding、border、margin</td>
-</tr>
-</tbody></table>
-<p>以上参数为空，则是获取相应值，返回的是 数字型</p>
-<p>如果参数为数字，则是修改相应值</p>
-<p>参数可以不必写单位</p>
-<h4 id="jQuery位置"><a href="#jQuery位置" class="headerlink" title="jQuery位置"></a>jQuery位置</h4><p>位置主要有三个：offset()、position()、scrollTop()/scrollLeft()</p>
-<h5 id="1-offset-设置或获取元素偏移"><a href="#1-offset-设置或获取元素偏移" class="headerlink" title="1.offset()设置或获取元素偏移"></a>1.offset()设置或获取元素偏移</h5><p>offset()方法设置或返回被选中元素相当于文档的偏移坐标，跟父级没有关系</p>
-<p>该方法有2个属性left、top、offset()、top 用于获取距离文档顶部的距离，offset().left用于获取距离文档左侧的距离。</p>
-<p>可以设置元素的偏移：offset({top:10,left:30});</p>
-<h5 id="2-position-获取元素偏移"><a href="#2-position-获取元素偏移" class="headerlink" title="2.position() 获取元素偏移"></a>2.position() 获取元素偏移</h5><p>position()方法用于返回被选元素相对于带有定位的父级偏移坐标，如果父级都没有定位，则以文档为准。这个方法只能获取不能设置偏移。</p>
-<h5 id="3-scrollTop-scrollLeft-设置或获取元素被卷去的头不和左侧"><a href="#3-scrollTop-scrollLeft-设置或获取元素被卷去的头不和左侧" class="headerlink" title="3.scrollTop() /scrollLeft()设置或获取元素被卷去的头不和左侧"></a>3.scrollTop() /scrollLeft()设置或获取元素被卷去的头不和左侧</h5><p>srcollTop()方法设置或返回被选元素被卷去的头部</p>
-</li>
+<pre><code>// 引入express框架
+const express = require(&#39;express&#39;);
+// 创建网站服务器
+const app = express();
+app.get(&#39;/&#39; , (req, res) =&gt; {
+    // send()
+    // 1. send方法内部会检测响应内容的类型
+    // 2. send方法会自动设置http状态码
+    // 3. send方法会帮我们自动设置响应的内容类型及编码
+    res.send(&#39;Hello. Express&#39;);
+})
+// 监听端口
+app.listen(3000);</code></pre><h2 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h2><p>中间件就是一堆方法，可以接受客户端放来的请求，可以对请求做出响应，也可以将请求继续交给下一个中间件继续处理。</p>
+<p>中间件由两部分构成，中间件方法以及请求处理函数；中间件方法由Exprss提供，负责拦截请求，请求函数有开发人员提供，负责处理请求。</p>
+<pre><code> app.get(&#39;请求路径&#39;, &#39;处理函数&#39;)   // 接收并处理get请求
+ app.post(&#39;请求路径&#39;, &#39;处理函数&#39;)  // 接收并处理post请求</code></pre><p>可以针对同一个请求设置多个中间件，对同一个请求进行多次处理。默认情况下，请求从上到下依次匹配中间件，一旦匹配成功，终止匹配。可以调用next方法将请求的控制权交给下一个中间件，直到遇到结束请求的中间件。</p>
+<pre><code> app.get(&#39;/request&#39;, (req, res, next) =&gt; {
+     req.name = &quot;张三&quot;;
+     next();
+ });
+ app.get(&#39;/request&#39;, (req, res) =&gt; {
+     res.send(req.name);
+ });</code></pre><h3 id="app-use中间件用法"><a href="#app-use中间件用法" class="headerlink" title="app.use中间件用法"></a>app.use中间件用法</h3><p>app.use 匹配所有请求方式，可以直接传入请求处理函数，代表接受所有请求。第一个参数可以省略表示通配。</p>
+<pre><code> app.use(&#39;/admin&#39;, (req, res, next) =&gt; {
+     console.log(req.url);
+     next();
+ });</code></pre><h3 id="中间件的应用"><a href="#中间件的应用" class="headerlink" title="中间件的应用"></a>中间件的应用</h3><ol>
+<li>路由保护，客户端在访问需要登录的页面时，可以先使用中间件判断用户登录状态，用户如果未登录，则拦截请求，直接响应，禁止用户进入需要登录的页面。</li>
+<li>网站维护公告，在所有路由的最上面定义接收所有请求的中间件，直接为客户端做出响应，网站正在维护中。</li>
+<li>自定义404页面</li>
 </ol>
-
+<h3 id="错误处理中间件"><a href="#错误处理中间件" class="headerlink" title="错误处理中间件"></a>错误处理中间件</h3><p>在程序执行的过程中，不可避免的会出现一些无法预料的错误，比如文件读取失败，数据库连接失败。错误处理中间件是一个集中处理错误的地方。</p>
+<pre><code> app.use((err, req, res, next) =&gt; {
+     res.status(500).send(&#39;服务器发生未知错误&#39;);
+ })</code></pre><p>当程序出现错误时，调用next()方法，并且将错误信息通过参数的形式传递给next()方法，即可触发错误处理中间件</p>
+<pre><code> app.get(&quot;/&quot;, (req, res, next) =&gt; {
+     fs.readFile(&quot;/file-does-not-exist&quot;, (err, data) =&gt; {
+         if (err) {
+            next(err);
+         }
+     });
+});</code></pre><h3 id="捕获错误"><a href="#捕获错误" class="headerlink" title="捕获错误"></a>捕获错误</h3><p>在node.js中，异步API的错误信息都是通过回调函数获取的，支持Promise对象的异步API发生错误可以通过catch方法捕获。</p>
+<p>异步函数执行如果发生错误可以通过 try catch 捕获异步函数以及其他同步代码在执行过程中发生的错误，但是不能其他类型的API发生的错误。</p>
+<pre><code> app.get(&quot;/&quot;, async (req, res, next) =&gt; {
+     try {
+         await User.find({name: &#39;张三&#39;})
+     }catch(ex) {
+         next(ex);
+     }
+ });</code></pre><h2 id="Express请求处理"><a href="#Express请求处理" class="headerlink" title="Express请求处理"></a>Express请求处理</h2><h3 id="模块化路由"><a href="#模块化路由" class="headerlink" title="模块化路由"></a>模块化路由</h3><pre><code>const home = express.Router();
+// 为路由对象匹配请求路径
+app.use(&#39;/home&#39;, home);
+// 创建二级路由
+home.get(&#39;/index&#39;, (req, res) =&gt; {
+    res.send(&#39;欢迎来到博客首页页面&#39;)
+})</code></pre><pre><code> // admin.js
+ const admin = express.Router();
+ admin.get(&#39;/index&#39;, () =&gt; {
+     res.send(&#39;欢迎来到博客管理页面&#39;);
+ });
+ module.exports = admin;</code></pre><pre><code>const admin = require(&#39;./route/admin.js&#39;);
+ app.use(&#39;/admin&#39;, admin);</code></pre><h3 id="GET-参数的获取"><a href="#GET-参数的获取" class="headerlink" title="GET 参数的获取"></a>GET 参数的获取</h3><p>Express框架中使用<strong>req.query</strong>即可获取GET参数，框架内部会将GET参数转换为对象并返回。</p>
+<pre><code> // 接收地址栏中问号后面的参数
+ // 例如: http://localhost:3000/?name=zhangsan&amp;age=30
+ app.get(&#39;/&#39;, (req, res) =&gt; {
+    console.log(req.query); // {&quot;name&quot;: &quot;zhangsan&quot;, &quot;age&quot;: &quot;30&quot;}
+ });</code></pre><h3 id="POST参数的获取"><a href="#POST参数的获取" class="headerlink" title="POST参数的获取"></a>POST参数的获取</h3><p>Express中接收post请求参数需要借助第三方包 body-parser。</p>
+<pre><code> // 引入body-parser模块
+ const bodyParser = require(&#39;body-parser&#39;);
+ // 配置body-parser模块
+    // extended: false 方法内部使用querystring模块处理请求参数的格式
+    // extended: true 方法内部使用第三方模块qs处理请求参数的格式
+ app.use(bodyParser.urlencoded({ extended: false }));
+ // 接收请求
+ app.post(&#39;/add&#39;, (req, res) =&gt; {
+    // 接收请求参数
+    console.log(req.body);
+ }) </code></pre><h3 id="路由参数"><a href="#路由参数" class="headerlink" title="路由参数"></a>路由参数</h3><pre><code> app.get(&#39;/find/:id&#39;, (req, res) =&gt; { 
+     console.log(req.params); // {id: 123} 
+ });</code></pre><p>访问的是<code>localhost:3000/find/123</code></p>
+<h3 id="静态资源的处理"><a href="#静态资源的处理" class="headerlink" title="静态资源的处理"></a>静态资源的处理</h3><p>通过Express内置的<strong>express.static</strong>可以方便地托管静态文件，例如img、CSS、JavaScript 文件等。</p>
+<pre><code> app.use(express.static(&#39;public&#39;));</code></pre><p>这样public下的静态资源就可以访问了</p>
+<h2 id="Express-art-template模板引擎"><a href="#Express-art-template模板引擎" class="headerlink" title="Express-art-template模板引擎"></a>Express-art-template模板引擎</h2><h3 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h3><ul>
+<li>为了使art-template模板引擎能够更好的和Express框架配合，模板引擎官方在原art-template模板引擎的基础上封装了express-art-template。</li>
+<li>使用npm install art-template express-art-template命令进行安装。</li>
+</ul>
+<pre><code>  // 当渲染后缀为art的模板时 使用express-art-template
+ app.engine(&#39;art&#39;, require(&#39;express-art-template&#39;));
+  // 设置模板存放目录
+ app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;));
+  // 渲染模板时不写后缀 默认拼接art后缀
+ app.set(&#39;view engine&#39;, &#39;art&#39;);
+ app.get(&#39;/&#39;, (req, res) =&gt; {
+     // 渲染模板
+     res.render(&#39;index&#39;);
+ }); </code></pre><h3 id="app-locals对象"><a href="#app-locals对象" class="headerlink" title="app.locals对象"></a>app.locals对象</h3><p>将变量设置到app.locals对象下面，这个数据在所有的模板中都可以获取到。</p>
+<pre><code> app.locals.users = [{
+     name: &#39;张三&#39;,
+     age: 20
+ },{
+     name: &#39;李四&#39;,
+     age: 20
+}]</code></pre>
             </div>
             <hr/>
 
@@ -809,7 +632,7 @@ $(&quot;p&quot;).trigger(&quot;click&quot;);    //此时自动触发点击事件
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.iamys.club/2020/04/10/jQuery/">https://www.iamys.club/2020/04/10/jQuery/</a>
+                    <a href="https://www.iamys.club/2020/04/20/Express%E6%A1%86%E6%9E%B6/">https://www.iamys.club/2020/04/20/Express%E6%A1%86%E6%9E%B6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -847,8 +670,8 @@ $(&quot;p&quot;).trigger(&quot;click&quot;);    //此时自动触发点击事件
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/jQuery/">
-                                    <span class="chip bg-color">jQuery</span>
+                                <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
+                                    <span class="chip bg-color">Express框架</span>
                                 </a>
                             
                         </div>
@@ -1038,54 +861,51 @@ $(&quot;p&quot;).trigger(&quot;click&quot;);    //此时自动触发点击事件
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/04/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <a href="/2020/04/20/Express%E6%A1%86%E6%9E%B6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="hexo+github搭建博客">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Express框架">
                         
-                        <span class="card-title">hexo+github搭建博客</span>
+                        <span class="card-title">Express框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言作为一个一直追随大佬脚步的小菜鸟，一直都想有一个属于自己的博客，但是一直没有付诸行动（主要是不会），但是偶然的一天看到一篇公众号文章标题大概是这样“十分钟带你搭建一个博客”嗯就是这样一个标题激起了我心中的博客之念想，开始蠢蠢欲动跟着步骤
+                            Express是一个基于Node平台的web应用开放框架，他提供了一系列的强大特性，帮助你创建各种web应用。我们可以使用npm install express 命令下载
+Express框架特性
+提供了方便简洁的路由定义方式
+对获取HTTP
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
-                                </a>
-                            
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
+                                    前后端交互
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
-                    </a>
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
+                        <span class="chip bg-color">Express框架</span>
                     </a>
                     
                 </div>
@@ -1099,37 +919,52 @@ $(&quot;p&quot;).trigger(&quot;click&quot;);    //此时自动触发点击事件
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/10/vue%E5%9F%BA%E7%A1%80/">
+                <a href="/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="初识vue">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="mongoDB数据库">
                         
-                        <span class="card-title">初识vue</span>
+                        <span class="card-title">mongoDB数据库</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            vue模块语法Vue概述声明式渲染&gt;组件系统&gt;客户端路由&gt;集中式状态管理&gt;项目构建
-优点：易用、灵活、高效
-Vue基本使用目标：能够说出Vue基本用法
-vue的基本使用步骤
-提供标签填充数据
-引入vue.js库文件
+                            
 
+
+术语
+解释说明
+
+
+
+database
+数据库，可建立多个
+
+
+collection
+集合，一组数据，相当于js里的数组
+
+
+document
+文档，一条具体的数据，相当于js里的对象
+
+
+filed
+字段，文档中的属性名称，相当与j
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    web前端
+                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
+                                    前后端交互
                                 </a>
                             
                             
@@ -1139,8 +974,8 @@ vue的基本使用步骤
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vue/">
-                        <span class="chip bg-color">vue</span>
+                    <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">mongoDB数据库</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mongoDB接数据库, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="mongoDB数据库, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mongoDB接数据库 | XiaoQi&#39;s Blog</title>
+    <title>mongoDB数据库 | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mongoDB接数据库</h1>
+                    <h1 class="description center-align post-title">mongoDB数据库</h1>
                 </div>
             </div>
         </div>
@@ -433,12 +433,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">mongoDB数据库</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
+                                前后端交互
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -454,21 +467,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-17
+                    2020-04-20
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -484,8 +497,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="mongoDB数据库"><a href="#mongoDB数据库" class="headerlink" title="mongoDB数据库"></a>mongoDB数据库</h1><h2 id="如何连mongoDB接数据库"><a href="#如何连mongoDB接数据库" class="headerlink" title="如何连mongoDB接数据库"></a>如何连mongoDB接数据库</h2><ol>
-<li>下载<code>mongoos</code>第三方模块<code>npm install mongoose</code></li>
+                <table>
+<thead>
+<tr>
+<th>术语</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>database</td>
+<td>数据库，可建立多个</td>
+</tr>
+<tr>
+<td>collection</td>
+<td>集合，一组数据，相当于js里的数组</td>
+</tr>
+<tr>
+<td>document</td>
+<td>文档，一条具体的数据，相当于js里的对象</td>
+</tr>
+<tr>
+<td>filed</td>
+<td>字段，文档中的属性名称，相当与js中的对象属性</td>
+</tr>
+</tbody></table>
+<h2 id="如何连mongoDB接数据库"><a href="#如何连mongoDB接数据库" class="headerlink" title="如何连mongoDB接数据库"></a>如何连mongoDB接数据库</h2><ol>
+<li>下载<code>mongoos</code>第三方模块<code>npm install mongoose</code> 启动 <code>ner start mongoDB</code></li>
 <li>引入<code>mongoose</code>第三方模块，用来操作数据库</li>
 <li>用<code>connect</code>方法来连接数据库，参数为<code>mongodb://localhost/playground</code>，最后一个是数据库名写上就会自动创建</li>
 <li>分别用<code>.then</code>和<code>.catch</code>对数据库连接成功或失败一个反馈</li>
@@ -494,10 +531,10 @@
 mongoose.connect(&#39;mongoose://localhost/playground&#39;)
     .then(() =&gt; console.log(&#39;数据库连接成功&#39;))
     .catch(() =&gt; console.log(&#39;数据库连接失败&#39;))</code></pre><h2 id="如何创建一个集合以及向集合插入文档"><a href="#如何创建一个集合以及向集合插入文档" class="headerlink" title="如何创建一个集合以及向集合插入文档"></a>如何创建一个集合以及向集合插入文档</h2><ol>
-<li>创建集合规则，用new实例化mongoose，用Schema方法添加规则，规则为字段名和类型</li>
-<li>创建集合，model方法第一个参数是集合名第二个参数是集合规则</li>
-<li>创建文档，用new实例化集合，参数为一个对象每一项是具体的字段和值</li>
-<li>将文档保存到数据库，文档名.save()</li>
+<li>创建集合规则，用<code>new</code>实例化<code>mongoose</code>，用<code>Schema</code>方法添加规则，规则为字段名和类型</li>
+<li>创建集合，<code>model</code>方法第一个参数是<code>集合名</code>第二个参数是<code>集合规则</code></li>
+<li>创建文档，用<code>new</code>实例化集合，参数为一个对象每一项是具体的字段和值</li>
+<li>将文档保存到数据库，文档名<code>.save()</code></li>
 </ol>
 <pre><code>const personSchema = new mongoose.Schema({
     name: String,
@@ -510,26 +547,25 @@ const person = new Person({
     age: 12,
     hobbies: [&#39;sing&#39;, &#39;read&#39;]
 })
-person.save()</code></pre><h2 id="集合插入文档的另一种方式"><a href="#集合插入文档的另一种方式" class="headerlink" title="集合插入文档的另一种方式"></a>集合插入文档的另一种方式</h2><p>之前我们插入文档是用new实例化集合，还有一个方式是用集合.create方法参数是一个对象，里面是具体的字段和值，可以用.then查看结果。</p>
+person.save()</code></pre><h2 id="集合插入文档的另一种方式"><a href="#集合插入文档的另一种方式" class="headerlink" title="集合插入文档的另一种方式"></a>集合插入文档的另一种方式</h2><p>之前我们插入文档是用<code>new</code>实例化集合，还有一个方式是用集合<code>.create</code>方法参数是一个对象，里面是具体的字段和值，可以用<code>.then</code>查看结果。</p>
 <pre><code>Person.create({ name: &#39;zhangsan&#39;, age: 12, hobbies: [&#39;sing&#39;, &#39;read&#39;] })
-    .then(result =&gt; {
-        console.log(result);
-    })</code></pre><h2 id="文档查询"><a href="#文档查询" class="headerlink" title="文档查询"></a>文档查询</h2><p>文档查询之前可以先建立一个用户信息文件如user.json</p>
+    .then(result =&gt; {console.log(result);})</code></pre><h2 id="文档查询"><a href="#文档查询" class="headerlink" title="文档查询"></a>文档查询</h2><p>文档查询之前可以先建立一个用户信息文件如user.json</p>
 <pre><code>{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f1e5aeb04b22f8460965&quot; }, &quot;name&quot;: &quot;张三&quot;, &quot;age&quot;: 20, &quot;hobbies&quot;: [&quot;足球&quot;, &quot;篮球&quot;, &quot;橄榄球&quot;], &quot;email&quot;: &quot;zhangsan@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; } 
 { &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f236aeb04b22f8460967&quot; }, &quot;name&quot;: &quot;李四&quot;, &quot;age&quot;: 10, &quot;hobbies&quot;: [&quot;足球&quot;, &quot;篮球&quot;], &quot;email&quot;: &quot;lisi@itcast.cn&quot;, &quot;password&quot;: &quot;654321&quot; }
 { &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f267aeb04b22f8460968&quot; }, &quot;name&quot;: &quot;王五&quot;, &quot;age&quot;: 25, &quot;hobbies&quot;: [&quot;敲代码&quot;], &quot;email&quot;: &quot;wangwu@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
 { &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f294aeb04b22f8460969&quot; }, &quot;name&quot;: &quot;赵六&quot;, &quot;age&quot;: 50, &quot;hobbies&quot;: [&quot;吃饭&quot;, &quot;睡觉&quot;, &quot;打豆豆&quot;], &quot;email&quot;: &quot;zhaoliu@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
 { &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f2b6aeb04b22f846096a&quot; }, &quot;name&quot;: &quot;王二麻子&quot;, &quot;age&quot;: 32, &quot;hobbies&quot;: [&quot;吃饭&quot;], &quot;email&quot;: &quot;wangermazi@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f2d9aeb04b22f846096b&quot; }, &quot;name&quot;: &quot;狗蛋&quot;, &quot;age&quot;: 14, &quot;hobbies&quot;: [&quot;打豆豆&quot;], &quot;email&quot;: &quot;goudan@163.com&quot;, &quot;password&quot;: &quot;123456&quot; }</code></pre><p>创建好集合之后用：<code>mongoimport -d 数据库名 -c 集合名 --file 要导入文件的路径</code></p>
-<p>find()查询指定集合的所有文档</p>
-<pre><code>Person.find().then(result =&gt; console.log(result))</code></pre><p>find({条件})查询指定集合中满足条件的文档</p>
-<pre><code>Person.find({name:&#39;李四&#39;}).then(result=&gt;console.log(result))</code></pre><p>find({字段:{$gt:开始范围 , $lt: 结束范围}})查询字段位于之间的文档 &amp;lt小于 &amp;gt大于</p>
-<pre><code>Person.find({age:{$gt:20,$lt40}}).then(result=&gt;console.log(result))</code></pre><p>find({字段:{$in:包含项}})</p>
-<pre><code>Person.find({hobbies:{$in:[&#39;sing&#39;]}}).then(result=&gt;console.log(result))</code></pre><p>find().select(‘字段1，字段2..’)查询指定字段，字段前加-，可以去除字段</p>
-<pre><code>Person.find().select(&#39;name,age,-id&#39;).then(result=&gt;console.log(result))</code></pre><p>find().sort(‘排序字段’)默认按升序排序，加-按降序排序</p>
-<pre><code>Person.find().sort(&#39;-age&#39;).then(result=&gt;console.log(result))</code></pre><p>find().skip(跳过的条数).limit(限制显示结果的条数)</p>
-<pre><code>Person.find.skip(2).limit(3).then(result=&gt;console.log(result))</code></pre><p>findOne()返回指定集合第一个文档</p>
-<pre><code>Person.findOne().then(result=&gt;console.log(result))</code></pre><p>findOne({条件})返回指定集合满足条件的第一个文档</p>
+{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f2d9aeb04b22f846096b&quot; }, &quot;name&quot;: &quot;狗蛋&quot;, &quot;age&quot;: 14, &quot;hobbies&quot;: [&quot;打豆豆&quot;], &quot;email&quot;: &quot;goudan@163.com&quot;, &quot;password&quot;: &quot;123456&quot; }</code></pre><p>创建好集合之后用导入数据：<code>mongoimport -d 数据库名 -c 集合名 --file 要导入文件的路径</code></p>
+<p>然后再找到<code>mongodb</code>数据库的安装目录，将安装目录下的<code>bin目录</code>放置在环境变量中。</p>
+<p><code>find()</code>查询指定集合的所有文档</p>
+<pre><code>Person.find().then(result =&gt; console.log(result))</code></pre><p><code>find({条件})</code>查询指定集合中满足条件的文档</p>
+<pre><code>Person.find({name:&#39;李四&#39;}).then(result=&gt;console.log(result))</code></pre><p><code>find({字段:{$gt:开始范围 , $lt: 结束范围}})</code>查询字段位于之间的文档 <code>&amp;lt小于</code>   <code>&amp;gt大于</code></p>
+<pre><code>Person.find({age:{$gt:20,$lt40}}).then(result=&gt;console.log(result))</code></pre><p><code>find({字段:{$in:包含项}})</code></p>
+<pre><code>Person.find({hobbies:{$in:[&#39;sing&#39;]}}).then(result=&gt;console.log(result))</code></pre><p><code>find().select(&#39;字段1，字段2..&#39;)</code>查询指定字段，字段前加<code>-</code>，可以去除字段</p>
+<pre><code>Person.find().select(&#39;name,age,-id&#39;).then(result=&gt;console.log(result))</code></pre><p><code>find().sort(&#39;排序字段&#39;)</code>默认按升序排序，加<code>-</code>按降序排序</p>
+<pre><code>Person.find().sort(&#39;-age&#39;).then(result=&gt;console.log(result))</code></pre><p><code>find().skip(跳过的条数).limit(限制显示结果的条数)</code></p>
+<pre><code>Person.find.skip(2).limit(3).then(result=&gt;console.log(result))</code></pre><p><code>findOne()</code>返回指定集合第一个文档</p>
+<pre><code>Person.findOne().then(result=&gt;console.log(result))</code></pre><p><code>findOne({条件})</code>返回指定集合满足条件的第一个文档</p>
 <pre><code>Person.findOne({age:14}).then(result=&gt;console.log(result))</code></pre><h2 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h2><p>查找一条文档并且删除，返回的是删除的文档，匹配多个文档会删除第一条</p>
 <pre><code>Person.findOneAndDelete({name:&#39;张三&#39;}).then(result =&gt; console.log(result))</code></pre><p>删除多个文档，不加条件会删除全部文档</p>
 <pre><code>Person.deleteMany({}).then(result =&gt; console.log(result))</code></pre><h2 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h2><p>更新一条文档</p>
@@ -545,7 +581,12 @@ person.save()</code></pre><h2 id="集合插入文档的另一种方式"><a href=
             // 将错误信息打印到控制台中
             console.log(err[attr][&#39;message&#39;]);
         }
-    })</code></pre><h2 id="集合关联"><a href="#集合关联" class="headerlink" title="集合关联"></a>集合关联</h2><pre><code>const userSchema = new mongoose.Schema({
+    })</code></pre><h2 id="集合关联"><a href="#集合关联" class="headerlink" title="集合关联"></a>集合关联</h2><p>通常<strong>不同集合的数据之间是有关系的</strong>，例如文章信息和用户信息存储在不同集合中，但文章是某个用户发表的，要查询文章的所有信息包括发表用户，就需要用到集合关联。</p>
+<ul>
+<li>使用id对集合进行关联</li>
+<li>使用<code>populate</code>方法进行关联集合查询</li>
+</ul>
+<pre><code>const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -627,7 +668,11 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">mongoDB数据库</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -815,42 +860,52 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                <a href="/2020/04/20/Express%E6%A1%86%E6%9E%B6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="mongoDB接数据库">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Express框架">
                         
-                        <span class="card-title">mongoDB接数据库</span>
+                        <span class="card-title">Express框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            mongoDB数据库如何连mongoDB接数据库
-下载mongoos第三方模块npm install mongoose
-引入mongoose第三方模块，用来操作数据库
-用connect方法来连接数据库，参数为mongodb://localh
+                            Express是一个基于Node平台的web应用开放框架，他提供了一系列的强大特性，帮助你创建各种web应用。我们可以使用npm install express 命令下载
+Express框架特性
+提供了方便简洁的路由定义方式
+对获取HTTP
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            XiaoQi
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
+                                    前后端交互
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
+                        <span class="chip bg-color">Express框架</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -861,35 +916,32 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/11/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
+                <a href="/2020/04/16/node.js/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="hexo+github搭建博客">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="node.js">
                         
-                        <span class="card-title">hexo+github搭建博客</span>
+                        <span class="card-title">node.js</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言作为一个一直追随大佬脚步的小菜鸟，一直都想有一个属于自己的博客，但是一直没有付诸行动（主要是不会），但是偶然的一天看到一篇公众号文章标题大概是这样“十分钟带你搭建一个博客”嗯就是这样一个标题激起了我心中的博客之念想，开始蠢蠢欲动跟着步骤
+                            node概念node是基于Chrome V8引擎的JavaScript代码运行环境，全局对象是globle，在node环境下使用node命令执行后缀为.js的文件即可
+CommonJScommonJS是为js的表现制定规范，因为js没有模块
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-category">
-                                    博客搭建
-                                </a>
-                            
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
+                                    前后端交互
                                 </a>
                             
                             
@@ -899,12 +951,8 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-                        <span class="chip bg-color">博客搭建</span>
-                    </a>
-                    
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/node-js/">
+                        <span class="chip bg-color">node.js</span>
                     </a>
                     
                 </div>
@@ -1093,7 +1141,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.8k</span>&nbsp;字
+                class="white-color">22.4k</span>&nbsp;字
             
             
             
