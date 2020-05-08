@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mongoDB数据库, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="博客管理系统, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mongoDB数据库 | XiaoQi&#39;s Blog</title>
+    <title>博客管理系统 | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mongoDB数据库</h1>
+                    <h1 class="description center-align post-title">博客管理系统</h1>
                 </div>
             </div>
         </div>
@@ -433,25 +433,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">mongoDB数据库</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                前后端交互
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -460,14 +447,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-17
+                    2020-04-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-04-26
                 </div>
                 
 
@@ -481,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    6 分
                 </div>
                 
 
@@ -497,116 +484,234 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <table>
-<thead>
-<tr>
-<th>术语</th>
-<th>解释说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>database</td>
-<td>数据库，可建立多个</td>
-</tr>
-<tr>
-<td>collection</td>
-<td>集合，一组数据，相当于js里的数组</td>
-</tr>
-<tr>
-<td>document</td>
-<td>文档，一条具体的数据，相当于js里的对象</td>
-</tr>
-<tr>
-<td>filed</td>
-<td>字段，文档中的属性名称，相当与js中的对象属性</td>
-</tr>
-</tbody></table>
-<h2 id="如何连mongoDB接数据库"><a href="#如何连mongoDB接数据库" class="headerlink" title="如何连mongoDB接数据库"></a>如何连mongoDB接数据库</h2><ol>
-<li>下载<code>mongoos</code>第三方模块<code>npm install mongoose</code> 启动 <code>ner start mongoDB</code></li>
-<li>引入<code>mongoose</code>第三方模块，用来操作数据库</li>
-<li>用<code>connect</code>方法来连接数据库，参数为<code>mongodb://localhost/playground</code>，最后一个是数据库名写上就会自动创建</li>
-<li>分别用<code>.then</code>和<code>.catch</code>对数据库连接成功或失败一个反馈</li>
-</ol>
-<pre><code>const mongoose = require(&#39;mongoose&#39;)
-mongoose.connect(&#39;mongoose://localhost/playground&#39;)
-    .then(() =&gt; console.log(&#39;数据库连接成功&#39;))
-    .catch(() =&gt; console.log(&#39;数据库连接失败&#39;))</code></pre><h2 id="如何创建一个集合以及向集合插入文档"><a href="#如何创建一个集合以及向集合插入文档" class="headerlink" title="如何创建一个集合以及向集合插入文档"></a>如何创建一个集合以及向集合插入文档</h2><ol>
-<li>创建集合规则，用<code>new</code>实例化<code>mongoose</code>，用<code>Schema</code>方法添加规则，规则为字段名和类型</li>
-<li>创建集合，<code>model</code>方法第一个参数是<code>集合名</code>第二个参数是<code>集合规则</code></li>
-<li>创建文档，用<code>new</code>实例化集合，参数为一个对象每一项是具体的字段和值</li>
-<li>将文档保存到数据库，文档名<code>.save()</code></li>
-</ol>
-<pre><code>const personSchema = new mongoose.Schema({
-    name: String,
-    age: Number,
-    hobbies: [String]
-})
-const Person = mongoose.model(&#39;Person&#39;, personSchema)
-const person = new Person({
-    name: &#39;zhangsan&#39;,
-    age: 12,
-    hobbies: [&#39;sing&#39;, &#39;read&#39;]
-})
-person.save()</code></pre><h2 id="集合插入文档的另一种方式"><a href="#集合插入文档的另一种方式" class="headerlink" title="集合插入文档的另一种方式"></a>集合插入文档的另一种方式</h2><p>之前我们插入文档是用<code>new</code>实例化集合，还有一个方式是用集合<code>.create</code>方法参数是一个对象，里面是具体的字段和值，可以用<code>.then</code>查看结果。</p>
-<pre><code>Person.create({ name: &#39;zhangsan&#39;, age: 12, hobbies: [&#39;sing&#39;, &#39;read&#39;] })
-    .then(result =&gt; {console.log(result);})</code></pre><h2 id="文档查询"><a href="#文档查询" class="headerlink" title="文档查询"></a>文档查询</h2><p>文档查询之前可以先建立一个用户信息文件如user.json</p>
-<pre><code>{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f1e5aeb04b22f8460965&quot; }, &quot;name&quot;: &quot;张三&quot;, &quot;age&quot;: 20, &quot;hobbies&quot;: [&quot;足球&quot;, &quot;篮球&quot;, &quot;橄榄球&quot;], &quot;email&quot;: &quot;zhangsan@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; } 
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f236aeb04b22f8460967&quot; }, &quot;name&quot;: &quot;李四&quot;, &quot;age&quot;: 10, &quot;hobbies&quot;: [&quot;足球&quot;, &quot;篮球&quot;], &quot;email&quot;: &quot;lisi@itcast.cn&quot;, &quot;password&quot;: &quot;654321&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f267aeb04b22f8460968&quot; }, &quot;name&quot;: &quot;王五&quot;, &quot;age&quot;: 25, &quot;hobbies&quot;: [&quot;敲代码&quot;], &quot;email&quot;: &quot;wangwu@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f294aeb04b22f8460969&quot; }, &quot;name&quot;: &quot;赵六&quot;, &quot;age&quot;: 50, &quot;hobbies&quot;: [&quot;吃饭&quot;, &quot;睡觉&quot;, &quot;打豆豆&quot;], &quot;email&quot;: &quot;zhaoliu@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f2b6aeb04b22f846096a&quot; }, &quot;name&quot;: &quot;王二麻子&quot;, &quot;age&quot;: 32, &quot;hobbies&quot;: [&quot;吃饭&quot;], &quot;email&quot;: &quot;wangermazi@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f2d9aeb04b22f846096b&quot; }, &quot;name&quot;: &quot;狗蛋&quot;, &quot;age&quot;: 14, &quot;hobbies&quot;: [&quot;打豆豆&quot;], &quot;email&quot;: &quot;goudan@163.com&quot;, &quot;password&quot;: &quot;123456&quot; }</code></pre><p>创建好集合之后用导入数据：<code>mongoimport -d 数据库名 -c 集合名 --file 要导入文件的路径</code></p>
-<p>然后再找到<code>mongodb</code>数据库的安装目录，将安装目录下的<code>bin目录</code>放置在环境变量中。</p>
-<p><code>find()</code>查询指定集合的所有文档</p>
-<pre><code>Person.find().then(result =&gt; console.log(result))</code></pre><p><code>find({条件})</code>查询指定集合中满足条件的文档</p>
-<pre><code>Person.find({name:&#39;李四&#39;}).then(result=&gt;console.log(result))</code></pre><p><code>find({字段:{$gt:开始范围 , $lt: 结束范围}})</code>查询字段位于之间的文档 <code>&amp;lt小于</code>   <code>&amp;gt大于</code></p>
-<pre><code>Person.find({age:{$gt:20,$lt40}}).then(result=&gt;console.log(result))</code></pre><p><code>find({字段:{$in:包含项}})</code></p>
-<pre><code>Person.find({hobbies:{$in:[&#39;sing&#39;]}}).then(result=&gt;console.log(result))</code></pre><p><code>find().select(&#39;字段1，字段2..&#39;)</code>查询指定字段，字段前加<code>-</code>，可以去除字段</p>
-<pre><code>Person.find().select(&#39;name,age,-id&#39;).then(result=&gt;console.log(result))</code></pre><p><code>find().sort(&#39;排序字段&#39;)</code>默认按升序排序，加<code>-</code>按降序排序</p>
-<pre><code>Person.find().sort(&#39;-age&#39;).then(result=&gt;console.log(result))</code></pre><p><code>find().skip(跳过的条数).limit(限制显示结果的条数)</code></p>
-<pre><code>Person.find.skip(2).limit(3).then(result=&gt;console.log(result))</code></pre><p><code>findOne()</code>返回指定集合第一个文档</p>
-<pre><code>Person.findOne().then(result=&gt;console.log(result))</code></pre><p><code>findOne({条件})</code>返回指定集合满足条件的第一个文档</p>
-<pre><code>Person.findOne({age:14}).then(result=&gt;console.log(result))</code></pre><h2 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h2><p>查找一条文档并且删除，返回的是删除的文档，匹配多个文档会删除第一条</p>
-<pre><code>Person.findOneAndDelete({name:&#39;张三&#39;}).then(result =&gt; console.log(result))</code></pre><p>删除多个文档，不加条件会删除全部文档</p>
-<pre><code>Person.deleteMany({}).then(result =&gt; console.log(result))</code></pre><h2 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h2><p>更新一条文档</p>
-<pre><code>Person.updateOne({ name: &#39;李四&#39; }, { name: &#39;李小四&#39;, age: 18 }).then(result =&gt; console.log(result))</code></pre><p>更新全部文档</p>
-<pre><code>Person.updateMany({}, { age: 0 }).then(result =&gt; console.log(result))</code></pre><h2 id="mongoose验证"><a href="#mongoose验证" class="headerlink" title="mongoose验证"></a>mongoose验证</h2><p>在集合规则中有很多验证规则</p>
-<p><code>required</code>必填项，<code>typt</code>字段类型，<code>minlength</code>最小长度，<code>maxlength</code>最大长度，<code>min</code>最小值，<code>max</code>最大值，<code>trim:true</code>去掉首尾空格，<code>default</code>默认值，<code>enum:{values:[]}</code>枚举，<code>validate:{validator:v=&gt;{return v&amp;&amp;v.length&gt;4}}</code>自定义验证程序</p>
-<p><code>message</code>错误提示的获得，在向集合插入文档时的错误信息定义成如下</p>
-<pre><code>.catch(error =&gt; {
-        // 获取错误信息对象
-        const err = error.errors;
-        // 循环错误信息对象
-        for (var attr in err) {
-            // 将错误信息打印到控制台中
-            console.log(err[attr][&#39;message&#39;]);
-        }
-    })</code></pre><h2 id="集合关联"><a href="#集合关联" class="headerlink" title="集合关联"></a>集合关联</h2><p>通常<strong>不同集合的数据之间是有关系的</strong>，例如文章信息和用户信息存储在不同集合中，但文章是某个用户发表的，要查询文章的所有信息包括发表用户，就需要用到集合关联。</p>
+                <p>博客管理系统</p>
 <ul>
-<li>使用id对集合进行关联</li>
-<li>使用<code>populate</code>方法进行关联集合查询</li>
+<li>博客内容展示</li>
+<li>博客管理功能</li>
 </ul>
-<pre><code>const userSchema = new mongoose.Schema({
-    name: {
+<h2 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h2><p>1.建立文件所需文件夹</p>
+<ul>
+<li>public静态资源</li>
+<li>model数据库操作</li>
+<li>route路由</li>
+<li>views模板</li>
+</ul>
+<p>2.初始化项目描述文件</p>
+<ul>
+<li>npm init -y</li>
+</ul>
+<p>3.下载项目所需第三方模块</p>
+<ul>
+<li>npm install express mongooser art-template express-art-template</li>
+</ul>
+<p>4.创建网站服务器</p>
+<pre><code>//根目录的app.js文件
+
+//引入Express框架
+const express = require(&#39;express&#39;);
+//创建网站服务器
+const app = express();
+
+//监听端口
+app.listen(80);</code></pre><p>5.构建模块化路由</p>
+<p>在route文件夹下建立两个页面有两个路由home展示页面和admin管理页面</p>
+<pre><code>//route文件夹下面的home.js
+
+//引入Express框架
+const express = require(&#39;express&#39;);
+//创建博客展示页面路由
+const home = express.Router();
+
+//挂载二级路由 博客首页
+home.get(&#39;/&#39;, require(&#39;./home/index&#39;));
+
+//将路由对象作为模块成员进行导出
+module.exports = home;</code></pre><pre><code>//要使路由生效必须在app.js里面去引入，然后用use拦截匹配路径
+
+//引入路由模块
+const home = require(&#39;./route/home&#39;);
+const admin = require(&#39;./route/admin&#39;);
+//为路由匹配请求路径
+app.use(&#39;/home&#39;, home);
+app.use(&#39;/admin&#39;, admin);</code></pre><p>6.构建博客管理页面模块</p>
+<p>​      6.1.把静态资源放在public文件夹中，再把静态页面开放出去</p>
+<pre><code>//导入处理路径模块
+const path = require(&#39;path&#39;);
+
+//开放静态资源文件
+app.use(express.static(path.join(__dirname, &#39;public&#39;)));</code></pre><p>​      6.2.要再.htnl文件里做一些动态的操作，所有它不算静态页面。要将它移动到views文件夹里并且后缀改为.art,然后再路由里渲染模板</p>
+<pre><code>//为避免每次都要配置模板路径，要在app.js中做统一设置
+
+//告诉express框架模板所在的位置
+app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;));
+//告诉express框架模块的默认后缀
+app.set(&#39;view engine&#39;, &#39;art&#39;);
+//当渲染后缀为art的模板时，所使用的模板引擎是什么
+app.engine(&#39;art&#39;, require(&#39;express-art-template&#39;));</code></pre><pre><code>//渲染登录页面的路由 route/admin.js
+admin.get(&#39;/login&#39;, require(&#39;./admin/loginPage&#39;));
+
+//  route/admin/loginPage.js
+module.exports = (req, res) =&gt; {
+    res.render(&#39;admin/login&#39;);
+}</code></pre><p>​      6.3.模板外链资源，相对路径改为绝对路径，其中<code>/</code>就代表绝对路径，再外链资源前加上<code>/admin/</code>或<code>/home/</code>就可以了</p>
+<p>​      6.4. 优化模板，将公共部分和骨架抽离出来</p>
+<pre><code>//公共部分位置  views/admin/common/header.art
+
+//在一个文件内引入回来
+{{include './common/header.art'}}</code></pre><pre><code>//骨架部分位置 views/admin/common/layout.art
+//不相同的地方要预留坑位 以不同的名字区分
+{{block 'link'}}{{/block}}
+{{block 'main'}}{{/block}}
+{{block 'script'}}{{/block}}
+
+//在文件中引入回来 先继承再填坑
+{{extend './common/layout.art'}}
+{{block 'main'}}
+&lt;p class=&#39;bg-danger error&#39;&gt;{{msg}}&lt;/p&gt;
+{{/block}}</code></pre><h2 id="项目功能的实现"><a href="#项目功能的实现" class="headerlink" title="项目功能的实现"></a>项目功能的实现</h2><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><ol>
+<li><p>创建用户集合，初始化用户</p>
+<p>​      1.1连接数据库（model/connect.js）</p>
+<pre><code>//引入mongoose这个第三方模块
+const mongoose = require(&#39;mongoose&#39;);
+
+//连接数据库
+mongoose.connect(`mongodb://${config.get(&#39;db.user&#39;)}:${config.get(&#39;db.pwd&#39;)}@${config.get(&#39;db.host&#39;)}:${config.get(&#39;db.port&#39;)}/${config.get(&#39;db.name&#39;)}`, { useNewUrlParser: true })
+    .then(() =&gt; console.log(&#39;数据库连接成功&#39;))
+    .catch(() =&gt; console.log(&#39;数据库连接失败&#39;))
+
+//在app.js中引入
+//数据库连接
+require(&#39;./model/connect&#39;);</code></pre><p>​      1.2创建用户集合（model/user.js）</p>
+<pre><code>//引入mongoose这个第三方模块
+const mongoose = require(&#39;mongoose&#39;);
+
+//创建集合规则
+const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true,
+        minlength: 2,
+        maxlength: 20
+    },
+    email: {
+        type: String,
+        //保证唯一性
+        unique: true,
+        required: true
+    },
+    password: {
         type: String,
         required: true
+    },
+    //admin超级管理员  normal普通用户
+    role: {
+        type: String,
+        required: true
+    },
+    //状态0为启用 1为禁用
+    state: {
+        type: Number,
+        default: 0
     }
 });
-const postSchema = new mongoose.Schema({
-    title: String,
-    author: {
-        //类型为id，固定写法
-        type: mongoose.Schema.Types.ObjectId,
-        //关联集合user
-        ref: &#39;User&#39;
+//创建集合
+const User = mongoose.model(&#39;User&#39;, userSchema);
+
+//将用户集合作为模块成员进行导出
+module.exports = {User}</code></pre><p>​      1.3 初始化用户</p>
+<pre><code>//导入bcrypt加密模块
+const bcrypt = require(&#39;bcrypt&#39;);
+
+//创建文档
+async function createUser() {
+    const salt = await bcrypt.genSalt(10);
+    const pass = await bcrypt.hash(&#39;123456&#39;, salt);
+    const user = await User.create({
+        username: &#39;yang&#39;,
+        email: &#39;1678271576@qq.com&#39;,
+        password: pass,
+        role: &#39;admin&#39;,
+        state: 0
+    });
+}
+//createUser();</code></pre></li>
+<li><p>为登录表单项设置请求地址、请求方式以及表单项name属性</p>
+</li>
+<li><p>当用户点击登录按钮时，客户端验证用户是否填写了登录表单</p>
+<pre class=" language-html"><code class="language-html">// 用户点击登录按钮获取用户填写内容 public/admin/js/common.js
+
+function serializeToJson(form) {
+    var result = {};
+    //serializeArray()获取表单用户输入的内容[{name:'',value:'用户输入的内容'}]
+    var f = form.serializeArray();
+    f.forEach(function(item) {
+        result[item.name] = item.value;
+    });
+    //{email:'',password:''}
+    return result;
+}</code></pre>
+</li>
+<li><p>如果其中一项没有输入，阻止表单提交</p>
+<script src="/admin/js/common.js"></script>  //可放在views/admin/layout.art
+<script>
+$('#loginForm').on('submit',function(){
+    var result = serializeToJson($(this))
+    if(result.email.trim().length==0){
+        alert('请输入邮箱地址');
+        //阻止程序向下执行
+        return false;
+    }
+        if(result.password.trim().length==0){
+        alert('请输入密码')
+        //阻止程序向下执行
+        return false;
     }
 })
-const Post = mongoose.model(&#39;Post&#39;, postSchema);
-const User = mongoose.model(&#39;User&#39;, userSchema)
-Post.create({ title: &#39;123&#39;, author: &#39;5c0caae2c4e4081c28439791&#39; }).then(result =&gt; console.log(result));
-User.create({ name: &#39;李四&#39; }).then(result =&gt; console.log(result))
-    //populate()关联集合查询
-Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</code></pre>
+</script>
+</li>
+<li><p>服务器端接收请求参数，验证用户是否填写了登录表单</p>
+</li>
+<li><p>如果其中一项没有输入，为客户端做出响应，阻止程序向下执行</p>
+<p>​      先下载接收post请求参数的第三方模块<code>npm install body-parser</code></p>
+<pre><code>//引入body-parser模块用来处理post请求参数    app.js里
+const bodyParser = require(&#39;body-parser&#39;);
+
+//处理post请求参数
+app.use(bodyParser.urlencoded({ extended: false }));  </code></pre><pre><code>//引入实现登录功能    route/admin.js
+admin.post(&#39;/login&#39;, require(&#39;./admin/login&#39;))</code></pre><pre><code>//实现登录功能  route/admin/login.js
+module.exports = async(req, res) =&gt; {
+   //接收请求参数
+   const { email, password } = req.body;
+   if (email.trim().length == 0 || password.trim().length == 0) {
+       return res.status(400).render(&#39;admin/error&#39;, { msg: &#39;邮件地址或密码错误&#39; })
+   }</code></pre><pre><code>//错误信息的显示   views/error.art
+{{extend './common/layout.art'}}
+{{block 'main'}}
+&lt;p class=&#39;bg-danger error&#39;&gt;{{msg}}&lt;/p&gt;
+{{/block}}
+{{block 'script'}}
+&lt;script&gt;
+setTimeout(function () {
+   location.href=&#39;/admin/login&#39;
+},3000)
+&lt;/script&gt;
+{{/block}}</code></pre></li>
+<li><p>根据邮箱地址查询用户信息</p>
+</li>
+<li><p>如果用户不存在，为客户端做出响应，阻止程序向下执行</p>
+</li>
+<li><p>如果用户存在，将用户名和密码进行比对</p>
+</li>
+<li><p>比对成功，用户登录成功</p>
+</li>
+<li><p>比对失败，用户登录失败</p>
+</li>
+<li><p>保存登录状态</p>
+</li>
+<li><p>密码加密处理 </p>
+<pre><code></code></pre></li>
+</ol>
+
             </div>
             <hr/>
 
@@ -631,7 +736,7 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.iamys.club/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">https://www.iamys.club/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</a>
+                    <a href="https://www.iamys.club/2020/04/25/%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">https://www.iamys.club/2020/04/25/%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -668,11 +773,7 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">mongoDB数据库</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -864,6 +965,62 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/05/08/Ajax/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Ajax">
+                        
+                        <span class="card-title">Ajax</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Ajax的作用浏览器提供的一个方法，可以实现无刷新更新数据，提高用户浏览应用的体验。
+Ajax的应用场景
+页面上拉加载更多数据
+列表数据无刷新分页
+表单项离开焦点数据验证
+搜索框提示文字下拉列表
+
+Ajax运行原理及实现Ajax运行原理Aj
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
+                                    前后端交互
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Ajax/">
+                        <span class="chip bg-color">Ajax</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/04/20/Express%E6%A1%86%E6%9E%B6/">
                     <div class="card-image">
                         
@@ -883,9 +1040,9 @@ Express框架特性
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -903,56 +1060,6 @@ Express框架特性
                     
                     <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
                         <span class="chip bg-color">Express框架</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/16/node.js/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="node.js">
-                        
-                        <span class="card-title">node.js</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            node概念node是基于Chrome V8引擎的JavaScript代码运行环境，全局对象是globle，在node环境下使用node命令执行后缀为.js的文件即可
-CommonJScommonJS是为js的表现制定规范，因为js没有模块
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                    前后端交互
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/node-js/">
-                        <span class="chip bg-color">node.js</span>
                     </a>
                     
                 </div>

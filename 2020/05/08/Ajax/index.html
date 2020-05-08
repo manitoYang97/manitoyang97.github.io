@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mongoDB数据库, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="Ajax, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mongoDB数据库 | XiaoQi&#39;s Blog</title>
+    <title>Ajax | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mongoDB数据库</h1>
+                    <h1 class="description center-align post-title">Ajax</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                <span class="chip bg-color">mongoDB数据库</span>
+                            <a href="/tags/Ajax/">
+                                <span class="chip bg-color">Ajax</span>
                             </a>
                         
                     </div>
@@ -460,28 +460,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-17
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-05-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    10 分
                 </div>
                 
 
@@ -497,116 +497,198 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <table>
-<thead>
-<tr>
-<th>术语</th>
-<th>解释说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>database</td>
-<td>数据库，可建立多个</td>
-</tr>
-<tr>
-<td>collection</td>
-<td>集合，一组数据，相当于js里的数组</td>
-</tr>
-<tr>
-<td>document</td>
-<td>文档，一条具体的数据，相当于js里的对象</td>
-</tr>
-<tr>
-<td>filed</td>
-<td>字段，文档中的属性名称，相当与js中的对象属性</td>
-</tr>
-</tbody></table>
-<h2 id="如何连mongoDB接数据库"><a href="#如何连mongoDB接数据库" class="headerlink" title="如何连mongoDB接数据库"></a>如何连mongoDB接数据库</h2><ol>
-<li>下载<code>mongoos</code>第三方模块<code>npm install mongoose</code> 启动 <code>ner start mongoDB</code></li>
-<li>引入<code>mongoose</code>第三方模块，用来操作数据库</li>
-<li>用<code>connect</code>方法来连接数据库，参数为<code>mongodb://localhost/playground</code>，最后一个是数据库名写上就会自动创建</li>
-<li>分别用<code>.then</code>和<code>.catch</code>对数据库连接成功或失败一个反馈</li>
+                <h3 id="Ajax的作用"><a href="#Ajax的作用" class="headerlink" title="Ajax的作用"></a>Ajax的作用</h3><p>浏览器提供的一个方法，可以实现无刷新更新数据，提高用户浏览应用的体验。</p>
+<h3 id="Ajax的应用场景"><a href="#Ajax的应用场景" class="headerlink" title="Ajax的应用场景"></a>Ajax的应用场景</h3><ol>
+<li>页面上拉加载更多数据</li>
+<li>列表数据无刷新分页</li>
+<li>表单项离开焦点数据验证</li>
+<li>搜索框提示文字下拉列表</li>
 </ol>
-<pre><code>const mongoose = require(&#39;mongoose&#39;)
-mongoose.connect(&#39;mongoose://localhost/playground&#39;)
-    .then(() =&gt; console.log(&#39;数据库连接成功&#39;))
-    .catch(() =&gt; console.log(&#39;数据库连接失败&#39;))</code></pre><h2 id="如何创建一个集合以及向集合插入文档"><a href="#如何创建一个集合以及向集合插入文档" class="headerlink" title="如何创建一个集合以及向集合插入文档"></a>如何创建一个集合以及向集合插入文档</h2><ol>
-<li>创建集合规则，用<code>new</code>实例化<code>mongoose</code>，用<code>Schema</code>方法添加规则，规则为字段名和类型</li>
-<li>创建集合，<code>model</code>方法第一个参数是<code>集合名</code>第二个参数是<code>集合规则</code></li>
-<li>创建文档，用<code>new</code>实例化集合，参数为一个对象每一项是具体的字段和值</li>
-<li>将文档保存到数据库，文档名<code>.save()</code></li>
+<h2 id="Ajax运行原理及实现"><a href="#Ajax运行原理及实现" class="headerlink" title="Ajax运行原理及实现"></a>Ajax运行原理及实现</h2><h3 id="Ajax运行原理"><a href="#Ajax运行原理" class="headerlink" title="Ajax运行原理"></a>Ajax运行原理</h3><p>Ajax相当于浏览器发送请求与接收响应的代理人，以实现在不影响用户浏览页面的情况下，局部更新数据，从而提高用户体验。</p>
+<h3 id="Ajax的实现步骤"><a href="#Ajax的实现步骤" class="headerlink" title="Ajax的实现步骤"></a>Ajax的实现步骤</h3><ol>
+<li><p>创建Ajax对象</p>
+<pre><code>var xhr = new XHLHttpRequest()</code></pre></li>
+<li><p>告诉Ajax请求地址以及请求方式</p>
+<pre><code>xhr.open(&#39;get&#39;,&#39;http://localhost:3000&#39;)</code></pre></li>
+<li><p>发送请求</p>
+<pre><code>xhr.send()</code></pre></li>
+<li><p>获取服务器端给客服端的响应数据</p>
+<pre><code>xhr.onload = function(){
+     console.log(xhr.responseText)
+}</code></pre><h3 id="服务器端响应的数据格式"><a href="#服务器端响应的数据格式" class="headerlink" title="服务器端响应的数据格式"></a>服务器端响应的数据格式</h3><p>服务器端大多数情况下会以JSON对象作为响应数据的格式，客户端拿到数据时要将JSON数据和HTML字符串进行拼接，再把拼接好的结果展示在页面</p>
+</li>
 </ol>
-<pre><code>const personSchema = new mongoose.Schema({
-    name: String,
-    age: Number,
-    hobbies: [String]
-})
-const Person = mongoose.model(&#39;Person&#39;, personSchema)
-const person = new Person({
-    name: &#39;zhangsan&#39;,
-    age: 12,
-    hobbies: [&#39;sing&#39;, &#39;read&#39;]
-})
-person.save()</code></pre><h2 id="集合插入文档的另一种方式"><a href="#集合插入文档的另一种方式" class="headerlink" title="集合插入文档的另一种方式"></a>集合插入文档的另一种方式</h2><p>之前我们插入文档是用<code>new</code>实例化集合，还有一个方式是用集合<code>.create</code>方法参数是一个对象，里面是具体的字段和值，可以用<code>.then</code>查看结果。</p>
-<pre><code>Person.create({ name: &#39;zhangsan&#39;, age: 12, hobbies: [&#39;sing&#39;, &#39;read&#39;] })
-    .then(result =&gt; {console.log(result);})</code></pre><h2 id="文档查询"><a href="#文档查询" class="headerlink" title="文档查询"></a>文档查询</h2><p>文档查询之前可以先建立一个用户信息文件如user.json</p>
-<pre><code>{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f1e5aeb04b22f8460965&quot; }, &quot;name&quot;: &quot;张三&quot;, &quot;age&quot;: 20, &quot;hobbies&quot;: [&quot;足球&quot;, &quot;篮球&quot;, &quot;橄榄球&quot;], &quot;email&quot;: &quot;zhangsan@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; } 
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f236aeb04b22f8460967&quot; }, &quot;name&quot;: &quot;李四&quot;, &quot;age&quot;: 10, &quot;hobbies&quot;: [&quot;足球&quot;, &quot;篮球&quot;], &quot;email&quot;: &quot;lisi@itcast.cn&quot;, &quot;password&quot;: &quot;654321&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f267aeb04b22f8460968&quot; }, &quot;name&quot;: &quot;王五&quot;, &quot;age&quot;: 25, &quot;hobbies&quot;: [&quot;敲代码&quot;], &quot;email&quot;: &quot;wangwu@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f294aeb04b22f8460969&quot; }, &quot;name&quot;: &quot;赵六&quot;, &quot;age&quot;: 50, &quot;hobbies&quot;: [&quot;吃饭&quot;, &quot;睡觉&quot;, &quot;打豆豆&quot;], &quot;email&quot;: &quot;zhaoliu@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f2b6aeb04b22f846096a&quot; }, &quot;name&quot;: &quot;王二麻子&quot;, &quot;age&quot;: 32, &quot;hobbies&quot;: [&quot;吃饭&quot;], &quot;email&quot;: &quot;wangermazi@itcast.cn&quot;, &quot;password&quot;: &quot;123456&quot; }
-{ &quot;_id&quot;: { &quot;$oid&quot;: &quot;5c09f2d9aeb04b22f846096b&quot; }, &quot;name&quot;: &quot;狗蛋&quot;, &quot;age&quot;: 14, &quot;hobbies&quot;: [&quot;打豆豆&quot;], &quot;email&quot;: &quot;goudan@163.com&quot;, &quot;password&quot;: &quot;123456&quot; }</code></pre><p>创建好集合之后用导入数据：<code>mongoimport -d 数据库名 -c 集合名 --file 要导入文件的路径</code></p>
-<p>然后再找到<code>mongodb</code>数据库的安装目录，将安装目录下的<code>bin目录</code>放置在环境变量中。</p>
-<p><code>find()</code>查询指定集合的所有文档</p>
-<pre><code>Person.find().then(result =&gt; console.log(result))</code></pre><p><code>find({条件})</code>查询指定集合中满足条件的文档</p>
-<pre><code>Person.find({name:&#39;李四&#39;}).then(result=&gt;console.log(result))</code></pre><p><code>find({字段:{$gt:开始范围 , $lt: 结束范围}})</code>查询字段位于之间的文档 <code>&amp;lt小于</code>   <code>&amp;gt大于</code></p>
-<pre><code>Person.find({age:{$gt:20,$lt40}}).then(result=&gt;console.log(result))</code></pre><p><code>find({字段:{$in:包含项}})</code></p>
-<pre><code>Person.find({hobbies:{$in:[&#39;sing&#39;]}}).then(result=&gt;console.log(result))</code></pre><p><code>find().select(&#39;字段1，字段2..&#39;)</code>查询指定字段，字段前加<code>-</code>，可以去除字段</p>
-<pre><code>Person.find().select(&#39;name,age,-id&#39;).then(result=&gt;console.log(result))</code></pre><p><code>find().sort(&#39;排序字段&#39;)</code>默认按升序排序，加<code>-</code>按降序排序</p>
-<pre><code>Person.find().sort(&#39;-age&#39;).then(result=&gt;console.log(result))</code></pre><p><code>find().skip(跳过的条数).limit(限制显示结果的条数)</code></p>
-<pre><code>Person.find.skip(2).limit(3).then(result=&gt;console.log(result))</code></pre><p><code>findOne()</code>返回指定集合第一个文档</p>
-<pre><code>Person.findOne().then(result=&gt;console.log(result))</code></pre><p><code>findOne({条件})</code>返回指定集合满足条件的第一个文档</p>
-<pre><code>Person.findOne({age:14}).then(result=&gt;console.log(result))</code></pre><h2 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h2><p>查找一条文档并且删除，返回的是删除的文档，匹配多个文档会删除第一条</p>
-<pre><code>Person.findOneAndDelete({name:&#39;张三&#39;}).then(result =&gt; console.log(result))</code></pre><p>删除多个文档，不加条件会删除全部文档</p>
-<pre><code>Person.deleteMany({}).then(result =&gt; console.log(result))</code></pre><h2 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h2><p>更新一条文档</p>
-<pre><code>Person.updateOne({ name: &#39;李四&#39; }, { name: &#39;李小四&#39;, age: 18 }).then(result =&gt; console.log(result))</code></pre><p>更新全部文档</p>
-<pre><code>Person.updateMany({}, { age: 0 }).then(result =&gt; console.log(result))</code></pre><h2 id="mongoose验证"><a href="#mongoose验证" class="headerlink" title="mongoose验证"></a>mongoose验证</h2><p>在集合规则中有很多验证规则</p>
-<p><code>required</code>必填项，<code>typt</code>字段类型，<code>minlength</code>最小长度，<code>maxlength</code>最大长度，<code>min</code>最小值，<code>max</code>最大值，<code>trim:true</code>去掉首尾空格，<code>default</code>默认值，<code>enum:{values:[]}</code>枚举，<code>validate:{validator:v=&gt;{return v&amp;&amp;v.length&gt;4}}</code>自定义验证程序</p>
-<p><code>message</code>错误提示的获得，在向集合插入文档时的错误信息定义成如下</p>
-<pre><code>.catch(error =&gt; {
-        // 获取错误信息对象
-        const err = error.errors;
-        // 循环错误信息对象
-        for (var attr in err) {
-            // 将错误信息打印到控制台中
-            console.log(err[attr][&#39;message&#39;]);
-        }
-    })</code></pre><h2 id="集合关联"><a href="#集合关联" class="headerlink" title="集合关联"></a>集合关联</h2><p>通常<strong>不同集合的数据之间是有关系的</strong>，例如文章信息和用户信息存储在不同集合中，但文章是某个用户发表的，要查询文章的所有信息包括发表用户，就需要用到集合关联。</p>
+<p>   在http请求和响应的过程中，无论时请求参数还是请求参数还是响应内容，如果时对象类型，最终都会被转换为对象字符串进行传输。</p>
+<pre><code>   JSON.parse()  //将json字符串转换为json对象</code></pre><pre><code>   JSON.stringify() // 将json对象转换为json字符串</code></pre><p>   在请求头中指定 Content-Type 属性的值是 application/json，告诉服务器端当前请求参数的格式是 json。</p>
+<p>   注意：get 请求是不能提交 json 对象数据格式的，传统网站的表单提交也是不支持 json 对象数据格式的。</p>
+<h3 id="请求参数传递"><a href="#请求参数传递" class="headerlink" title="请求参数传递"></a>请求参数传递</h3><p>   GET请求方式</p>
+<pre><code>   xhr.open(&#39;get&#39;,&#39;http://www.example.com?name=zhangsan&amp;age=20&#39;)</code></pre><p>   POST请求方式</p>
+<pre><code>   xhr.setRequestHeader(&#39;Content-Type&#39;,&#39;application/x-www-form-urlencoded&#39;)
+   xhr.send(&#39;name=zhangsan&amp;age=20&#39;)</code></pre><h3 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h3><p>   在http请求和响应的过程中传递的数据块就叫做报文，，包括要传送的数据和一些附加信息，这些数据和信息要遵守规定好的格式。</p>
+<p>   请求参数的格式</p>
+<ol>
+<li><p>application/x-www-form-urlencoded</p>
+<pre><code> name=zhangsan&amp;age=20&amp;sex=男</code></pre></li>
+<li><p>application/json</p>
+<pre><code> {name: &#39;zhangsan&#39;, age: &#39;20&#39;, sex: &#39;男&#39;}</code></pre></li>
+</ol>
+<h3 id="获取服务器的响应"><a href="#获取服务器的响应" class="headerlink" title="获取服务器的响应"></a>获取服务器的响应</h3><h4 id="Ajax状态码"><a href="#Ajax状态码" class="headerlink" title="Ajax状态码"></a>Ajax状态码</h4><p>在创建ajax对象，配置ajax对象，发送请求，以及接收完服务器端响应数据，这个过程中的每一个步骤都会对应一个数值，这个数值就是ajax状态码。</p>
 <ul>
-<li>使用id对集合进行关联</li>
-<li>使用<code>populate</code>方法进行关联集合查询</li>
+<li>0：请求未初始化(还没有调用open())</li>
+<li>1：请求已经建立，但是还没有发送(还没有调用send())</li>
+<li>2：请求已经发送</li>
+<li>3：请求正在处理中，通常响应中已经有部分数据可以用了</li>
+<li>4：响应已经完成，可以获取并使用服务器的响应了</li>
 </ul>
-<pre><code>const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    }
-});
-const postSchema = new mongoose.Schema({
-    title: String,
-    author: {
-        //类型为id，固定写法
-        type: mongoose.Schema.Types.ObjectId,
-        //关联集合user
-        ref: &#39;User&#39;
-    }
-})
-const Post = mongoose.model(&#39;Post&#39;, postSchema);
-const User = mongoose.model(&#39;User&#39;, userSchema)
-Post.create({ title: &#39;123&#39;, author: &#39;5c0caae2c4e4081c28439791&#39; }).then(result =&gt; console.log(result));
-User.create({ name: &#39;李四&#39; }).then(result =&gt; console.log(result))
-    //populate()关联集合查询
-Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</code></pre>
+<pre><code> xhr.readyState // 获取Ajax状态码</code></pre><h4 id="onreadystatechange事件"><a href="#onreadystatechange事件" class="headerlink" title="onreadystatechange事件"></a>onreadystatechange事件</h4><p>当Ajax状态码发生变化时自动触发该事件</p>
+<p>在事件处理函数中可以获取 Ajax 状态码并对其进行判断，当状态码为 4 时就可以通过 xhr.responseText 获取服务器端的响应数据了。</p>
+<pre><code> // 当Ajax状态码发生变化时
+ xhr.onreadystatechange = function () {
+     // 判断当Ajax状态码为4时
+     if (xhr.readyState == 4) {
+         // 获取服务器端的响应数据
+         console.log(xhr.responseText);
+     }
+ }</code></pre><h3 id="Ajax错误处理"><a href="#Ajax错误处理" class="headerlink" title="Ajax错误处理"></a>Ajax错误处理</h3><ol>
+<li>网络畅通，服务器端能接收到请求，服务器端返回的结果不是预期结果。</li>
+</ol>
+<p>​       可以判断服务器端返回的状态码，分别进行处理。xhr.status 获取http状态码</p>
+<ol start="2">
+<li>网络畅通，服务器端没有接收到请求，返回404状态码。</li>
+</ol>
+<p>​       检查请求地址是否错误。</p>
+<ol start="3">
+<li>网络畅通，服务器端能接收到请求，服务器端返回500状态码。</li>
+</ol>
+<p>​        服务器端错误，找后端程序员进行沟通。</p>
+<ol start="4">
+<li>网络中断，请求无法发送到服务器端。</li>
+</ol>
+<p>​      会触发xhr对象下面的onerror事件，在onerror事件处理函数中对错误进行处理。</p>
+<h3 id="低版本ie浏览器的缓存问题"><a href="#低版本ie浏览器的缓存问题" class="headerlink" title="低版本ie浏览器的缓存问题"></a>低版本ie浏览器的缓存问题</h3><p>解决方案：在请求地址的后面加请求参数，保证每一次请求中的请求参数的值不相同</p>
+<pre><code> xhr.open(&#39;get&#39;, &#39;http://www.example.com?t=&#39; + Math.random());</code></pre><h3 id="Ajax异步编程"><a href="#Ajax异步编程" class="headerlink" title="Ajax异步编程"></a>Ajax异步编程</h3><ul>
+<li>一个人一件事情做了一半，转而去做其他事情，当其他事情做完以后，再回过头来继续做之前未完成的事情。</li>
+<li>落实到代码上，就是异步代码虽然需要花费时间去执行，但程序不会等待异步代码执行完成后再继续执行后续代码，而是直接执行后续代码，当后续代码执行完成后再回头看异步代码是否返回结果，如果已有返回结果，再调用事先准备好的回调函数处理异步代码执行的结果。</li>
+</ul>
+<h2 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h2><h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><p>1.下载art-template模板引擎文件，并引入</p>
+<pre><code> &lt;script src=&quot;./js/template-web.js&quot;&gt;&lt;/script&gt;</code></pre><p>2.准备模板</p>
+<pre><code> &lt;script id=&quot;tpl&quot; type=&quot;text/html&quot;&gt;
+     &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+ &lt;/script&gt;</code></pre><p>  3.告诉模板引擎将哪一个模板和哪个数据进行拼接</p>
+<pre><code> var html = template(&#39;tpl&#39;, {username: &#39;zhangsan&#39;, age: &#39;20&#39;});</code></pre><p>4.将拼接好的html字符串添加到页面中</p>
+<pre><code> document.getElementById(&#39;container&#39;).innerHTML = html;</code></pre><ol start="5">
+<li>通过模板语法告诉模板引擎，数据和html字符串要如何拼接</li>
+</ol>
+<pre><code> &lt;script id=&quot;tpl&quot; type=&quot;text/html&quot;&gt;
+     &lt;div class=&quot;box&quot;&gt; {{ username }} &lt;/div&gt;
+ &lt;/script&gt;</code></pre><h3 id="FormData-对象的作用"><a href="#FormData-对象的作用" class="headerlink" title="FormData 对象的作用"></a>FormData 对象的作用</h3><p>1.模拟HTML表单，相当于将HTML表单映射成表单对象，自动将表单对象中的数据拼接成请求参数的格式。</p>
+<p>2.异步上传二进制文件</p>
+<p>FormData 对象的使用</p>
+<p>1.有一个HTML表单</p>
+<p>2.将HTML表单转换为formData对象</p>
+<pre><code>var form = document.getElementById(&#39;form&#39;); 
+var formData = new FormData(form);</code></pre><p>3.提交表单对象</p>
+<pre><code>xhr.send(formData)</code></pre><p>注意：</p>
+<ul>
+<li>Formdata 对象不能用于 get 请求，因为对象需要被传递到 send 方法中，而 get 请求方式的请求参数只能放在请求地址的后面。</li>
+<li>服务器端 bodyParser 模块不能解析 formData 对象表单数据，我们需要使用 formidable 模块进行解析。</li>
+</ul>
+<h3 id="formData对象的实例方法"><a href="#formData对象的实例方法" class="headerlink" title="formData对象的实例方法"></a>formData对象的实例方法</h3><ul>
+<li><p>获取表单对象中的属性值</p>
+<pre><code>formData.get(&#39;key&#39;)</code></pre></li>
+<li><p>设置表单对象中的属性的值</p>
+<pre><code>formData.set(&#39;key&#39;,value)</code></pre></li>
+<li><p>删除表单对象中属性的值</p>
+<pre><code>formData.delete(&#39;key&#39;)</code></pre></li>
+<li><p>像表单对象中追加属性值</p>
+<pre><code>formData.append(&#39;key&#39;,&#39;value&#39;)</code></pre><p>注意：set 方法与 append 方法的区别是，在属性名已存在的情况下，set 会覆盖已有键名的值，append会保留两个值。</p>
+</li>
+</ul>
+<h3 id="FormData二进制文件上传"><a href="#FormData二进制文件上传" class="headerlink" title="FormData二进制文件上传"></a>FormData二进制文件上传</h3><pre><code>&lt;input type=&quot;file&quot; id=&quot;file&quot;/&gt;</code></pre><pre><code> var file = document.getElementById(&#39;file&#39;)
+// 当用户选择文件的时候
+ file.onchange = function () {
+     // 创建空表单对象
+     var formData = new FormData();
+     // 将用户选择的二进制文件追加到表单对象中
+     formData.append(&#39;attrName&#39;, this.files[0]);
+     // 配置ajax对象，请求方式必须为post
+     xhr.open(&#39;post&#39;, &#39;www.example.com&#39;);
+     xhr.send(formData);
+ }</code></pre><p>FormData文件上传进度展示</p>
+<pre><code> // 当用户选择文件的时候
+ file.onchange = function () {
+     // 文件上传过程中持续触发onprogress事件
+     xhr.upload.onprogress = function (ev) {
+         // 当前上传文件大小/文件总大小 再将结果转换为百分数
+         // 将结果赋值给进度条的宽度属性 
+         bar.style.width = (ev.loaded / ev.total) * 100 + &#39;%&#39;;
+     }
+ }</code></pre><h3 id="FormData文件上传图片即使预览"><a href="#FormData文件上传图片即使预览" class="headerlink" title="FormData文件上传图片即使预览"></a>FormData文件上传图片即使预览</h3><pre><code> xhr.onload = function () {
+     var result = JSON.parse(xhr.responseText);
+     var img = document.createElement(&#39;img&#39;);
+     img.src = result.src;
+     img.onload = function () {
+         document.body.appendChild(this);
+     }
+ }</code></pre><h2 id="同源政策"><a href="#同源政策" class="headerlink" title="同源政策"></a>同源政策</h2><p><strong>什么时同源</strong>：如果两个页面拥有相同的协议、域名和端口，那么这两个页面就属于同一个源，其中只要有一个不相同，就是不同源。</p>
+<p><strong>同源的目的</strong>：同源政策是为了保证用户信息的安全，防止恶意的网站窃取数据。最初的同源政策是指 A 网站在客户端设置的 Cookie，B网站是不能访问的。随着互联网的发展，同源政策也越来越严格，在不同源的情况下，其中有一项规定就是无法向非同源地址发送Ajax 请求，如果请求，浏览器就会报错。</p>
+<h3 id="使用JSONP解决同源限制问题"><a href="#使用JSONP解决同源限制问题" class="headerlink" title="使用JSONP解决同源限制问题"></a>使用JSONP解决同源限制问题</h3><ol>
+<li><p>将不同源的服务器端请求地址写在 script 标签的 src 属性中</p>
+<pre><code> &lt;script src=“https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre></li>
+<li><p>服务器端响应数据必须是一个函数的调用，真正要发送给客户端的数据需要作为函数调用的参数。</p>
+<pre><code> const data = &#39;fn({name: &quot;张三&quot;, age: &quot;20&quot;})&#39;;
+ res.send(data);</code></pre></li>
+<li><p>在客户端全局作用域下定义函数 fn，并进行处理</p>
+<pre><code> function fn (data) { console.log(data); }</code></pre></li>
+</ol>
+<h4 id="JSONP代码优化"><a href="#JSONP代码优化" class="headerlink" title="JSONP代码优化"></a>JSONP代码优化</h4><p>1.客户端需要将函数名称传递到服务器端。</p>
+<p>2.将 script 请求的发送变成动态请求。</p>
+<p>3.封装 jsonp 函数，方便请求发送。</p>
+<p>4.服务器端代码优化之 res.jsonp 方法。</p>
+<h3 id="CORS跨域资源共享"><a href="#CORS跨域资源共享" class="headerlink" title="CORS跨域资源共享"></a>CORS跨域资源共享</h3><p>CORS：全称为 Cross-origin resource sharing，即跨域资源共享，它允许浏览器向跨域服务器发送 Ajax 请求，克服了 Ajax 只能同源使用的限制。</p>
+<p>浏览器端请求头</p>
+<pre><code> origin: http://localhost:3000</code></pre><p>服务器端响应头</p>
+<pre><code> Access-Control-Allow-Origin: &#39;http://localhost:3000&#39;
+ Access-Control-Allow-Origin: &#39;*&#39;
+
+ //Node服务器设置响应头实例
+  app.use((req, res, next) =&gt; {
+     res.header(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;);
+     res.header(&#39;Access-Control-Allow-Methods&#39;, &#39;GET, POST&#39;);
+     next();
+ })</code></pre><h2 id="jQuery与Ajax"><a href="#jQuery与Ajax" class="headerlink" title="jQuery与Ajax"></a>jQuery与Ajax</h2><h3 id="ajax-发送Ajax请求"><a href="#ajax-发送Ajax请求" class="headerlink" title="$.ajax() :发送Ajax请求"></a>$.ajax() :发送Ajax请求</h3><pre><code> $.ajax({
+     type: &#39;get&#39;,
+     url: &#39;http://www.example.com&#39;,
+     data: { name: &#39;zhangsan&#39;, age: &#39;20&#39; },
+     contentType: &#39;application/x-www-form-urlencoded&#39;,
+     beforeSend: function () { 
+         return false
+     },
+     success: function (response) {},
+     error: function (xhr) {}
+});</code></pre><h3 id="ajax-发送jsonp请求"><a href="#ajax-发送jsonp请求" class="headerlink" title="$.ajax: 发送jsonp请求"></a>$.ajax: 发送jsonp请求</h3><pre><code>$.ajax({
+    url: &#39;http://www.example.com&#39;,
+    // 指定当前发送jsonp请求
+    dataType: &#39;jsonp&#39;,
+    // 修改callback参数名称
+    jsonp: &#39;cb&#39;,
+    // 指定函数名称
+    jsonCallback: &#39;fnName&#39;,
+    success: function (response) {} 
+})</code></pre><h3 id="serialize方法："><a href="#serialize方法：" class="headerlink" title="serialize方法："></a>serialize方法：</h3><p>将表单中的数据自动拼接成字符串类型的参数，获取用户在表单中输入的值</p>
+<pre><code>var params = $(&#39;#form&#39;).serialize();
+// name=zhangsan&amp;age=30</code></pre><h3 id="get-和-post-方法："><a href="#get-和-post-方法：" class="headerlink" title="$.get()和$.post()方法："></a>$.get()和$.post()方法：</h3><p>$.get方法用于发送get请求，$.post方法用于发送post请求</p>
+<h3 id="全局事件"><a href="#全局事件" class="headerlink" title="全局事件"></a>全局事件</h3><p>只要页面有Ajax请求被发送，对应的全局事件就会触发</p>
+<pre><code>.ajaxStart()     // 当请求开始发送时触发
+.ajaxComplete()  // 当请求完成时触发</code></pre><h4 id="NProgress：进度条动画"><a href="#NProgress：进度条动画" class="headerlink" title="NProgress：进度条动画"></a>NProgress：进度条动画</h4><pre><code>NProgress.start();  // 进度条开始运动 
+NProgress.done();   // 进度条结束运动</code></pre><p>RESTful API  一套关于请求风格的规范</p>
+<ul>
+<li>GET：   获取数据</li>
+<li>POST：  添加数据</li>
+<li>PUT：   更新数据</li>
+<li>DELETE： 删除数据</li>
+</ul>
+
             </div>
             <hr/>
 
@@ -631,7 +713,7 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.iamys.club/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">https://www.iamys.club/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</a>
+                    <a href="https://www.iamys.club/2020/05/08/Ajax/">https://www.iamys.club/2020/05/08/Ajax/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -669,8 +751,8 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                                    <span class="chip bg-color">mongoDB数据库</span>
+                                <a href="/tags/Ajax/">
+                                    <span class="chip bg-color">Ajax</span>
                                 </a>
                             
                         </div>
@@ -860,81 +942,36 @@ Post.find().populate(&#39;author&#39;).then(result =&gt; console.log(result))</c
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/04/20/Express%E6%A1%86%E6%9E%B6/">
+                <a href="/2020/05/08/Ajax/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Express框架">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Ajax">
                         
-                        <span class="card-title">Express框架</span>
+                        <span class="card-title">Ajax</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Express是一个基于Node平台的web应用开放框架，他提供了一系列的强大特性，帮助你创建各种web应用。我们可以使用npm install express 命令下载
-Express框架特性
-提供了方便简洁的路由定义方式
-对获取HTTP
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-20
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                    前后端交互
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
-                        <span class="chip bg-color">Express框架</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/04/16/node.js/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="node.js">
-                        
-                        <span class="card-title">node.js</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            node概念node是基于Chrome V8引擎的JavaScript代码运行环境，全局对象是globle，在node环境下使用node命令执行后缀为.js的文件即可
-CommonJScommonJS是为js的表现制定规范，因为js没有模块
+                            Ajax的作用浏览器提供的一个方法，可以实现无刷新更新数据，提高用户浏览应用的体验。
+Ajax的应用场景
+页面上拉加载更多数据
+列表数据无刷新分页
+表单项离开焦点数据验证
+搜索框提示文字下拉列表
+
+Ajax运行原理及实现Ajax运行原理Aj
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                             </span>
                         <span class="publish-author">
                             
@@ -948,13 +985,68 @@ CommonJScommonJS是为js的表现制定规范，因为js没有模块
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/node-js/">
-                        <span class="chip bg-color">node.js</span>
+                    <a href="/tags/Ajax/">
+                        <span class="chip bg-color">Ajax</span>
                     </a>
                     
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/04/25/%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="博客管理系统">
+                        
+                        <span class="card-title">博客管理系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            博客管理系统
+
+博客内容展示
+博客管理功能
+
+项目初始化1.建立文件所需文件夹
+
+public静态资源
+model数据库操作
+route路由
+views模板
+
+2.初始化项目描述文件
+
+npm init -y
+
+3.下载项目所需第三方模块
+
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            XiaoQi
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>
