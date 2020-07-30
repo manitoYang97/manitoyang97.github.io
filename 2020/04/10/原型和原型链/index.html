@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Express框架, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="原型和原型链, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Express框架 | XiaoQi&#39;s Blog</title>
+    <title>原型和原型链 | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Express框架</h1>
+                    <h1 class="description center-align post-title">原型和原型链</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
-                                <span class="chip bg-color">Express框架</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                            <a href="/tags/EC6/">
+                                <span class="chip bg-color">EC6</span>
                             </a>
                         
                     </div>
@@ -447,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                前后端交互
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -460,28 +464,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-04-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-07-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    800
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    3 分
                 </div>
                 
 
@@ -497,117 +501,73 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Express是一个基于Node平台的web应用开放框架，他提供了一系列的强大特性，帮助你创建各种web应用。我们可以使用npm install express 命令下载</p>
-<h2 id="Express框架特性"><a href="#Express框架特性" class="headerlink" title="Express框架特性"></a>Express框架特性</h2><ul>
-<li>提供了方便简洁的路由定义方式</li>
-<li>对获取HTTP请求参数进行了简化处理</li>
-<li>对模板引擎支持程度高，方便渲染动态HTML页面</li>
-<li>提供中间件机制有效控制HTTP请求</li>
-<li>拥有大量中间件对功能进行扩展</li>
-</ul>
-<pre><code>// 引入express框架
-const express = require(&#39;express&#39;);
-// 创建网站服务器
-const app = express();
-app.get(&#39;/&#39; , (req, res) =&gt; {
-    // send()
-    // 1. send方法内部会检测响应内容的类型
-    // 2. send方法会自动设置http状态码
-    // 3. send方法会帮我们自动设置响应的内容类型及编码
-    res.send(&#39;Hello. Express&#39;);
-})
-// 监听端口
-app.listen(3000);</code></pre><h2 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h2><p>中间件就是一堆方法，可以接受客户端放来的请求，可以对请求做出响应，也可以将请求继续交给下一个中间件继续处理。</p>
-<p>中间件由两部分构成，中间件方法以及请求处理函数；中间件方法由Exprss提供，负责拦截请求，请求函数有开发人员提供，负责处理请求。</p>
-<pre><code> app.get(&#39;请求路径&#39;, &#39;处理函数&#39;)   // 接收并处理get请求
- app.post(&#39;请求路径&#39;, &#39;处理函数&#39;)  // 接收并处理post请求</code></pre><p>可以针对同一个请求设置多个中间件，对同一个请求进行多次处理。默认情况下，请求从上到下依次匹配中间件，一旦匹配成功，终止匹配。可以调用next方法将请求的控制权交给下一个中间件，直到遇到结束请求的中间件。</p>
-<pre><code> app.get(&#39;/request&#39;, (req, res, next) =&gt; {
-     req.name = &quot;张三&quot;;
-     next();
- });
- app.get(&#39;/request&#39;, (req, res) =&gt; {
-     res.send(req.name);
- });</code></pre><h3 id="app-use中间件用法"><a href="#app-use中间件用法" class="headerlink" title="app.use中间件用法"></a>app.use中间件用法</h3><p>app.use 匹配所有请求方式，可以直接传入请求处理函数，代表接受所有请求。第一个参数可以省略表示通配。</p>
-<pre><code> app.use(&#39;/admin&#39;, (req, res, next) =&gt; {
-     console.log(req.url);
-     next();
- });</code></pre><h3 id="中间件的应用"><a href="#中间件的应用" class="headerlink" title="中间件的应用"></a>中间件的应用</h3><ol>
-<li>路由保护，客户端在访问需要登录的页面时，可以先使用中间件判断用户登录状态，用户如果未登录，则拦截请求，直接响应，禁止用户进入需要登录的页面。</li>
-<li>网站维护公告，在所有路由的最上面定义接收所有请求的中间件，直接为客户端做出响应，网站正在维护中。</li>
-<li>自定义404页面</li>
-</ol>
-<h3 id="错误处理中间件"><a href="#错误处理中间件" class="headerlink" title="错误处理中间件"></a>错误处理中间件</h3><p>在程序执行的过程中，不可避免的会出现一些无法预料的错误，比如文件读取失败，数据库连接失败。错误处理中间件是一个集中处理错误的地方。</p>
-<pre><code> app.use((err, req, res, next) =&gt; {
-     res.status(500).send(&#39;服务器发生未知错误&#39;);
- })</code></pre><p>当程序出现错误时，调用next()方法，并且将错误信息通过参数的形式传递给next()方法，即可触发错误处理中间件</p>
-<pre><code> app.get(&quot;/&quot;, (req, res, next) =&gt; {
-     fs.readFile(&quot;/file-does-not-exist&quot;, (err, data) =&gt; {
-         if (err) {
-            next(err);
-         }
-     });
-});</code></pre><h3 id="捕获错误"><a href="#捕获错误" class="headerlink" title="捕获错误"></a>捕获错误</h3><p>在node.js中，异步API的错误信息都是通过回调函数获取的，支持Promise对象的异步API发生错误可以通过catch方法捕获。</p>
-<p>异步函数执行如果发生错误可以通过 try catch 捕获异步函数以及其他同步代码在执行过程中发生的错误，但是不能其他类型的API发生的错误。</p>
-<pre><code> app.get(&quot;/&quot;, async (req, res, next) =&gt; {
-     try {
-         await User.find({name: &#39;张三&#39;})
-     }catch(ex) {
-         next(ex);
-     }
- });</code></pre><h2 id="Express请求处理"><a href="#Express请求处理" class="headerlink" title="Express请求处理"></a>Express请求处理</h2><h3 id="模块化路由"><a href="#模块化路由" class="headerlink" title="模块化路由"></a>模块化路由</h3><pre><code>const home = express.Router();
-// 为路由对象匹配请求路径
-app.use(&#39;/home&#39;, home);
-// 创建二级路由
-home.get(&#39;/index&#39;, (req, res) =&gt; {
-    res.send(&#39;欢迎来到博客首页页面&#39;)
-})</code></pre><pre><code> // admin.js
- const admin = express.Router();
- admin.get(&#39;/index&#39;, () =&gt; {
-     res.send(&#39;欢迎来到博客管理页面&#39;);
- });
- module.exports = admin;</code></pre><pre><code>const admin = require(&#39;./route/admin.js&#39;);
- app.use(&#39;/admin&#39;, admin);</code></pre><h3 id="GET-参数的获取"><a href="#GET-参数的获取" class="headerlink" title="GET 参数的获取"></a>GET 参数的获取</h3><p>Express框架中使用<strong>req.query</strong>即可获取GET参数，框架内部会将GET参数转换为对象并返回。</p>
-<pre><code> // 接收地址栏中问号后面的参数
- // 例如: http://localhost:3000/?name=zhangsan&amp;age=30
- app.get(&#39;/&#39;, (req, res) =&gt; {
-    console.log(req.query); // {&quot;name&quot;: &quot;zhangsan&quot;, &quot;age&quot;: &quot;30&quot;}
- });</code></pre><h3 id="POST参数的获取"><a href="#POST参数的获取" class="headerlink" title="POST参数的获取"></a>POST参数的获取</h3><p>Express中接收post请求参数需要借助第三方包 body-parser。</p>
-<pre><code> // 引入body-parser模块
- const bodyParser = require(&#39;body-parser&#39;);
- // 配置body-parser模块
-    // extended: false 方法内部使用querystring模块处理请求参数的格式
-    // extended: true 方法内部使用第三方模块qs处理请求参数的格式
- app.use(bodyParser.urlencoded({ extended: false }));
- // 接收请求
- app.post(&#39;/add&#39;, (req, res) =&gt; {
-    // 接收请求参数
-    console.log(req.body);
- }) </code></pre><h3 id="路由参数"><a href="#路由参数" class="headerlink" title="路由参数"></a>路由参数</h3><pre><code> app.get(&#39;/find/:id&#39;, (req, res) =&gt; { 
-     console.log(req.params); // {id: 123} 
- });</code></pre><p>访问的是<code>localhost:3000/find/123</code></p>
-<h3 id="静态资源的处理"><a href="#静态资源的处理" class="headerlink" title="静态资源的处理"></a>静态资源的处理</h3><p>通过Express内置的<strong>express.static</strong>可以方便地托管静态文件，例如img、CSS、JavaScript 文件等。</p>
-<pre><code> app.use(express.static(&#39;public&#39;));</code></pre><p>这样public下的静态资源就可以访问了</p>
-<h2 id="Express-art-template模板引擎"><a href="#Express-art-template模板引擎" class="headerlink" title="Express-art-template模板引擎"></a>Express-art-template模板引擎</h2><h3 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h3><ul>
-<li>为了使art-template模板引擎能够更好的和Express框架配合，模板引擎官方在原art-template模板引擎的基础上封装了express-art-template。</li>
-<li>使用npm install art-template express-art-template命令进行安装。</li>
-</ul>
-<pre><code>  // 当渲染后缀为art的模板时 使用express-art-template
- app.engine(&#39;art&#39;, require(&#39;express-art-template&#39;));
-  // 设置模板存放目录
- app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;));
-  // 渲染模板时不写后缀 默认拼接art后缀
- app.set(&#39;view engine&#39;, &#39;art&#39;);
- app.get(&#39;/&#39;, (req, res) =&gt; {
-     // 渲染模板
-     res.render(&#39;index&#39;);
- }); </code></pre><h3 id="app-locals对象"><a href="#app-locals对象" class="headerlink" title="app.locals对象"></a>app.locals对象</h3><p>将变量设置到app.locals对象下面，这个数据在所有的模板中都可以获取到。</p>
-<pre><code> app.locals.users = [{
-     name: &#39;张三&#39;,
-     age: 20
- },{
-     name: &#39;李四&#39;,
-     age: 20
-}]</code></pre>
+                <h3 id="构造函数创建对象"><a href="#构造函数创建对象" class="headerlink" title="构造函数创建对象"></a>构造函数创建对象</h3><pre><code>function Person(){
+
+}
+var person = new Person();
+person.name = &#39;Kevin&#39;;
+console.log(person.name);//Kevin</code></pre><p><code>Person</code>是个构造函数，使用new创建了一个实例对象<code>person</code>.</p>
+<h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a><code>prototype</code></h3><p>每个函数都有一个<code>prototype</code>属性,也是函数才有的属性</p>
+<pre><code>function Person(){
+
+}
+Person.prototype.name=&#39;Kevin&#39;
+var person1=new Person()
+var person2=new Person()
+console.log(person1.name)//Kevin
+console.log(person2.name)//Kevin</code></pre><p>函数的<code>prototype</code>属性指向的是一个对象，这个对象时调用该构造函数而创建的实例的原型，也就是例子中的<code>person1</code>和<code>person2</code>的原型。</p>
+<p><a href="https://pics.images.ac.cn/image/5f2245bf9c241.html" target="_blank" rel="noopener"><img src="https://pics.images.ac.cn/image/5f2245bf9c241.html" alt="https://pics.images.ac.cn/image/5f2245bf9c241.html"></a></p>
+<h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a><code>__proto__</code></h3><p>这是每一个JavaScript对象（除了<code>null</code>）都具有的一个属性，它指向该对象的原型。</p>
+<pre><code>function Person(){
+
+}
+var person=new Person()
+console.log(person.__proto__===Person.prototype)</code></pre><p><a href="https://pics.images.ac.cn/image/5f22459171f27.html" target="_blank" rel="noopener"><img src="https://pics.images.ac.cn/image/5f22459171f27.html" alt="https://pics.images.ac.cn/image/5f22459171f27.html"></a></p>
+<h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a><code>constructor</code></h3><p>这是原型指向构造函数的属性，每一个原型都有一个<code>constructor</code>属性指向关联的构造函数。</p>
+<pre><code>function Person(){
+
+}
+console.log(Person===Person.prototype.constructor)//true</code></pre><p><a href="https://pics.images.ac.cn/image/5f2245663030a.html" target="_blank" rel="noopener"><img src="https://pics.images.ac.cn/image/5f2245663030a.html" alt="https://pics.images.ac.cn/image/5f2245663030a.html"></a></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><pre><code>function Person() {
+
+}
+
+var person = new Person();
+
+console.log(person.__proto__ == Person.prototype) // true
+console.log(Person.prototype.constructor == Person) // true
+// 顺便学习一个ES5的方法,可以获得对象的原型
+console.log(Object.getPrototypeOf(person) === Person.prototype) // true</code></pre><h3 id="实例和原型"><a href="#实例和原型" class="headerlink" title="实例和原型"></a>实例和原型</h3><p>当读取实例对象中的属性，读取不到时就回去查找实例对象的原型中的属性，如果还是没找到就会去原型的原型中找，直到找到顶层为止</p>
+<pre><code>function Person() {
+
+}
+
+Person.prototype.name = &#39;Kevin&#39;;
+
+var person = new Person();
+
+person.name = &#39;Daisy&#39;;
+console.log(person.name) // Daisy
+
+delete person.name;
+console.log(person.name) // Kevin</code></pre><h3 id="原型的原型"><a href="#原型的原型" class="headerlink" title="原型的原型"></a>原型的原型</h3><p>原型也是一个对象，既然是对象就用原始的方法创建它</p>
+<pre><code>var obj = new Object();
+obj.name = &#39;Kevin&#39;
+console.log(obj.name) // Kevin</code></pre><p>其实原型对象就是由Object构造函数生成的</p>
+<p><a href="https://pics.images.ac.cn/image/5f22451b737a7.html" target="_blank" rel="noopener"><img src="https://pics.images.ac.cn/image/5f22451b737a7.html" alt="https://pics.images.ac.cn/image/5f22451b737a7.html"></a></p>
+<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p><code>Object.prototype</code>的原型是<code>null</code>，也就是没有原型，所以查找到<code>Object.prototype</code>就可以停止查找了</p>
+<pre><code>console.log(Object.prototype.__proto__ === null) // true</code></pre><p><a href="https://pics.images.ac.cn/image/5f2244c7b8b8c.html" target="_blank" rel="noopener"><img src="https://pics.images.ac.cn/image/5f2244c7b8b8c.html" alt="https://pics.images.ac.cn/image/5f2244c7b8b8c.html"></a></p>
+<p>图中由相互关联的原型组成的链状结构就是原型链，也就是<code>__proto__</code>蓝色的一条线</p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>最后，补充三点大家可能不会注意的地方：</p>
+<h4 id="constructor"><a href="#constructor" class="headerlink" title="constructor"></a><code>constructor</code></h4><pre><code>function Person() {
+
+}
+var person = new Person();
+console.log(person.constructor === Person); // true</code></pre><p>当获取 <code>person.constructor</code> 时，其实 <code>person</code>中并没有 <code>constructor</code> 属性,当不能读取到<code>constructor</code> 属性时，会从 <code>person</code>的原型也就是 <code>Person.prototype</code> 中读取，正好原型中有该属性，所以：</p>
+<pre><code>person.constructor === Person.prototype.constructor</code></pre><h3 id="proto-1"><a href="#proto-1" class="headerlink" title="__proto__"></a><code>__proto__</code></h3><p>绝大部分浏览器都支持这个非标准的方法访问原型，然而它并不存在于 <code>Person.prototype</code>中，实际上，它是来自于<code>Object.prototype</code>，与其说是一个属性，不如说是一个<code>getter/setter</code>，当使用 <code>obj.__proto</code>__ 时，可以理解成返回了<code>Object.getPrototypeOf(obj)</code>。</p>
+<h4 id="真的是继承吗？"><a href="#真的是继承吗？" class="headerlink" title="真的是继承吗？"></a>真的是继承吗？</h4><p>最后是关于继承，前面我们讲到“每一个对象都会从原型‘继承’属性”，实际上，继承是一个十分具有迷惑性的说法，引用《你不知道的JavaScript》中的话，就是：</p>
+<p>继承意味着复制操作，然而 JavaScript 默认并不会复制对象的属性，相反，JavaScript 只是在两个对象之间创建一个关联，这样，一个对象就可以通过委托访问另一个对象的属性和函数，所以与其叫继承，委托的说法反而更准确些。</p>
+
             </div>
             <hr/>
 
@@ -632,7 +592,7 @@ home.get(&#39;/index&#39;, (req, res) =&gt; {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.iamys.club/2020/04/20/Express%E6%A1%86%E6%9E%B6/">https://www.iamys.club/2020/04/20/Express%E6%A1%86%E6%9E%B6/</a>
+                    <a href="https://www.iamys.club/2020/04/10/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/">https://www.iamys.club/2020/04/10/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -670,8 +630,12 @@ home.get(&#39;/index&#39;, (req, res) =&gt; {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
-                                    <span class="chip bg-color">Express框架</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
+                                <a href="/tags/EC6/">
+                                    <span class="chip bg-color">EC6</span>
                                 </a>
                             
                         </div>
@@ -865,38 +829,31 @@ home.get(&#39;/index&#39;, (req, res) =&gt; {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/08/Ajax/">
+                <a href="/2020/04/10/jQuery/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Ajax">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="初识jQuery">
                         
-                        <span class="card-title">Ajax</span>
+                        <span class="card-title">初识jQuery</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Ajax的作用浏览器提供的一个方法，可以实现无刷新更新数据，提高用户浏览应用的体验。
-Ajax的应用场景
-页面上拉加载更多数据
-列表数据无刷新分页
-表单项离开焦点数据验证
-搜索框提示文字下拉列表
-
-Ajax运行原理及实现Ajax运行原理Aj
+                            初始jQuery什么是jQueryjQuery是一个快速、简洁的javascript库，它里面封装了JavaScript常用大的功能代码，优化了DOM操作、事件处理、动画设计和Ajax交互，学习jQuery的本质就是学习调用这些函数（方法）
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                    前后端交互
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -906,8 +863,8 @@ Ajax运行原理及实现Ajax运行原理Aj
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Ajax/">
-                        <span class="chip bg-color">Ajax</span>
+                    <a href="/tags/jQuery/">
+                        <span class="chip bg-color">jQuery</span>
                     </a>
                     
                 </div>
@@ -921,52 +878,37 @@ Ajax运行原理及实现Ajax运行原理Aj
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                <a href="/2020/04/10/vue%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="mongoDB数据库">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="初识vue">
                         
-                        <span class="card-title">mongoDB数据库</span>
+                        <span class="card-title">初识vue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            vue模块语法Vue概述声明式渲染&gt;组件系统&gt;客户端路由&gt;集中式状态管理&gt;项目构建
+优点：易用、灵活、高效
+Vue基本使用目标：能够说出Vue基本用法
+vue的基本使用步骤
+提供标签填充数据
+引入vue.js库文件
 
-
-术语
-解释说明
-
-
-
-database
-数据库，可建立多个
-
-
-collection
-集合，一组数据，相当于js里的数组
-
-
-document
-文档，一条具体的数据，相当于js里的对象
-
-
-filed
-字段，文档中的属性名称，相当与j
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                    前后端交互
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -976,8 +918,8 @@ filed
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">mongoDB数据库</span>
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
