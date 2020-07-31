@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Express框架, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="this全面解析, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Express框架 | XiaoQi&#39;s Blog</title>
+    <title>this全面解析 | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Express框架</h1>
+                    <h1 class="description center-align post-title">this全面解析</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
-                                <span class="chip bg-color">Express框架</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                            <a href="/tags/EC6/">
+                                <span class="chip bg-color">EC6</span>
                             </a>
                         
                     </div>
@@ -447,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                前后端交互
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -460,28 +464,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-04-09
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-07-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
 
@@ -497,117 +501,51 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Express是一个基于Node平台的web应用开放框架，他提供了一系列的强大特性，帮助你创建各种web应用。我们可以使用npm install express 命令下载</p>
-<h2 id="Express框架特性"><a href="#Express框架特性" class="headerlink" title="Express框架特性"></a>Express框架特性</h2><ul>
-<li>提供了方便简洁的路由定义方式</li>
-<li>对获取HTTP请求参数进行了简化处理</li>
-<li>对模板引擎支持程度高，方便渲染动态HTML页面</li>
-<li>提供中间件机制有效控制HTTP请求</li>
-<li>拥有大量中间件对功能进行扩展</li>
-</ul>
-<pre><code>// 引入express框架
-const express = require(&#39;express&#39;);
-// 创建网站服务器
-const app = express();
-app.get(&#39;/&#39; , (req, res) =&gt; {
-    // send()
-    // 1. send方法内部会检测响应内容的类型
-    // 2. send方法会自动设置http状态码
-    // 3. send方法会帮我们自动设置响应的内容类型及编码
-    res.send(&#39;Hello. Express&#39;);
-})
-// 监听端口
-app.listen(3000);</code></pre><h2 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h2><p>中间件就是一堆方法，可以接受客户端放来的请求，可以对请求做出响应，也可以将请求继续交给下一个中间件继续处理。</p>
-<p>中间件由两部分构成，中间件方法以及请求处理函数；中间件方法由Exprss提供，负责拦截请求，请求函数有开发人员提供，负责处理请求。</p>
-<pre><code> app.get(&#39;请求路径&#39;, &#39;处理函数&#39;)   // 接收并处理get请求
- app.post(&#39;请求路径&#39;, &#39;处理函数&#39;)  // 接收并处理post请求</code></pre><p>可以针对同一个请求设置多个中间件，对同一个请求进行多次处理。默认情况下，请求从上到下依次匹配中间件，一旦匹配成功，终止匹配。可以调用next方法将请求的控制权交给下一个中间件，直到遇到结束请求的中间件。</p>
-<pre><code> app.get(&#39;/request&#39;, (req, res, next) =&gt; {
-     req.name = &quot;张三&quot;;
-     next();
- });
- app.get(&#39;/request&#39;, (req, res) =&gt; {
-     res.send(req.name);
- });</code></pre><h3 id="app-use中间件用法"><a href="#app-use中间件用法" class="headerlink" title="app.use中间件用法"></a>app.use中间件用法</h3><p>app.use 匹配所有请求方式，可以直接传入请求处理函数，代表接受所有请求。第一个参数可以省略表示通配。</p>
-<pre><code> app.use(&#39;/admin&#39;, (req, res, next) =&gt; {
-     console.log(req.url);
-     next();
- });</code></pre><h3 id="中间件的应用"><a href="#中间件的应用" class="headerlink" title="中间件的应用"></a>中间件的应用</h3><ol>
-<li>路由保护，客户端在访问需要登录的页面时，可以先使用中间件判断用户登录状态，用户如果未登录，则拦截请求，直接响应，禁止用户进入需要登录的页面。</li>
-<li>网站维护公告，在所有路由的最上面定义接收所有请求的中间件，直接为客户端做出响应，网站正在维护中。</li>
-<li>自定义404页面</li>
+                <blockquote>
+<p>this 关键字是 JavaScript 中最复杂的机制之一。它是一个很特别的关键字，被自动定义在 所有函数的作用域中。但是即使是非常有经验的 JavaScript 开发者也很难说清它到底指向 什么。</p>
+<p>实际上，JavaScript 中 this 的机制并没有那么先进，但是开发者往往会把理解过程复杂化， 毫无疑问，在缺乏清晰认识的情况下，this 对你来说完全就是一种魔法</p>
+</blockquote>
+<h2 id="为什么要用this"><a href="#为什么要用this" class="headerlink" title="为什么要用this"></a>为什么要用this</h2><p>使用this可以在不同的上下文对象中重复使用函数，不用针对每个对象编写不同版本的函数；</p>
+<p>如果不使用this那就得给函数显示的传入一个上下文对象，随着你使用的模式越来越复杂，显示传递上下文对象会让代码越来越混乱；</p>
+<p>而this提供了一种更优雅的方式来隐式传递一个对象引用，可以是API设计得更加简洁并且易于复用。</p>
+<h2 id="解开this的误解"><a href="#解开this的误解" class="headerlink" title="解开this的误解"></a>解开this的误解</h2><ol>
+<li>this并不指向函数自身</li>
+<li>this也不一定总指向函数的作用域</li>
 </ol>
-<h3 id="错误处理中间件"><a href="#错误处理中间件" class="headerlink" title="错误处理中间件"></a>错误处理中间件</h3><p>在程序执行的过程中，不可避免的会出现一些无法预料的错误，比如文件读取失败，数据库连接失败。错误处理中间件是一个集中处理错误的地方。</p>
-<pre><code> app.use((err, req, res, next) =&gt; {
-     res.status(500).send(&#39;服务器发生未知错误&#39;);
- })</code></pre><p>当程序出现错误时，调用next()方法，并且将错误信息通过参数的形式传递给next()方法，即可触发错误处理中间件</p>
-<pre><code> app.get(&quot;/&quot;, (req, res, next) =&gt; {
-     fs.readFile(&quot;/file-does-not-exist&quot;, (err, data) =&gt; {
-         if (err) {
-            next(err);
-         }
-     });
-});</code></pre><h3 id="捕获错误"><a href="#捕获错误" class="headerlink" title="捕获错误"></a>捕获错误</h3><p>在node.js中，异步API的错误信息都是通过回调函数获取的，支持Promise对象的异步API发生错误可以通过catch方法捕获。</p>
-<p>异步函数执行如果发生错误可以通过 try catch 捕获异步函数以及其他同步代码在执行过程中发生的错误，但是不能其他类型的API发生的错误。</p>
-<pre><code> app.get(&quot;/&quot;, async (req, res, next) =&gt; {
-     try {
-         await User.find({name: &#39;张三&#39;})
-     }catch(ex) {
-         next(ex);
-     }
- });</code></pre><h2 id="Express请求处理"><a href="#Express请求处理" class="headerlink" title="Express请求处理"></a>Express请求处理</h2><h3 id="模块化路由"><a href="#模块化路由" class="headerlink" title="模块化路由"></a>模块化路由</h3><pre><code>const home = express.Router();
-// 为路由对象匹配请求路径
-app.use(&#39;/home&#39;, home);
-// 创建二级路由
-home.get(&#39;/index&#39;, (req, res) =&gt; {
-    res.send(&#39;欢迎来到博客首页页面&#39;)
-})</code></pre><pre><code> // admin.js
- const admin = express.Router();
- admin.get(&#39;/index&#39;, () =&gt; {
-     res.send(&#39;欢迎来到博客管理页面&#39;);
- });
- module.exports = admin;</code></pre><pre><code>const admin = require(&#39;./route/admin.js&#39;);
- app.use(&#39;/admin&#39;, admin);</code></pre><h3 id="GET-参数的获取"><a href="#GET-参数的获取" class="headerlink" title="GET 参数的获取"></a>GET 参数的获取</h3><p>Express框架中使用<strong>req.query</strong>即可获取GET参数，框架内部会将GET参数转换为对象并返回。</p>
-<pre><code> // 接收地址栏中问号后面的参数
- // 例如: http://localhost:3000/?name=zhangsan&amp;age=30
- app.get(&#39;/&#39;, (req, res) =&gt; {
-    console.log(req.query); // {&quot;name&quot;: &quot;zhangsan&quot;, &quot;age&quot;: &quot;30&quot;}
- });</code></pre><h3 id="POST参数的获取"><a href="#POST参数的获取" class="headerlink" title="POST参数的获取"></a>POST参数的获取</h3><p>Express中接收post请求参数需要借助第三方包 body-parser。</p>
-<pre><code> // 引入body-parser模块
- const bodyParser = require(&#39;body-parser&#39;);
- // 配置body-parser模块
-    // extended: false 方法内部使用querystring模块处理请求参数的格式
-    // extended: true 方法内部使用第三方模块qs处理请求参数的格式
- app.use(bodyParser.urlencoded({ extended: false }));
- // 接收请求
- app.post(&#39;/add&#39;, (req, res) =&gt; {
-    // 接收请求参数
-    console.log(req.body);
- }) </code></pre><h3 id="路由参数"><a href="#路由参数" class="headerlink" title="路由参数"></a>路由参数</h3><pre><code> app.get(&#39;/find/:id&#39;, (req, res) =&gt; { 
-     console.log(req.params); // {id: 123} 
- });</code></pre><p>访问的是<code>localhost:3000/find/123</code></p>
-<h3 id="静态资源的处理"><a href="#静态资源的处理" class="headerlink" title="静态资源的处理"></a>静态资源的处理</h3><p>通过Express内置的<strong>express.static</strong>可以方便地托管静态文件，例如img、CSS、JavaScript 文件等。</p>
-<pre><code> app.use(express.static(&#39;public&#39;));</code></pre><p>这样public下的静态资源就可以访问了</p>
-<h2 id="Express-art-template模板引擎"><a href="#Express-art-template模板引擎" class="headerlink" title="Express-art-template模板引擎"></a>Express-art-template模板引擎</h2><h3 id="模板引擎"><a href="#模板引擎" class="headerlink" title="模板引擎"></a>模板引擎</h3><ul>
-<li>为了使art-template模板引擎能够更好的和Express框架配合，模板引擎官方在原art-template模板引擎的基础上封装了express-art-template。</li>
-<li>使用npm install art-template express-art-template命令进行安装。</li>
+<h2 id="this到底是什么"><a href="#this到底是什么" class="headerlink" title="this到底是什么"></a>this到底是什么</h2><p>this实际上是在函数调用时发生绑定的，它指向什么完全取决于函数在哪里被调用。</p>
+<p>调用位置有时候会被隐藏，可以分析调用栈也就是为了到达当前执行位置所调用的所有函数，要注意的是调用位置就在正在执行的函数的前一个调用中。</p>
+<blockquote>
+<p>可以在工具中给 foo() 函数的 第一行代码设置一个断点，或者直接在第一行代码之前插入一条 debugger; 语句。运行代码时，调试器会在那个位置暂停，同时会展示当前位置的函数 调用列表，这就是你的调用栈。因此，如果你想要分析 this 的绑定，使用开 发者工具得到调用栈，然后找到栈中第二个元素，这就是真正的调用位置。</p>
+</blockquote>
+<h2 id="this的绑定规则以及优先级"><a href="#this的绑定规则以及优先级" class="headerlink" title="this的绑定规则以及优先级"></a>this的绑定规则以及优先级</h2><h3 id="默认绑定"><a href="#默认绑定" class="headerlink" title="默认绑定"></a>默认绑定</h3><p>最常用的函数调用类型：独立函数调用（函数的调用在全局不加任何修饰）。可以把这条规则看作是无法应用 其他规则时的默认规则，this指向全局对象window，但是如果时严格模式下this的绑定是undefined。</p>
+<pre><code>var bar = foo()</code></pre><h3 id="隐式绑定"><a href="#隐式绑定" class="headerlink" title="隐式绑定"></a>隐式绑定</h3><p>需要考虑的规则是调用位置是否有上下文对象，或者说是否被某个对象拥有或者包含，绑定在那个上下文对象。</p>
+<pre><code>obj1.foo()</code></pre><p><em>当函数引 用有上下文对象时，隐式绑定规则会把函数调用中的 this 绑定到这个上下文对象。因为调 用 foo() 时 this 被绑定到 obj，因此 this.a 和 obj.a 是一样的</em></p>
+<p>注意：对象属性引用链中只有最顶层或者说最后一层会影响调用位置<code>obj1.obj2.foo()</code>时this指向<code>obj2</code></p>
+<h4 id="隐式丢失"><a href="#隐式丢失" class="headerlink" title="隐式丢失"></a>隐式丢失</h4><ul>
+<li>上下文对象引用之后赋值在全局调用</li>
+<li>把函数作为参数进行值传递在全局调用</li>
+<li>把函数传入语言内置函数中调用</li>
 </ul>
-<pre><code>  // 当渲染后缀为art的模板时 使用express-art-template
- app.engine(&#39;art&#39;, require(&#39;express-art-template&#39;));
-  // 设置模板存放目录
- app.set(&#39;views&#39;, path.join(__dirname, &#39;views&#39;));
-  // 渲染模板时不写后缀 默认拼接art后缀
- app.set(&#39;view engine&#39;, &#39;art&#39;);
- app.get(&#39;/&#39;, (req, res) =&gt; {
-     // 渲染模板
-     res.render(&#39;index&#39;);
- }); </code></pre><h3 id="app-locals对象"><a href="#app-locals对象" class="headerlink" title="app.locals对象"></a>app.locals对象</h3><p>将变量设置到app.locals对象下面，这个数据在所有的模板中都可以获取到。</p>
-<pre><code> app.locals.users = [{
-     name: &#39;张三&#39;,
-     age: 20
- },{
-     name: &#39;李四&#39;,
-     age: 20
-}]</code></pre>
+<h3 id="显示绑定"><a href="#显示绑定" class="headerlink" title="显示绑定"></a>显示绑定</h3><p>由call、apply、bind调用，绑定到指定对象上</p>
+<pre><code>var bar = foo.call(obj2)</code></pre><h3 id="new绑定"><a href="#new绑定" class="headerlink" title="new绑定"></a>new绑定</h3><p>是否由new调用，绑定到新创建的对象上</p>
+<pre><code>var bar = new foo()</code></pre><p><strong>new调用函数自动执行的操作</strong></p>
+<ol>
+<li>创建（或者说构造）一个全新的对象。</li>
+<li>这个新对象会被执行 [[ 原型 ]] 连接。</li>
+<li>这个新对象会绑定到函数调用的 this。 </li>
+<li>如果函数没有返回其他对象，那么 new 表达式中的函数调用会自动返回这个新对象。</li>
+</ol>
+<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>new绑定&gt;显示绑定&gt;隐式绑定&gt;默认绑定</p>
+<h2 id="绑定例外"><a href="#绑定例外" class="headerlink" title="绑定例外"></a>绑定例外</h2><ul>
+<li>如果你把 null 或者 undefined 作为 this 的绑定对象传入 call、apply 或者 bind，这些值 在调用时会被忽略，实际应用的是默认绑定规则</li>
+</ul>
+<p>​      安全的做法：在忽略 this 绑定时总是传入一个 DMZ 对象</p>
+<pre><code>var ø = Object.create( null ); 
+ foo.apply( ø, [2, 3] );</code></pre><ul>
+<li>创建一个函数的“间接引用（间接引用最容易在赋值时发生）”，在这 种情况下，调用这个函数会应用默认绑定规则。</li>
+</ul>
+<h2 id="this词法"><a href="#this词法" class="headerlink" title="this词法"></a>this词法</h2><p>ES6 中的箭头函数并不会使用四条标准的绑定规则，而是根据当前的词法作用域来决定 this，具体来说，箭头函数会继承外层函数调用的 this 绑定（无论 this 绑定到什么）。这 其实和 ES6 之前代码中的 self = this 机制一样。</p>
+
             </div>
             <hr/>
 
@@ -632,7 +570,7 @@ home.get(&#39;/index&#39;, (req, res) =&gt; {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.iamys.club/2020/04/20/Express%E6%A1%86%E6%9E%B6/">https://www.iamys.club/2020/04/20/Express%E6%A1%86%E6%9E%B6/</a>
+                    <a href="https://www.iamys.club/2020/04/09/this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90/">https://www.iamys.club/2020/04/09/this%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -670,8 +608,12 @@ home.get(&#39;/index&#39;, (req, res) =&gt; {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Express%E6%A1%86%E6%9E%B6/">
-                                    <span class="chip bg-color">Express框架</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
+                                <a href="/tags/EC6/">
+                                    <span class="chip bg-color">EC6</span>
                                 </a>
                             
                         </div>
@@ -865,38 +807,36 @@ home.get(&#39;/index&#39;, (req, res) =&gt; {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/05/08/Ajax/">
+                <a href="/2020/04/10/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Ajax">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="原型和原型链">
                         
-                        <span class="card-title">Ajax</span>
+                        <span class="card-title">原型和原型链</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Ajax的作用浏览器提供的一个方法，可以实现无刷新更新数据，提高用户浏览应用的体验。
-Ajax的应用场景
-页面上拉加载更多数据
-列表数据无刷新分页
-表单项离开焦点数据验证
-搜索框提示文字下拉列表
+                            构造函数创建对象function Person(){
 
-Ajax运行原理及实现Ajax运行原理Aj
+}
+var person = new Person();
+person.name = &#39;Kevin&#39;;
+console.log(person.name);//Kevin
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                    前后端交互
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -906,8 +846,12 @@ Ajax运行原理及实现Ajax运行原理Aj
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Ajax/">
-                        <span class="chip bg-color">Ajax</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/EC6/">
+                        <span class="chip bg-color">EC6</span>
                     </a>
                     
                 </div>
@@ -921,52 +865,33 @@ Ajax运行原理及实现Ajax运行原理Aj
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                <a href="/2020/04/06/js%E9%AB%98%E7%BA%A7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="mongoDB数据库">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="JavaScript进阶">
                         
-                        <span class="card-title">mongoDB数据库</span>
+                        <span class="card-title">JavaScript进阶</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-
-
-术语
-解释说明
-
-
-
-database
-数据库，可建立多个
-
-
-collection
-集合，一组数据，相当于js里的数组
-
-
-document
-文档，一条具体的数据，相当于js里的对象
-
-
-filed
-字段，文档中的属性名称，相当与j
+                            1.面向对象和类的继承什么是面向对象面向对象是把事务分解成一个一个对象，以对象来划分问题，然后对象之间分工与合作。
+面向对象的程序思维中，每一个对象都是功能中心，具有明确的分工。
+面向对象编程具有灵活，代码可复用、容易维护和开发大的优点，适
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                    前后端交互
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -976,8 +901,12 @@ filed
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">mongoDB数据库</span>
+                    <a href="/tags/JavaScript/">
+                        <span class="chip bg-color">JavaScript</span>
+                    </a>
+                    
+                    <a href="/tags/EC6/">
+                        <span class="chip bg-color">EC6</span>
                     </a>
                     
                 </div>
