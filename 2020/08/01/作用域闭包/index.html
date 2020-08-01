@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="node.js, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="闭包, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>node.js | XiaoQi&#39;s Blog</title>
+    <title>闭包 | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">node.js</h1>
+                    <h1 class="description center-align post-title">闭包</h1>
                 </div>
             </div>
         </div>
@@ -435,8 +435,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/node-js/">
-                                <span class="chip bg-color">node.js</span>
+                            <a href="/tags/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/">
+                                <span class="chip bg-color">你不知道的JavaScript</span>
                             </a>
                         
                     </div>
@@ -447,8 +447,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                前后端交互
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
                             </a>
                         
                     </div>
@@ -460,28 +460,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-16
+                    2020-08-01
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-20
+                    2020-08-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    4 分
                 </div>
                 
 
@@ -497,267 +497,87 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="node概念"><a href="#node概念" class="headerlink" title="node概念"></a>node概念</h2><p>node是基于Chrome V8引擎的JavaScript代码运行环境，全局对象是globle，在node环境下使用node命令执行后缀为.js的文件即可</p>
-<h2 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h2><p>commonJS是为js的表现制定规范，因为js没有模块化系统，标准库较少，缺乏包管理工具，CommonJS应运而生，它希望js可以在任何地方运行而不只是浏览器中，从而达到一些后端语言具有开发大型应用的能力。</p>
-<p>commonJS与Node.js的关系：CommonJS时模块化的标准，Node.js是CommonJS（模块化）的实现</p>
-<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><ul>
-<li>服务器端js的应用程序Node.js</li>
-<li>命令行工具</li>
-<li>桌面图形应用程序</li>
-</ul>
-<h2 id="node组成"><a href="#node组成" class="headerlink" title="node组成"></a>node组成</h2><p>ECMAScript和node环境提供的附加API</p>
-<h2 id="模块化开发"><a href="#模块化开发" class="headerlink" title="模块化开发"></a>模块化开发</h2><p>javasript使用存在文件依赖和命名冲突的问题，因而要使用模块化开发，模块化开发的含义是一个功能就是一个模块多个模块可以组成完整的应用，抽离一个模块不会影响其他模块的运行。node.js规定一个JavaScript就是一个模块，模块内部定义的变量和函数外部无法得到，需要使用exports对象进行成员导出，require方法导入其他模块。</p>
-<h3 id="模块的导入导出"><a href="#模块的导入导出" class="headerlink" title="模块的导入导出"></a>模块的导入导出</h3><ul>
-<li><p>导出</p>
-<ul>
-<li><p>exports</p>
-</li>
-<li><p>module.exports</p>
-</li>
-<li><p>两者之间的关系</p>
-<p>module.exports 是真正的接口<br>exports是一个辅助工具<br>如果module.exports为空，那么所有的exports属性和方法都赋值module.exports<br>如果module.exports具有任何方法和属性，则exports会被忽略</p>
-</li>
-</ul>
-</li>
-<li><p>导入</p>
-<ul>
-<li>require</li>
-</ul>
-</li>
-</ul>
-<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><ul>
-<li><p>核心模块</p>
-<p>node自带的模块加载速度快</p>
-<ul>
-<li><h4 id="http模块"><a href="#http模块" class="headerlink" title="http模块"></a>http模块</h4><ul>
-<li><pre><code>// 引用系统模块
- const http = require(&#39;http&#39;);
-  // 创建web服务器
- const app = http.createServer();
-  // 当客户端发送请求的时候
- app.on(&#39;request&#39;, (req, res) =&gt; {
-        //  响应
-       res.end(&#39;&lt;h1&gt;hi, user&lt;/h1&gt;&#39;);
- });
-  // 监听3000端口
- app.listen(3000);
- console.log(&#39;服务器已启动，监听3000端口，请访问 localhost:3000&#39;)
-</code></pre></li>
-</ul>
-<p><strong>请求方式</strong></p>
-<p>   get  请求数据 数据处理 参数放在地址栏中  参数获取需要借助系统模块url</p>
-<p>   客户端请求途径：浏览器地址栏  link标签的href属性  script标签的src属性  img标签的src属性</p>
-<pre><code> const http = require(&#39;http&#39;);
- // 导入url系统模块 用于处理url地址
- const url = require(&#39;url&#39;);
- const app = http.createServer();
- app.on(&#39;request&#39;, (req, res) =&gt; {
-     // 将url路径的各个部分解析出来并返回对象
-         // true 代表将参数解析为对象格式
-     let {query} = url.parse(req.url, true);
-     console.log(query);
- });
- app.listen(3000);</code></pre><p>​    post  发送数据  实现某种功能  参数再请求体中 获取需要data和end事件 使用querystringstring系统模块将参数转为对象</p>
-<p>​    客户端请求途径：Form表单提交</p>
-<pre><code> // 导入系统模块querystring 用于将HTTP参数转换为对象格式
- const querystring = require(&#39;querystring&#39;);
- app.on(&#39;request&#39;, (req, res) =&gt; {
-     let postData = &#39;&#39;;
-     // 监听参数传输事件
-     req.on(&#39;data&#39;, (chunk) =&gt; postData += chunk;);
-     // 监听参数传输完毕事件
-     req.on(&#39;end&#39;, () =&gt; { 
-         console.log(querystring.parse(postData)); 
-     }); 
- });</code></pre><p><strong>请求地址</strong></p>
-<pre><code> app.on(&#39;request&#39;, (req, res) =&gt; {
-     req.headers  // 获取请求报文
-     req.url      // 获取请求地址
-     req.method   // 获取请求方法
- });</code></pre><p><strong>http状态码</strong></p>
-<p>  200 请求成功</p>
-<p>  404 请求的资源没有被找到</p>
-<p>  500 服务器端错误</p>
-<p>  400 客户端请求有语法错误</p>
-</li>
-<li><h4 id="url模块"><a href="#url模块" class="headerlink" title="url模块"></a>url模块</h4><ul>
-<li>parse  获取地址信息</li>
-<li>resolve  追加或替换地址</li>
-<li>formal   根据地址信息获得原url信息</li>
-</ul>
-</li>
-<li><h4 id="fs文件管理"><a href="#fs文件管理" class="headerlink" title="fs文件管理"></a>fs文件管理</h4><ul>
-<li><p>fs.stats  检测是文件还是文档</p>
-<ul>
-<li>isDirctory()   是否文档</li>
-<li>isFile()  是否文件</li>
-</ul>
-</li>
-<li><p>fs.mkdir  创建文档</p>
-</li>
-<li><p>fs.writeFile  创建写入文件</p>
-</li>
-<li><p>fs.appendFile  追加文件</p>
-</li>
-<li><p>fs.readdFile  读取文件</p>
-</li>
-<li><p>fs.readdir   读取文档</p>
-</li>
-<li><p>fs.rename  重命名或者剪切</p>
-</li>
-<li><p>fs.rmdir   删除文档</p>
-</li>
-<li><p>fs.unlink   删除文件</p>
-</li>
-<li><p>fs.createReadStream   读取流</p>
-<ul>
-<li>on读取</li>
-</ul>
-</li>
-<li><p>fs.createWriteStream   写入流</p>
-<ul>
-<li>write写入</li>
-<li>end写完</li>
-<li>on完成</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h4 id="path模块"><a href="#path模块" class="headerlink" title="path模块"></a>path模块</h4><ul>
-<li>path join()  拼接模块</li>
-<li>__dirname  当前文件的绝对路径</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h4 id="文件模块"><a href="#文件模块" class="headerlink" title="文件模块"></a>文件模块</h4><p>用户自己编写的模块，动态加载运行速度相对较慢</p>
-</li>
-</ul>
-<h3 id="模块的加载机制"><a href="#模块的加载机制" class="headerlink" title="模块的加载机制"></a>模块的加载机制</h3><p>1.require方法根据模块路径查找模块，如果是完整路径，直接引入模块。<br>2.如果模块后缀省略，先找同名JS文件再找同名JS文件夹<br>3.如果找到了同名文件夹，找文件夹中的index.js<br>4.如果文件夹中没有index.js就会去当前文件夹中的package.json文件中查找main选项中的入口文件<br>5.如果找指定的入口文件不存在或者没有指定入口文件就会报错，模块没有被找到</p>
-<h2 id="常用的第三方包"><a href="#常用的第三方包" class="headerlink" title="常用的第三方包"></a>常用的第三方包</h2><p>第三方模块：别人已经写好的，具有特定功能的，我们可以下载直接使用的模块，通常是有多个文件组合在一起放置自在一个文件夹中，又名包。<br>有两种存在形式，以js文件的形式存在，提供项目具体的api接口。<br>以命令行工具存在，辅助项目开发。<br>npmjs.com第三方模块存储和分发厂库</p>
-<h3 id="npm：node的第三方模块管理工具"><a href="#npm：node的第三方模块管理工具" class="headerlink" title="npm：node的第三方模块管理工具"></a>npm：node的第三方模块管理工具</h3><p>下载：npm install/i 模块名<br>卸载：npm uninstall package 模块名<br>命令行工具：全局安装-g 可在计算机任何一个地方使用它<br>库文件：本地安装</p>
-<h3 id="nodemon：命令行工具辅助项目开发"><a href="#nodemon：命令行工具辅助项目开发" class="headerlink" title="nodemon：命令行工具辅助项目开发"></a>nodemon：命令行工具辅助项目开发</h3><p>下载：npm install -g nodemon<br>命令行工具用nodemon命令替代node命令执行文件<br>自动监听文件是否更新，如果更新就自动执行。</p>
-<h3 id="nrm-：下载地址切换工具"><a href="#nrm-：下载地址切换工具" class="headerlink" title="nrm ：下载地址切换工具"></a>nrm ：下载地址切换工具</h3><p>下载：npm install nrm -g<br>查询下载地址：nrm ls<br>切换下载地址：nrm use 下载地址名</p>
-<p>一般都是用淘宝镜像来安装 </p>
-<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></pre><h3 id="Glup-：基于node的前端构建工具"><a href="#Glup-：基于node的前端构建工具" class="headerlink" title="Glup ：基于node的前端构建工具"></a>Glup ：基于node的前端构建工具</h3><p><strong>作用</strong>：将机械化的操作编写成任务，想要执行这些任务时，可以用一个命令任务就自动执行了，提高开发效率。</p>
-<p><strong>具体应用</strong>：项目上线，HTML CSS JS文件的压缩合并。<br>                    语法转换es6 less之类的<br>                    公共文件抽离<br>                    修改文件浏览器自动刷新</p>
-<p><strong>使用</strong>：<code>npm install gulp</code>下载gulp库文件，在项目根目录下建立<code>gulpfile.js</code>文件，用``src目录放置源文件，<code>dist</code>目录放置构建后文件，在<code>gulpfile.js</code>文件中编写任务，在命令行工具执行gulp任务</p>
-<pre><code>const gulp = require(&#39;gulp&#39;);
-// 复制文件夹
-gulp.task(&#39;copy&#39;, () =&gt; {
-
-    gulp.src(&#39;./src/images/*&#39;)
-        .pipe(gulp.dest(&#39;dist/images&#39;));
-
-    gulp.src(&#39;./src/lib/*&#39;)
-        .pipe(gulp.dest(&#39;dist/lib&#39;))
-});
-
-// 构建任务
-gulp.task(&#39;default&#39;, [&#39;htmlmin&#39;, &#39;cssmin&#39;, &#39;jsmin&#39;, &#39;copy&#39;]);</code></pre><ul>
-<li><h4 id="gulp中提供的方法"><a href="#gulp中提供的方法" class="headerlink" title="gulp中提供的方法"></a>gulp中提供的方法</h4><ul>
-<li>gulp.src():获取任务要处理的文件</li>
-<li>gulp.dest()  输出文件</li>
-<li>gulp.task()  建立gulp任务</li>
-<li>gulp.watach() 监控文件的变化</li>
-<li>.pope() 放置要处理的文件</li>
-</ul>
-</li>
-<li><h4 id="gulp插件"><a href="#gulp插件" class="headerlink" title="gulp插件"></a>gulp插件</h4><p>插件网址：<a href="http://www.npmjs.com" target="_blank" rel="noopener">www.npmjs.com</a> </p>
-<p>插件用法：下载 如：<code>npm install gulp-htmlmin</code> 引用：如：<code>require  gulp-htmlmin</code> 调用</p>
-<p><code>npm install gulp-cil -g</code> 安装gulp的命令行工具</p>
-<p>在文件名为<code>.glupfile.js</code>里面编写任务，相同路径下建立<code>src</code>文件夹存放源文件，在<code>dist</code>目录下存放修改后的文件</p>
-<ul>
-<li><p>gulp-htmlmin  html文件的压缩</p>
-<pre><code>const gulp = require(&#39;gulp&#39;);
-const htmlmin = require(&#39;gulp-htmlmin&#39;);
-const fileinclude = require(&#39;gulp-file-include&#39;);
-// html任务
-// 1.html文件中代码的压缩操作
-// 2.抽取html文件中的公共代码
-gulp.task(&#39;htmlmin&#39;, () =&gt; {
-    gulp.src(&#39;./src/*.html&#39;)
-        .pipe(fileinclude())
-        // 压缩html文件中的代码
-        .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest(&#39;dist&#39;));
-});</code></pre></li>
-<li><p>gulp-file-include  公共文件包含</p>
-<p>先把公共部分提取到一个单独的文件里，再把需要引入公共部分的地方写上  @@include (‘公共文件的路径’)</p>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>- gulp-csso  压缩css
-
-- gullp-less  less语法转换
-
-  ```
-  const less = require(&#39;gulp-less&#39;);
-  const csso = require(&#39;gulp-csso&#39;);
-  // css任务
-  // 1.less语法转换
-  // 2.css代码压缩
-  gulp.task(&#39;cssmin&#39;, () =&gt; {
-      // 选择css目录下的所有less文件以及css文件
-      gulp.src([&#39;./src/css/*.less&#39;, &#39;./src/css/*.css&#39;])
-      // 将less语法转换为css语法
-          .pipe(less())
-          // 将css代码进行压缩
-      .pipe(csso())
-          // 将处理的结果进行输出
-          .pipe(gulp.dest(&#39;dist/css&#39;))
-  });
-  ```
-
-- gulp-bable  js语法转换
-
-- gulp-uglify  压缩混淆js
-
-  ```
-  const babel = require(&#39;gulp-babel&#39;);
-  const uglify = require(&#39;gulp-uglify&#39;);
-  // js任务
-  // 1.es6代码转换</code></pre><p>  // 2.代码压缩<br>      gulp.task(‘jsmin’, () =&gt; {<br>          gulp.src(‘./src/js/*.js’)<br>              .pipe(babel({<br>                  // 它可以判断当前代码的运行环境 将代码转换为当前运行环境所支持的代码<br>                  presets: [‘@babel/env’]<br>              }))<br>              .pipe(uglify())<br>              .pipe(gulp.dest(‘dist/js’))<br>      });<br>      ```</p>
-<pre><code>- browsersync  浏览器实时同步</code></pre><h2 id="package-json文件"><a href="#package-json文件" class="headerlink" title="package.json文件"></a>package.json文件</h2><p><strong>作用</strong>：项目描述文件，记录当前项目信息，可使用<code>npm init -yes/y</code>命令生成。</p>
-<h3 id="node-modules文件夹的问题"><a href="#node-modules文件夹的问题" class="headerlink" title="node_modules文件夹的问题"></a>node_modules文件夹的问题</h3><p>Node规范将模块文件都放在<code>node_modules</code>这个目录</p>
-<p>但是如果文件夹和文件过多过碎，我们要把整体文件夹拷贝给别人的时候传输速度会很慢。<br>复杂的模块依赖关系需要被记录，确保模块的版本和当前保持一致以免运行报错。</p>
-<h3 id="项目依赖"><a href="#项目依赖" class="headerlink" title="项目依赖"></a>项目依赖</h3><p>项目开发和运营上线都需要依赖的第三方包，使用<code>npm install  包名</code>下载的文件会默认添加到package.js文件的<code>dependencies</code>字段中</p>
-<ul>
-<li><p>dependencies</p>
-<ul>
-<li>npm install 下载</li>
-</ul>
-</li>
-</ul>
-<h3 id="开发依赖"><a href="#开发依赖" class="headerlink" title="开发依赖"></a>开发依赖</h3><p>项目开发阶段需要的依赖，线上运营不需要的第三方包，称为开发依赖<br>使用<code>npm install 包名 --save-dev/-D</code>命令将包添加到<code>devDependencies</code>字段中</p>
-<ul>
-<li><p>devDependencies</p>
-<ul>
-<li>npm install –production 下载</li>
-</ul>
-</li>
-</ul>
-<h3 id="package-lock-js文件的作用"><a href="#package-lock-js文件的作用" class="headerlink" title="package-lock.js文件的作用"></a>package-lock.js文件的作用</h3><p>锁定包的版本，确保再次下载时不会因为包版本不同而产生问题<br>加快下载速度，因为该文件中已经记录了项目所依赖第三方包的树状结构和包的下载地址，重新安装时只需下载即可，不需要做额外的工作</p>
-<h2 id="Node-js异步编程"><a href="#Node-js异步编程" class="headerlink" title="Node.js异步编程"></a>Node.js异步编程</h2><p><strong>同步API</strong>：只有当前API执行完成后，才能继续执行下一个API，可以从返回值拿到API的执行结果</p>
-<p><strong>异步API</strong>：当前API的执行不会阻塞后续代码的执行，使用回调函数(自己定义的函数别人调用)可以获取异步API的执行结果</p>
-<p><strong>Promise</strong>出现的目的是解决Node.js异步编程中回调地狱(也就是后面异步API依赖当前异步API的调用，造成一层层嵌套的关系)的问题。</p>
-<h4 id="异步函数"><a href="#异步函数" class="headerlink" title="异步函数"></a>异步函数</h4><p>异步函数是异步编程语法的终极解决方案，它可以让我们将异步代码写成同步的形式，让代码不再有回调函数嵌套，使代码变得清晰明了。</p>
-<p><strong>async关键字</strong></p>
-<pre><code>const fn = async () =&gt; {};</code></pre><pre><code>async function fn () {}</code></pre><ol>
-<li>普通函数定义前加async关键字 普通函数变成异步函数</li>
-<li>异步函数默认返回promise对象</li>
-<li>在异步函数内部使用return关键字进行结果返回 结果会被包裹的promise对象中 return关键字代替了resolve方法</li>
-<li>在异步函数内部使用throw关键字抛出程序异常</li>
-<li>调用异步函数再链式调用then方法获取异步函数执行结果</li>
-<li>调用异步函数再链式调用catch方法获取异步函数执行的错误信息</li>
-</ol>
-<p><strong>await关键字</strong></p>
+                <h2 id="作用域闭包"><a href="#作用域闭包" class="headerlink" title="作用域闭包"></a>作用域闭包</h2><blockquote>
 <ol>
-<li>await关键字只能出现在异步函数中</li>
-<li>await promise await后面只能写promise对象 写其他类型的API是不不可以的</li>
-<li>await关键字可是暂停异步函数向下执行 直到promise返回结果</li>
+<li>闭包就好像从 JavaScript 中分离出来的一个充满神秘色彩的未开化世界，只有最勇敢的人 才能够到达那里。但实际上它只是一个标准，显然就是关于如何在函数作为值按需传递的 词法环境中书写代码的。</li>
+<li>当函数可以记住并访问所在的词法作用域，即使函数是在当前词法作用域之外执行，这时 就产生了闭包。</li>
+<li>如果没能认出闭包，也不了解它的工作原理，在使用它的过程中就很容易犯错，比如在循 环中。但同时闭包也是一个非常强大的工具，可以用多种形式来实现模块等模式。</li>
+<li>模块有两个主要特征： （1）为创建内部作用域而调用了一个包装函数； （2）包装函数的返回 值必须至少包括一个对内部函数的引用，这样就会创建涵盖整个包装函数内部作用域的闭 包。</li>
 </ol>
+</blockquote>
+<p><strong>定义</strong>：当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用 域之外执行。</p>
+<pre><code>function foo() {   
+    var a = 2; 
+    function bar() {     
+        console.log( a ); // 2    
+          } 
+    bar(); 
+    } 
+foo();</code></pre><ul>
+<li>bar() 对 a 的引用的方法是词法作用域的查找规则，而这些规则只是闭包的一部分。（但却 是非常重要的一部分！）</li>
+<li>bar() 嵌套在 foo() 内部，所以函数 bar() 具有一个涵盖 foo() 作用域的闭包 （事实上，涵盖了它能访问的所有作用域，比如全局作用域）</li>
+</ul>
+<pre><code>function foo() { 
+    var a = 2; 
+    function bar() {
+        console.log( a );  
+            } 
+    return bar;    
+  }  
+var baz = foo(); 
+baz(); // 2 —— 朋友，这就是闭包的效果。</code></pre><ul>
+<li>拜 bar() 所声明的位置所赐，它拥有涵盖 foo() 内部作用域的闭包，使得该作用域能够一 直存活，以供 bar() 在之后任何时间进行引用。bar() 依然持有对该作用域的引用，而这个引用就叫作闭包。</li>
+<li>这个函数在定义时的词法作用域以外的地方被调用。闭包使得函数可以继续访问定义时的 词法作用域<ul>
+<li>无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到闭包。传递函数当然也可以是间接的</li>
+<li>无论通过何种手段将内部函数传递到所在的词法作用域以外，它都会持有对原始定义作用 域的引用，无论在何处执行这个函数都会使用闭包。</li>
+</ul>
+</li>
+<li>IIFE 本身并不是观察闭包的恰当例子，但它的确创建了闭包，并且也是最常用来创建 可以被封闭起来的闭包的工具。因此 IIFE 的确同闭包息息相关，即使本身并不会真的使用闭包。</li>
+</ul>
+<h3 id="循环域闭包"><a href="#循环域闭包" class="headerlink" title="循环域闭包"></a>循环域闭包</h3><p>问题</p>
+<pre><code>for (var i=1; i&lt;=5; i++) {   
+    setTimeout( function timer() {     
+        console.log( i );  //66666
+            }, i*1000 ); } </code></pre><ul>
+<li>缺陷是我们试图假设循环中的每个迭代在运行时都会给自己“捕获”一个 i 的副本。但是 根据作用域的工作原理，实际情况是尽管循环中的五个函数是在各个迭代中分别定义的， 但是它们都被封闭在一个共享的全局作用域中，因此实际上只有一个 i</li>
+</ul>
+<p>解决方案</p>
+<pre><code>for (var i=1; i&lt;=5; i++) {  
+    (function(j) {       
+        setTimeout( function timer() {           
+            console.log( j );  //12345
+          }, j*1000 );   
+    })( i ); 
+ }</code></pre><ul>
+<li>在迭代内使用 IIFE 会为每个迭代都生成一个新的作用域，使得延迟函数的回调可以将新的 作用域封闭在每个迭代内部，每个迭代中都会含有一个具有正确值的变量供我们访问。</li>
+</ul>
+<pre><code>for (let i=1; i&lt;=5; i++) {   
+    setTimeout( function timer() {    
+        console.log( i );  //12345
+        }, i*1000 );
+ }</code></pre><ul>
+<li>本质上这是将一个块转换成一个可以被关闭的作用域，并且在这个块作用域中声明一个变量。</li>
+</ul>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>模块模式需要具备两个必要条件：</p>
+<ol>
+<li>必须有外部的封闭函数，该函数必须至少被调用一次（每次调用都会创建一个新的模块 实例）。</li>
+<li>封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并且可以访问或者修改私有的状态。</li>
+</ol>
+<pre><code>bar.js
+function hello(who) {   
+    return &quot;Let me introduce: &quot; + who; } 
+export hello;
+
+foo.js
+// 仅从 &quot;bar&quot; 模块导入 hello() 
+import hello from &quot;bar&quot;;     
+var hungry = &quot;hippo&quot;; 
+function awesome() {    
+    console.log(hello( hungry )); //Let me introduce:hippo
+    } </code></pre><ul>
+<li>import 可以将一个模块中的一个或多个 API 导入到当前作用域中，并分别绑定在一个变量 上（在我们的例子里是 hello）。module 会将整个模块的 API 导入并绑定到一个变量上（在 我们的例子里是 foo 和 bar）。</li>
+<li>export 会将当前模块的一个标识符（变量、函数）导出为公 共 API。这些操作可以在模块定义中根据需要使用任意多次。</li>
+</ul>
 
             </div>
             <hr/>
@@ -783,7 +603,7 @@ gulp.task(&#39;htmlmin&#39;, () =&gt; {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.iamys.club/2020/04/16/node.js/">https://www.iamys.club/2020/04/16/node.js/</a>
+                    <a href="https://www.iamys.club/2020/08/01/%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85/">https://www.iamys.club/2020/08/01/%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -821,8 +641,8 @@ gulp.task(&#39;htmlmin&#39;, () =&gt; {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/node-js/">
-                                    <span class="chip bg-color">node.js</span>
+                                <a href="/tags/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/">
+                                    <span class="chip bg-color">你不知道的JavaScript</span>
                                 </a>
                             
                         </div>
@@ -1016,52 +836,35 @@ gulp.task(&#39;htmlmin&#39;, () =&gt; {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/04/17/mongoDB%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                <a href="/2020/08/01/%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="mongoDB数据库">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="对象和类">
                         
-                        <span class="card-title">mongoDB数据库</span>
+                        <span class="card-title">对象和类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            对象
 
+JavaScript 中的对象有字面形式（比如 var a = { .. }）和构造形式（比如 var a = new Array(..)）。字面形式更常用，不过有时候构造形式可以提供更多选项。
 
-术语
-解释说明
-
-
-
-database
-数据库，可建立多个
-
-
-collection
-集合，一组数据，相当于js里的数组
-
-
-document
-文档，一条具体的数据，相当于js里的对象
-
-
-filed
-字段，文档中的属性名称，相当与j
+许多人都以为“JavaScript
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-17
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/" class="post-category">
-                                    前后端交互
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
                                 </a>
                             
                             
@@ -1071,8 +874,8 @@ filed
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/mongoDB%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">mongoDB数据库</span>
+                    <a href="/tags/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/">
+                        <span class="chip bg-color">你不知道的JavaScript</span>
                     </a>
                     
                 </div>
@@ -1086,24 +889,28 @@ filed
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/10/jQuery/">
+                <a href="/2020/08/01/%E4%BD%9C%E7%94%A8%E5%9F%9F/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="初识jQuery">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="作用域">
                         
-                        <span class="card-title">初识jQuery</span>
+                        <span class="card-title">作用域</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            初始jQuery什么是jQueryjQuery是一个快速、简洁的javascript库，它里面封装了JavaScript常用大的功能代码，优化了DOM操作、事件处理、动画设计和Ajax交互，学习jQuery的本质就是学习调用这些函数（方法）
+                            作用域
+
+作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。
+如果查找的目的是对 变量进行赋值，那么就会使用 LHS 查询；如果目的是获取变量的值，就会使用 RHS 查询。
+赋值操作符会导致 LHS 查询。＝操作符或调用函数时传入
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
                             </span>
                         <span class="publish-author">
                             
@@ -1120,8 +927,8 @@ filed
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/jQuery/">
-                        <span class="chip bg-color">jQuery</span>
+                    <a href="/tags/%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript/">
+                        <span class="chip bg-color">你不知道的JavaScript</span>
                     </a>
                     
                 </div>
