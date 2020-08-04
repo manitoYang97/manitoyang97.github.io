@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="闭包, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="Promise, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>闭包 | XiaoQi&#39;s Blog</title>
+    <title>Promise | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">闭包</h1>
+                    <h1 class="description center-align post-title">Promise</h1>
                 </div>
             </div>
         </div>
@@ -460,28 +460,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-01
+                    2020-08-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-01
+                    2020-08-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    12 分
                 </div>
                 
 
@@ -497,88 +497,476 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="作用域闭包"><a href="#作用域闭包" class="headerlink" title="作用域闭包"></a>作用域闭包</h2><blockquote>
+                <h2 id="JavaScript-执行机制"><a href="#JavaScript-执行机制" class="headerlink" title="JavaScript 执行机制"></a>JavaScript 执行机制</h2><hr>
+<p>javascript是一门<strong>单线程</strong>语言不能同时处理多个任务，把任务分成了同步和异步。</p>
+<h3 id="事件循环Event-Loop"><a href="#事件循环Event-Loop" class="headerlink" title="事件循环Event Loop"></a>事件循环Event Loop</h3><p>事件循环是js实现异步的一种方法，也是js的执行机制。</p>
 <ol>
-<li>闭包就好像从 JavaScript 中分离出来的一个充满神秘色彩的未开化世界，只有最勇敢的人 才能够到达那里。但实际上它只是一个标准，显然就是关于如何在函数作为值按需传递的 词法环境中书写代码的。</li>
-<li>当函数可以记住并访问所在的词法作用域，即使函数是在当前词法作用域之外执行，这时 就产生了闭包。</li>
-<li>如果没能认出闭包，也不了解它的工作原理，在使用它的过程中就很容易犯错，比如在循 环中。但同时闭包也是一个非常强大的工具，可以用多种形式来实现模块等模式。</li>
-<li>模块有两个主要特征： （1）为创建内部作用域而调用了一个包装函数； （2）包装函数的返回 值必须至少包括一个对内部函数的引用，这样就会创建涵盖整个包装函数内部作用域的闭 包。</li>
+<li>同步和异步任务分别进入不同的执行”场所”，同步的进入主线程，异步的进入Event Table并注册函数。</li>
+<li>当指定的事情完成时，Event Table会将这个函数移入Event Queue。</li>
+<li>主线程内的任务执行完毕为空，会去Event Queue读取对应的函数，进入主线程执行。</li>
+<li>上述过程会不断重复，也就是常说的Event Loop(事件循环)。</li>
 </ol>
-</blockquote>
-<p><strong>定义</strong>：当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用 域之外执行。</p>
-<pre><code>function foo() {   
-    var a = 2; 
-    function bar() {     
-        console.log( a ); // 2    
-          } 
-    bar(); 
-    } 
-foo();</code></pre><ul>
-<li>bar() 对 a 的引用的方法是词法作用域的查找规则，而这些规则只是闭包的一部分。（但却 是非常重要的一部分！）</li>
-<li>bar() 嵌套在 foo() 内部，所以函数 bar() 具有一个涵盖 foo() 作用域的闭包 （事实上，涵盖了它能访问的所有作用域，比如全局作用域）</li>
+<pre><code>//举个栗子
+let data = [];
+$.ajax({
+    url:www.javascript.com,
+    data:data,
+    success:() =&gt; {
+        console.log(&#39;发送成功!&#39;);
+    }
+})
+console.log(&#39;代码执行结束&#39;);</code></pre><ol>
+<li>ajax进入Event Table，注册回调函数<code>success</code>。</li>
+<li>执行<code>console.log(&#39;代码执行结束&#39;)</code>。</li>
+<li>ajax事件完成，回调函数<code>success</code>进入Event Queue。</li>
+<li>主线程从Event Queue读取回调函数<code>success</code>并执行</li>
+</ol>
+<h3 id="宏任务和微任务"><a href="#宏任务和微任务" class="headerlink" title="宏任务和微任务"></a>宏任务和微任务</h3><ul>
+<li>macro-task(宏任务)：包括整体代码script，setTimeout，setInterval</li>
+<li>micro-task(微任务)：Promise，process.nextTick</li>
 </ul>
-<pre><code>function foo() { 
-    var a = 2; 
-    function bar() {
-        console.log( a );  
-            } 
-    return bar;    
-  }  
-var baz = foo(); 
-baz(); // 2 —— 朋友，这就是闭包的效果。</code></pre><ul>
-<li>拜 bar() 所声明的位置所赐，它拥有涵盖 foo() 内部作用域的闭包，使得该作用域能够一 直存活，以供 bar() 在之后任何时间进行引用。bar() 依然持有对该作用域的引用，而这个引用就叫作闭包。</li>
-<li>这个函数在定义时的词法作用域以外的地方被调用。闭包使得函数可以继续访问定义时的 词法作用域<ul>
-<li>无论使用何种方式对函数类型的值进行传递，当函数在别处被调用时都可以观察到闭包。传递函数当然也可以是间接的</li>
-<li>无论通过何种手段将内部函数传递到所在的词法作用域以外，它都会持有对原始定义作用 域的引用，无论在何处执行这个函数都会使用闭包。</li>
+<pre><code>setTimeout(function() {
+    console.log(&#39;setTimeout&#39;);  //4
+})
+
+new Promise(function(resolve) {
+    console.log(&#39;promise&#39;); //1
+}).then(function() {
+    console.log(&#39;then&#39;);  //3
+})
+
+console.log(&#39;console&#39;);  //2</code></pre><ol>
+<li>这段代码作为宏任务，进入主线程。</li>
+<li>先遇到<code>setTimeout</code>，那么将其回调函数注册后分发到宏任务Event Queue。</li>
+<li>接下来遇到了<code>Promise</code>，<code>new Promise</code>立即执行，<code>then</code>函数分发到微任务Event Queue。</li>
+<li>遇到<code>console.log()</code>，立即执行。</li>
+<li>整体代码script作为第一个宏任务执行结束，执行<code>then</code>在微任务Event Queue里面。</li>
+<li>第一轮事件循环结束了，开始第二轮循环，当然要从宏任务Event Queue开始。我们发现了宏任务Event Queue中<code>setTimeout</code>对应的回调函数，立即执行。</li>
+</ol>
+<h2 id="promise"><a href="#promise" class="headerlink" title="promise"></a>promise</h2><hr>
+<p>Promise 可以理解为承诺，就像我们去点餐服务员给我们一引订单票，这就是承诺。如果餐做好了叫我们这就是成功，如果没有办法给我们做出食物这就是拒绝。</p>
+<p>一个 <code>promise</code> 必须有一个 <code>then</code> 方法用于处理状态改变</p>
+<h2 id="状态说明"><a href="#状态说明" class="headerlink" title="状态说明"></a>状态说明</h2><hr>
+<p>Promise包含<code>pending</code>、<code>fulfilled</code>、<code>rejected</code>三种状态</p>
+<ol>
+<li><code>pending</code> 指初始等待状态，初始化 <code>promise</code> 时的状态</li>
+<li><code>resolve</code> 指已经解决，将 <code>promise</code> 状态设置为<code>fulfilled</code></li>
+<li><code>reject</code> 指拒绝处理，将 <code>promise</code> 状态设置为<code>rejected</code></li>
+</ol>
+<p><code>promise</code> 是生产者，通过 <code>resolve</code> 与 <code>reject</code> 函数告之结果</p>
+<p><code>promise</code> 非常适合需要一定执行时间的异步任务</p>
+<p>状态一旦改变将不可更改</p>
+<p>promise 是队列状态，就像体育中的接力赛，状态一直向后传递，当然其中的任何一个promise也可以改变状态。</p>
+<ul>
+<li><p>promise 没有使用 <code>resolve</code> 或 <code>reject</code> 更改状态时，状态为 <code>pending</code></p>
+<pre><code>    console.log(
+        new Promise((resolve, reject) =&gt; {})
+    )//Promise{&lt;pending&gt;}</code></pre></li>
+<li><p>promise状态更改为resolve或reject之后</p>
+<pre><code>console.log(
+            new Promise((resolve, reject) =&gt; {
+                resolve(&#39;felfilled&#39;)
+            })
+        ) //Promise{&lt;felfilled&gt;:felfilled}
+
+ console.log(
+        new Promise((resolve, reject) =&gt; {
+            reject(&#39;rejected&#39;)
+        })
+    ); //Promise{&lt;rejected&gt;:rejected}</code></pre></li>
+<li><p><code>promise</code> 创建时即立即执行即同步任务，<code>then</code> 会放在异步微任务中执行，需要等同步任务执行后才执行。</p>
+</li>
+<li><p><code>promise</code> 的 then、catch、finally的方法都是异步任务</p>
+</li>
+<li><p>程序需要将主任务执行完成才会执行异步队列任务</p>
+<pre><code>    let promise = new Promise((resolve, reject) =&gt; {
+        resolve(&#39;iamys.club&#39;);
+        console.log(&#39;世界&#39;);
+    }).then(msg =&gt; {
+        console.log(msg);
+    })
+    console.log(&#39;你好&#39;);
+    //世界
+    //你好
+    //iamys.club</code></pre><ul>
+<li>Promise里的是微任务比回调函数的宏任务先执行</li>
+</ul>
+<pre><code>   new Promise((resolve, reject) =&gt; {
+        setTimeout(() =&gt; {
+            console.log(&#39;定时器&#39;);
+        }, 3000);
+        resolve(&quot;fulfilled&quot;);
+    }).then(
+        msg =&gt; {
+            console.log(msg);
+        },
+        error =&gt; {
+            console.log(error);
+        }
+    );
+    //felfilled
+    //定时器</code></pre></li>
+<li><p>状态被改变后就不能再修改了。下面先通过<code>resolve</code> 改变为成功状态，表示<code>promise</code> 状态已经完成，就不能使用 <code>reject</code> 更改状态了</p>
+<pre><code>    new Promise((resolve, reject) =&gt; {
+        resolve(&quot;操作成功&quot;);
+        reject(new Error(&quot;请求失败&quot;));
+    }).then(
+        msg =&gt; {
+            console.log(msg);
+        },
+        error =&gt; {
+            console.log(error);
+        }
+    );
+    //操作成功</code></pre></li>
+</ul>
+<h2 id="动态改变"><a href="#动态改变" class="headerlink" title="动态改变"></a>动态改变</h2><hr>
+<ul>
+<li><p>如果 <code>resolve</code> 参数是一个 <code>promise</code> ，将会改变<code>promise</code>状态。</p>
+<p>下例中 <code>p1</code> 的状态将被改变为 <code>p2</code> 的状态</p>
+<pre><code>    const p1 = new Promise((resolve, reject) =&gt; {
+        resolve(
+            //p2
+            new Promise((s, e) =&gt; {
+                e(&quot;失败&quot;);
+            })
+        );
+    }).then(msg =&gt; {
+            console.log(msg);
+        },
+        reson =&gt; {
+            console.log(reson);//失败
+        }
+    );</code></pre></li>
+<li><p>当promise做为参数传递时，需要等待promise执行完才可以继承</p>
+<p>下面的p2需要等待p1执行完成。因为<code>p2</code> 的<code>resolve</code> 返回了 <code>p1</code> 的promise，所以此时<code>p2</code> 的<code>then</code> 方法已经是<code>p1</code> 的了，所以 <code>then</code> 的第一个函数输出了 <code>p1</code> 的 <code>resolve</code> 的参数</p>
+<pre><code> const p1 = new Promise((resolve, reject) =&gt; {
+        setTimeout(() =&gt; {
+            resolve(&quot;操作成功&quot;);
+        }, 2000);
+    });
+    const p2 = new Promise((resolve, reject) =&gt; {
+        resolve(p1);
+    }).then(
+        msg =&gt; {
+            console.log(msg);//操作成功
+        },
+        error =&gt; {
+            console.log(error);
+        }
+    );</code></pre></li>
+</ul>
+<h2 id="then"><a href="#then" class="headerlink" title="then"></a>then</h2><hr>
+<p>一个promise 需要提供一个then方法访问promise 结果，<code>then</code> 用于定义当 <code>promise</code> 状态发生改变时的处理，即<code>promise</code>处理异步操作，<code>then</code> 用于结果。</p>
+<ul>
+<li>then 方法必须返回 promise，用户返回或系统自动返回</li>
+<li>第一个函数在<code>resolved</code> 状态时执行，即执行<code>resolve</code>时执行<code>then</code>第一个函数处理成功状态，如果只关心失败时状态，<code>then</code> 的第一个参数传递 <code>null</code></li>
+<li>第二个函数在<code>rejected</code>状态时执行，即执行<code>reject</code> 时执行第二个函数处理失败状态，该函数是可选的</li>
+<li>两个函数都接收 <code>promise</code> 传出的值做为参数</li>
+<li>也可以使用<code>catch</code> 来处理失败的状态，那就是对所有没有指定失败返回的统一的失败返回</li>
+<li>如果 <code>then</code> 返回 <code>promise</code> ，下一个<code>then</code> 会在当前<code>promise</code> 状态改变后执行</li>
+</ul>
+<h3 id="链式调用"><a href="#链式调用" class="headerlink" title="链式调用"></a>链式调用</h3><p><code>promise</code> 中的 <code>then</code> 方法可以链接执行，<code>then</code> 方法的返回值会传递到下一个<code>then</code> 方法。</p>
+<ul>
+<li><p><code>then</code> 会返回一个<code>promise</code> ，所以如果有多个<code>then</code> 时会连续执行</p>
+</li>
+<li><p><code>then</code> 返回的值会做为当前<code>promise</code> 的结果</p>
+</li>
+<li><p>第一个<code>then</code> 是对上个promise 的状态的处理，每个 <code>then</code> 会是一个新的promise，默认传递 <code>fulfilled</code>状态，上一个 promise状态不会影响以后then返回的状态</p>
+<pre><code>    new Promise((resolve, reject) =&gt; {
+            reject();
+        })
+        .then(
+            resolve =&gt; console.log(&quot;fulfilled&quot;),
+            reject =&gt; console.log(&quot;rejected&quot;)
+        )
+        .then(
+            resolve =&gt; console.log(&quot;fulfilled&quot;),
+            reject =&gt; console.log(&quot;rejected&quot;)
+        )
+        .then(
+            resolve =&gt; console.log(&quot;fulfilled&quot;),
+            reject =&gt; console.log(&quot;rejected&quot;)
+        );
+    // 执行结果如下
+    // rejected
+    // fulfilled
+    // fulfilled</code></pre></li>
+<li><p>如果内部返回promise，就用这个promise</p>
+<pre><code>    let p1 = new Promise(resolve =&gt; {
+        resolve();
+    });
+    let p2 = p1.then(() =&gt; {
+        return new Promise(r =&gt; {
+            r(&quot;iamys.club&quot;);
+        });
+    });
+    p2.then(v =&gt; {
+        console.log(v); //iamys.club
+    });</code></pre></li>
+<li><p>如果 <code>then</code> 返回<code>promise</code> 时，后面的<code>then</code> 就是对返回的 <code>promise</code> 的处理（promise的返回值是promise也一样），其他操作需要等待该 promise 变更状态后执行。</p>
+<pre><code>    let promise = new Promise(resolve =&gt; resolve());
+    let p1 = promise.then(() =&gt; {
+        return new Promise(resolve =&gt; {
+            setTimeout(() =&gt; {
+                console.log(`p1`);
+                resolve();
+            }, 2000);
+        });
+    }).then(() =&gt; {
+        return new Promise((a, b) =&gt; {
+            console.log(`p2`);
+        });
+    });
+    //p1
+    //p2</code></pre></li>
+<li><p>如果<code>then</code>返回 <code>promise</code> 时，返回的<code>promise</code> 后面的<code>then</code> 就是处理这个<code>promise</code> 的</p>
+<pre><code>new Promise((resolve, reject) =&gt; {
+  resolve();
+})
+.then(v =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    resolve(&quot;第二个promise&quot;);
+  });
+})
+.then(value =&gt; {
+  console.log(value); //第二个promise
+  return value;
+})
+.then(value =&gt; {
+  console.log(value); //第二个promise
+});</code></pre></li>
+</ul>
+<h3 id="其它类型"><a href="#其它类型" class="headerlink" title="其它类型"></a>其它类型</h3><ul>
+<li><p>如果 <code>then</code> 返回与 <code>promise</code> 相同将禁止执行</p>
+<pre><code>let promise = new Promise(resolve =&gt; {
+  resolve();
+});
+let p2 = promise.then(() =&gt; {
+  return p2;
+}); // TypeError: Chaining cycle detected for promise</code></pre></li>
+<li><p>包含 <code>then</code> 方法的对象就是一个 <code>promise</code> ，享受和promise一样的特性和待遇，如果对象中的 then 不是函数，则将对象做为值传递</p>
+<pre><code>new Promise((resolve, reject) =&gt; {
+        resolve(
+            class {
+                static then(resolve, reject) {
+                    setTimeout(() =&gt; {
+                        resolve(&quot;解决状态&quot;);
+                    }, 2000);
+                }
+            }
+        );
+    }).then(
+        v =&gt; {
+            console.log(`felfilled: ${v}`);//felfilled:解决状态
+        },
+        v =&gt; {
+            console.log(`rejected: ${v}`);
+        }
+    );</code></pre></li>
+</ul>
+<h2 id="catch"><a href="#catch" class="headerlink" title="catch"></a>catch</h2><hr>
+<p>catch用于失败状态的处理函数，等同于 <code>then(null,reject){}</code></p>
+<ul>
+<li><p>建议使用 <code>catch</code> 处理错误</p>
+</li>
+<li><p>将 <code>catch</code> 放在最后面用于统一处理前面发生的错误</p>
+</li>
+<li><p>错误是冒泡的操作的，只要一个<code>then</code> 没有定义第二个函数，将一直冒泡到 <code>catch</code> 处理错误</p>
+</li>
+<li><p><code>catch</code> 也可以捕获对 <code>then</code> 抛出的错误处理</p>
+<pre><code>   new Promise((resolve, reject) =&gt; {
+            resolve();
+        })
+        .then(msg =&gt; {
+            throw new Error(&quot;这是then 抛出的错误&quot;);
+        })
+        .catch(() =&gt; {
+            console.log(&quot;33&quot;);//33
+        });</code></pre></li>
+<li><p>在异步中 <code>throw</code> 将不会触发 <code>catch</code>，而使用系统错误处理</p>
+<pre><code>    const promise = new Promise((resolve, reject) =&gt; {
+        setTimeout(() =&gt; {
+            throw new Error(&quot;fail&quot;);
+        }, 2000);
+    }).catch(msg =&gt; {
+        console.log(msg + &quot;123&quot;);
+    });</code></pre></li>
+</ul>
+<h3 id="定制错误"><a href="#定制错误" class="headerlink" title="定制错误"></a>定制错误</h3><p>404错误</p>
+<pre><code>class ParamError extends Error {
+  constructor(msg) {
+    super(msg);
+    this.name = &quot;ParamError&quot;;
+  }
+}
+class HttpError extends Error {
+  constructor(msg) {
+    super(msg);
+    this.name = &quot;HttpError&quot;;
+  }
+}
+function ajax(url) {
+  return new Promise((resolve, reject) =&gt; {
+    if (!/^http/.test(url)) {
+      throw new ParamError(&quot;请求地址格式错误&quot;);
+    }
+    let xhr = new XMLHttpRequest();
+    xhr.open(&quot;GET&quot;, url);
+    xhr.send();
+    xhr.onload = function() {
+      if (this.status == 200) {
+        resolve(JSON.parse(this.response));
+      } else if (this.status == 404) {
+        reject(new HttpError(&quot;用户不存在&quot;));
+      } else {
+        reject(&quot;加载失败&quot;);
+      }
+    };
+    xhr.onerror = function() {
+      reject(this);
+    };
+  });
+}
+
+ajax(`url`)
+.then(value =&gt; {
+  console.log(value);
+})
+.catch(error =&gt; {
+  if (error instanceof ParamError) {
+    console.log(error.message);
+  }
+  if (error instanceof HttpError) {
+    alert(error.message);
+  }
+  console.log(error);
+});
+</code></pre><h2 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h2><hr>
+<p>无论状态是<code>resolve</code> 或 <code>reject</code> 都会执行此动作，<code>finally</code> 与状态无关</p>
+<pre><code>const promise = new Promise((resolve, reject) =&gt; {
+  reject(&quot;hdcms&quot;);
+})
+.then(msg =&gt; {
+  console.log(&quot;resolve&quot;);
+})
+.catch(msg =&gt; {
+  console.log(&quot;reject&quot;);
+})
+.finally(() =&gt; {
+  console.log(&quot;resolve/reject状态都会执行&quot;);
+});</code></pre><h2 id="扩展接口"><a href="#扩展接口" class="headerlink" title="扩展接口"></a>扩展接口</h2><hr>
+<ol>
+<li>使用 <code>promise.resolve</code> 方法可以快速的返回一个<code>promise</code>对象</li>
+<li>和 <code>Promise.resolve</code> 类似，<code>reject</code> 生成一个失败的<code>promise</code></li>
+<li>使用<code>Promise.all</code> 方法可以同时执行多个并行异步操作，比如页面加载时同进获取课程列表与推荐课程。<ul>
+<li>任何一个 <code>Promise</code> 执行失败就会调用 <code>catch</code>方法</li>
+<li>适用于一次发送多个异步操作</li>
+<li>参数必须是可迭代类型，如Array/Set</li>
+<li>成功后返回 <code>promise</code> 结果的有序数组</li>
 </ul>
 </li>
-<li>IIFE 本身并不是观察闭包的恰当例子，但它的确创建了闭包，并且也是最常用来创建 可以被封闭起来的闭包的工具。因此 IIFE 的确同闭包息息相关，即使本身并不会真的使用闭包。</li>
-</ul>
-<h3 id="循环域闭包"><a href="#循环域闭包" class="headerlink" title="循环域闭包"></a>循环域闭包</h3><p>问题</p>
-<pre><code>for (var i=1; i&lt;=5; i++) {   
-    setTimeout( function timer() {     
-        console.log( i );  //66666
-            }, i*1000 ); } </code></pre><ul>
-<li>缺陷是我们试图假设循环中的每个迭代在运行时都会给自己“捕获”一个 i 的副本。但是 根据作用域的工作原理，实际情况是尽管循环中的五个函数是在各个迭代中分别定义的， 但是它们都被封闭在一个共享的全局作用域中，因此实际上只有一个 i</li>
-</ul>
-<p>解决方案</p>
-<pre><code>for (var i=1; i&lt;=5; i++) {  
-    (function(j) {       
-        setTimeout( function timer() {           
-            console.log( j );  //12345
-          }, j*1000 );   
-    })( i ); 
- }</code></pre><ul>
-<li>在迭代内使用 IIFE 会为每个迭代都生成一个新的作用域，使得延迟函数的回调可以将新的 作用域封闭在每个迭代内部，每个迭代中都会含有一个具有正确值的变量供我们访问。</li>
-</ul>
-<pre><code>for (let i=1; i&lt;=5; i++) {   
-    setTimeout( function timer() {    
-        console.log( i );  //12345
-        }, i*1000 );
- }</code></pre><ul>
-<li>本质上这是将一个块转换成一个可以被关闭的作用域，并且在这个块作用域中声明一个变量。</li>
-</ul>
-<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p>模块模式需要具备两个必要条件：</p>
-<ol>
-<li>必须有外部的封闭函数，该函数必须至少被调用一次（每次调用都会创建一个新的模块 实例）。</li>
-<li>封闭函数必须返回至少一个内部函数，这样内部函数才能在私有作用域中形成闭包，并且可以访问或者修改私有的状态。</li>
 </ol>
-<pre><code>bar.js
-function hello(who) {   
-    return &quot;Let me introduce: &quot; + who; } 
-export hello;
-
-foo.js
-// 仅从 &quot;bar&quot; 模块导入 hello() 
-import hello from &quot;bar&quot;;     
-var hungry = &quot;hippo&quot;; 
-function awesome() {    
-    console.log(hello( hungry )); //Let me introduce:hippo
-    } </code></pre><ul>
-<li>import 可以将一个模块中的一个或多个 API 导入到当前作用域中，并分别绑定在一个变量 上（在我们的例子里是 hello）。module 会将整个模块的 API 导入并绑定到一个变量上（在 我们的例子里是 foo 和 bar）。</li>
-<li>export 会将当前模块的一个标识符（变量、函数）导出为公 共 API。这些操作可以在模块定义中根据需要使用任意多次。</li>
+<pre><code>        const hdcms = new Promise((resolve, reject) =&gt; {
+            setTimeout(() =&gt; {
+                resolve(&quot;第一个Promise&quot;);
+            }, 1000);
+        });
+        const houdunren = new Promise((resolve, reject) =&gt; {
+            setTimeout(() =&gt; {
+                resolve(&quot;第二个异步&quot;);
+            }, 1000);
+        });
+        const hd = Promise.all([hdcms, houdunren])
+            .then(results =&gt; {
+                console.log(results);
+            })  //[&quot;第一个Promise&quot;, &quot;第二个异步&quot;]
+            .catch(msg =&gt; {
+                console.log(msg);
+            });</code></pre><ol start="4">
+<li><code>allSettled</code> 用于处理多个<code>promise</code> ，只关注执行完成，不关注是否全部执行成功，<code>allSettled</code> 状态只会是<code>fulfilled</code>。</li>
+<li>使用<code>Promise.race()</code> 处理容错异步，和<code>race</code>单词一样哪个Promise快用哪个，哪个先返回用哪个。<ul>
+<li>以最快返回的promise为准</li>
+<li>如果最快返加的状态为<code>rejected</code> 那整个<code>promise</code>为<code>rejected</code>执行cache</li>
+<li>如果参数不是promise，内部将自动转为promise</li>
 </ul>
+</li>
+</ol>
+<pre><code>        const hdcms = new Promise((resolve, reject) =&gt; {
+            setTimeout(() =&gt; {
+                resolve(&quot;第一个Promise&quot;);
+            }, 2000);
+        });
+        const houdunren = new Promise((resolve, reject) =&gt; {
+            setTimeout(() =&gt; {
+                resolve(&quot;第二个异步&quot;);
+            }, 1000);
+        });
+        Promise.race([hdcms, houdunren])
+            .then(results =&gt; {
+                console.log(results);//第二个异步
+            })
+            .catch(msg =&gt; {
+                console.log(msg);
+            });</code></pre><h2 id="async-await"><a href="#async-await" class="headerlink" title="async/await"></a>async/await</h2><hr>
+<p><code>async/await</code> 是promise 的语法糖，可以让编写 promise 更清晰易懂，也是推荐编写promise 的方式。</p>
+<ul>
+<li><code>async/await</code> 本质还是promise，只是更简洁的语法糖书写</li>
+<li><code>async/await</code> 使用更清晰的promise来替换 promise.then/catch 的方式</li>
+</ul>
+<ol>
+<li><p>函数前加上async，函数将返回promise，我们就可以像使用标准Promise一样使用了。</p>
+</li>
+<li><p>如果有多个await 需要排队执行完成，我们可以很方便的处理多个异步队列</p>
+<p>使用 <code>await</code> 关键词后会等待promise 完</p>
+<ul>
+<li><code>await</code> 后面一般是外部的promise，如果不是直接返回</li>
+<li><code>await</code> 必须放在 async 定义的函数中使用</li>
+<li><code>await</code> 用于替代 <code>then</code> 使编码更优雅</li>
+</ul>
+</li>
+</ol>
+<pre><code>      async function hd(message) {
+            return new Promise(resolve =&gt; {
+                setTimeout(() =&gt; {
+                    resolve(message);
+                }, 2000);
+            });
+        }
+        async function run() {
+            let h1 = await hd(&quot;好的&quot;);
+            console.log(h1);
+            let h2 = await hd(&quot;123&quot;);
+            console.log(h2);
+        }
+        run();</code></pre><h3 id="并发执行"><a href="#并发执行" class="headerlink" title="并发执行"></a>并发执行</h3><p>有时需要多个await 同时执行，有以下几种方法处理，下面多个await 将产生等待</p>
+<pre><code>async function p1() {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+      console.log(&quot;123&quot;);
+      resolve();
+    }, 2000);
+  });
+}
+async function p2() {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+      console.log(&quot;456&quot;);
+      resolve();
+    }, 2000);
+  });
+}
+async function hd() {
+  await p1();
+  await p2();
+}
+hd();
 
+//相当于使用 Promise.all() 处理多个promise并行执行
+async function hd() {
+  await Promise.all([p1(), p2()]);
+}
+hd();</code></pre>
             </div>
             <hr/>
 
@@ -603,7 +991,7 @@ function awesome() {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.iamys.club/2020/08/01/%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85/">https://www.iamys.club/2020/08/01/%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%97%AD%E5%8C%85/</a>
+                    <a href="https://www.iamys.club/2020/08/04/promise/">https://www.iamys.club/2020/08/04/promise/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -832,33 +1220,34 @@ function awesome() {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/01/%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB/">
+                <a href="/2020/08/04/promise/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="对象和类">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Promise">
                         
-                        <span class="card-title">对象和类</span>
+                        <span class="card-title">Promise</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            对象
+                            JavaScript 执行机制
+javascript是一门单线程语言不能同时处理多个任务，把任务分成了同步和异步。
+事件循环Event Loop事件循环是js实现异步的一种方法，也是js的执行机制。
 
-JavaScript 中的对象有字面形式（比如 var a = { .. }）和构造形式（比如 var a = new Array(..)）。字面形式更常用，不过有时候构造形式可以提供更多选项。
-
-许多人都以为“JavaScript
+同步和异步任务分别进入不同的执行”场所
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -871,6 +1260,7 @@ JavaScript 中的对象有字面形式（比如 var a = { .. }）和构造形式
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -889,28 +1279,27 @@ JavaScript 中的对象有字面形式（比如 var a = { .. }）和构造形式
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/01/%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+                <a href="/2020/08/03/%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%AF%AD%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="作用域">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="类型和语法">
                         
-                        <span class="card-title">作用域</span>
+                        <span class="card-title">类型和语法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.作用域
+                            1.类型
 
-作用域是一套规则，用于确定在何处以及如何查找变量（标识符）。
-如果查找的目的是对 变量进行赋值，那么就会使用 LHS 查询；如果目的是获取变量的值，就会使用 RHS 查询。
-赋值操作符会导致 LHS 查询。＝操作符或调用函数时
+JavaScript 有 七 种 内 置 类 型：null、undefined、boolean、number、string、object 和 symbol，可以使用 typeof 运算符来查看。
+变量没有类型，但它们持有的值有类
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
                             </span>
                         <span class="publish-author">
                             
