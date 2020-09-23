@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="初识vue, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="keywords" content="Vue, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
     <meta name="description" content="专注于Web前端,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>初识vue | XiaoQi&#39;s Blog</title>
+    <title>Vue | XiaoQi&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +305,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">初识vue</h1>
+                    <h1 class="description center-align post-title">Vue</h1>
                 </div>
             </div>
         </div>
@@ -433,25 +433,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/vue/">
-                                <span class="chip bg-color">vue</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
-                                web前端
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -460,28 +447,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-20
+                    2020-08-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-31
+                    2020-08-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    4 分
                 </div>
                 
 
@@ -497,345 +484,69 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="vue模块语法"><a href="#vue模块语法" class="headerlink" title="vue模块语法"></a>vue模块语法</h1><h2 id="Vue概述"><a href="#Vue概述" class="headerlink" title="Vue概述"></a>Vue概述</h2><p>声明式渲染&gt;组件系统&gt;客户端路由&gt;集中式状态管理&gt;项目构建</p>
-<p>优点：易用、灵活、高效</p>
-<h2 id="Vue基本使用"><a href="#Vue基本使用" class="headerlink" title="Vue基本使用"></a>Vue基本使用</h2><p>目标：能够说出Vue基本用法</p>
-<h3 id="vue的基本使用步骤"><a href="#vue的基本使用步骤" class="headerlink" title="vue的基本使用步骤"></a>vue的基本使用步骤</h3><ol>
-<li>提供标签填充数据</li>
-<li>引入vue.js库文件</li>
-<li>可以使用vue的语法做功能</li>
-<li>把vue提供的数据填充到标签中</li>
-</ol>
-<pre><code>  &lt;div id=&quot;app&quot;&gt;
-        &lt;div&gt;{{msg}} &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                msg: &#39;Hello Vue&#39; //在页面中打印这段字符
-            }
-        });
-    &lt;/script&gt;</code></pre><h3 id="细节分析："><a href="#细节分析：" class="headerlink" title="细节分析："></a>细节分析：</h3><ol>
-<li>实例参数分析</li>
-</ol>
-<ul>
-<li>el：元素的挂载位置（值可以是css选择器，也可以是DOM元素）</li>
-<li>data：模型数据（值是一个对象）</li>
-</ul>
-<ol start="2">
-<li>插值表达式用法</li>
-</ol>
-<ul>
-<li>将数据填充到HTML标签中</li>
-<li>插值表达式支持基本计算</li>
-</ul>
-<ol start="3">
-<li>vue代码运行原理分析</li>
-</ol>
-<ul>
-<li>vue代码通过可以通过vue框架编译成原生js代码</li>
-</ul>
-<h2 id="Vue模板语法"><a href="#Vue模板语法" class="headerlink" title="Vue模板语法"></a>Vue模板语法</h2><p>目标：能够说出Vue的模板语法</p>
-<h3 id="模板语法概述"><a href="#模板语法概述" class="headerlink" title="模板语法概述"></a>模板语法概述</h3><h4 id="如何理解前端渲染："><a href="#如何理解前端渲染：" class="headerlink" title="如何理解前端渲染："></a>如何理解前端渲染：</h4><p>把数据填充得HTML中</p>
-<h4 id="前端渲染的方式"><a href="#前端渲染的方式" class="headerlink" title="前端渲染的方式"></a>前端渲染的方式</h4><ul>
-<li>原生js拼接字符串</li>
-<li>使用前端模板引擎</li>
-<li>使用vue特有的模板语法</li>
-</ul>
-<h4 id="模板语法概述-1"><a href="#模板语法概述-1" class="headerlink" title="模板语法概述"></a>模板语法概述</h4><ul>
-<li>插值表达式</li>
-<li>指令</li>
-<li>事件绑定</li>
-<li>属性绑定</li>
-<li>样式绑定</li>
-<li>分支循环结构</li>
-</ul>
-<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h4 id="什么是指令"><a href="#什么是指令" class="headerlink" title="什么是指令"></a>什么是指令</h4><ul>
-<li>指令的本质就是自定义属性</li>
-<li>指令的格式:以v-开始</li>
-</ul>
-<h4 id="v-cloak指令用法"><a href="#v-cloak指令用法" class="headerlink" title="v-cloak指令用法"></a>v-cloak指令用法</h4><p>先提供样式,再在插值表达式中添加v-cloak指令</p>
-<pre><code>    &lt;style&gt;
-        [v-cloak] {
-            display: none;
-        }
-    &lt;/style&gt;</code></pre><pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div v-cloak&gt;{{msg}}&lt;/div&gt;
-    &lt;/div&gt;</code></pre><ul>
-<li>插值表达式存在的问题:闪动</li>
-<li>如何解决该问题:使用v-cloak指令</li>
-<li>解决问题的原理:先隐藏,替换好值之后显示最终的值</li>
-</ul>
-<h4 id="数据绑定指令"><a href="#数据绑定指令" class="headerlink" title="数据绑定指令"></a>数据绑定指令</h4><ul>
-<li>v-text填充纯文本   相比插值表达式更加简洁</li>
-<li>v-html填充HTMl片段  存在安全问题  只能本网站内部可以用</li>
-<li>v-pre填充原始信息  显示原始信息,跳过编译过程</li>
-</ul>
-<h4 id="数据的响应式"><a href="#数据的响应式" class="headerlink" title="数据的响应式"></a>数据的响应式</h4><ul>
-<li>如何理解响应式?  h5中的响应式就是屏幕尺寸变化导致的样式变化,数据的响应式就是数据的变化导致页面内容的变化</li>
-<li>什么是数据绑定?将数据填充到标签中</li>
-<li>v-once 只编译一次,显示内容之后不再具有响应式功能</li>
-</ul>
-<pre><code>        &lt;div v-once&gt;{{info}} &lt;/div&gt;</code></pre><h3 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h3><h4 id="什么是双向数据绑定"><a href="#什么是双向数据绑定" class="headerlink" title="什么是双向数据绑定?"></a>什么是双向数据绑定?</h4><p>当在表单输入域输入字符是页面的内容也会有所变化.</p>
-<h4 id="双向数据绑定分析"><a href="#双向数据绑定分析" class="headerlink" title="双向数据绑定分析"></a>双向数据绑定分析</h4><p>v-model指令</p>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div v-text=&#39;uname&#39;&gt;&lt;/div&gt;
-        &lt;input type=&quot;text&quot; v-model=&#39;uname&#39;&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                uname: &#39;&#39;
-            }
-        })
-    &lt;/script&gt;</code></pre><h4 id="MVVM设计思想"><a href="#MVVM设计思想" class="headerlink" title="MVVM设计思想"></a>MVVM设计思想</h4><p>M(model)  模型  js对象</p>
-<p>V(view)    视图  页面的DOM</p>
-<p>VM(View-Model)  视图模型  Vue DOM监听+数据绑定</p>
-<p>视图和模型可以通过视图模型相互访问,也就是DOM元素和js对象通过Vue相互转换</p>
-<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><h4 id="vue如何处理事件"><a href="#vue如何处理事件" class="headerlink" title="vue如何处理事件"></a>vue如何处理事件</h4><p>用v-on指令实现事件绑定</p>
-<h4 id="事件函数的调用方式"><a href="#事件函数的调用方式" class="headerlink" title="事件函数的调用方式"></a>事件函数的调用方式</h4><h4 id="事件函数参数的传递"><a href="#事件函数参数的传递" class="headerlink" title="事件函数参数的传递"></a>事件函数参数的传递</h4><pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div&gt;{{num}} &lt;/div&gt;
-        &lt;button v-on:click=&#39;num++&#39;&gt;点击3&lt;/button&gt;
-        &lt;!-- 事件绑定简写形式 --&gt;
-        &lt;button @click=&#39;num++&#39;&gt;点击4&lt;/button&gt;
-        &lt;!-- 事件绑定函数名 默认会传递事件对象  它为第一个参数 --&gt;
-        &lt;button v-on:click=handle1&gt;点击1&lt;/button&gt;
-        &lt;!-- 事件绑定函数调用 可以传递参数 事件对象必须是最后一个参数 参数名必须是$event --&gt;
-        &lt;button v-on:click=handle2(123,456,$event)&gt;点击2&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                num: 0
-            },
-            methods: {
-                handle1: function(event) {
-                    console.log(event.target.innerHTML);
-                },
-                handle2: function(a, b, event) {
-                    // 调用参数必须写this，它指向实例对象
-                    this.num++
-                        console.log(a, b, event.target.innerHTML);
-                }
-            }
-        });
-    &lt;/script&gt;</code></pre><h4 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h4><p>.stop阻止冒泡</p>
-<pre><code>&lt;a v-on:click.stop=&#39;handle&#39;&gt;&lt;/a&gt;</code></pre><p>.prevent 阻止默认行为</p>
-<pre><code>&lt;a v-on:click.prevent=&#39;handle&#39;&gt;&lt;/a&gt;</code></pre><h4 id="按键修饰符"><a href="#按键修饰符" class="headerlink" title="按键修饰符"></a>按键修饰符</h4><p>.enter回车键</p>
-<pre><code>&lt;input v-on:keyup.enter=&#39;submit&#39;&gt;</code></pre><p>.delete删除键</p>
-<pre><code>&lt;input v-on:keyup.delete=&#39;handle&#39;&gt;</code></pre><h4 id="自定义按键修饰符"><a href="#自定义按键修饰符" class="headerlink" title="自定义按键修饰符"></a>自定义按键修饰符</h4><p>全局config.keyCodes对象</p>
-<pre><code>Vue.config.keyCodes.f1=112</code></pre><h3 id="属性绑定"><a href="#属性绑定" class="headerlink" title="属性绑定"></a>属性绑定</h3><h4 id="Vue如何动态处理数据"><a href="#Vue如何动态处理数据" class="headerlink" title="Vue如何动态处理数据"></a>Vue如何动态处理数据</h4><p>v-bind指令实现动态绑定数据</p>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;!-- v-bind动态绑定属性:是它的缩写 --&gt;
-        &lt;a v-bind:href=&quot;url&quot;&gt;百度&lt;/a&gt;
-        &lt;!-- &lt;a :href=&quot;url&quot;&gt;百度&lt;/a&gt; --&gt;
-        &lt;button v-on:click=&#39;handle&#39;&gt;切换&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                url: &#39;http//www.baidu.com&#39;
-            },
-            methods: {
-                handle: function() {
-                    this.url = &#39;http://itcast.cn&#39;;
-                }
-            }
-        })
-    &lt;/script&gt;</code></pre><h4 id="v-model的底层实现原理"><a href="#v-model的底层实现原理" class="headerlink" title="v-model的底层实现原理"></a>v-model的底层实现原理</h4><pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div&gt;{{msg}} &lt;/div&gt;
-        &lt;input type=&quot;text&quot; v-bind:value=&quot;msg&quot; v-on:input=&quot;handle&quot;&gt;  //v-bind v-on
-    &lt;/div&gt;
-    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                msg: &#39;hello&#39;
-            },
-            methods: {
-                handle: function(event) {
-                    this.msg = event.target.value;
-                }
-            }
-        })
-    &lt;/script&gt;</code></pre><pre><code>        &lt;input type=&quot;text&quot; v-bind:value=&quot;msg&quot; v-on:input=&#39;msg=$event.target.value&#39;&gt;</code></pre><pre><code>        &lt;input type=&quot;text&quot; v-model=&#39;msg&#39;&gt;</code></pre><h3 id="样式绑定"><a href="#样式绑定" class="headerlink" title="样式绑定"></a>样式绑定</h3><h4 id="class样式处理"><a href="#class样式处理" class="headerlink" title="class样式处理"></a>class样式处理</h4><p>对象语法</p>
-<pre><code>&lt;div v-bind:class=&quot;{active:isActive}&quot;&gt;&lt;/div&gt;</code></pre><p>数组语法</p>
-<pre><code>&lt;div v-bind:class=&quot;[activeClass,errorClass]&quot;&gt;&lt;/div&gt;</code></pre><h4 id="style样式处理"><a href="#style样式处理" class="headerlink" title="style样式处理"></a>style样式处理</h4><p>对象语法</p>
-<pre><code>&lt;div v-bind:style=&quot;{color:activeColor,fontSize:fontSize} &quot;&gt;&lt;/div&gt;</code></pre><p>数组语法</p>
-<pre><code>&lt;div v-bind:style=&quot;[beseStyle,overrideingStyles]&quot;&gt;&lt;/div&gt;</code></pre><h3 id="分支循环结构"><a href="#分支循环结构" class="headerlink" title="分支循环结构"></a>分支循环结构</h3><h4 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h4><h4 id="v-if和v-show的区别"><a href="#v-if和v-show的区别" class="headerlink" title="v-if和v-show的区别"></a>v-if和v-show的区别</h4><h4 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h4><p>v-for遍历数组</p>
-<pre><code>&lt;li v-for=&#39;item in list&#39;&gt;{{item}}+{{index}}&lt;/li&gt;</code></pre><p>key的作用：帮助Vue区分不同的元素，从而提高性能</p>
-<pre><code>&lt;li :key=&#39;item.id&#39; v-for=&#39;{item,index} in list&#39;&gt;{{item}}+{{index}}&lt;/li&gt;</code></pre><h2 id="基础案例"><a href="#基础案例" class="headerlink" title="基础案例"></a>基础案例</h2><h3 id="简易计算器"><a href="#简易计算器" class="headerlink" title="简易计算器"></a>简易计算器</h3><ul>
-<li>通过v-nodel指令实现数值a和数值b的绑定</li>
-<li>给计算按钮绑定事件,实现计算逻辑</li>
-<li>将计算结果绑定到对应位置</li>
-</ul>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;h1&gt;简单计算器&lt;/h1&gt;
-        数字1：&lt;input type=&quot;text&quot; v-model=&#39;a&#39;&gt;&lt;br&gt; 数字2：
-        &lt;input type=&quot;text&quot; v-model=&#39;b&#39;&gt;&lt;br&gt;
-        &lt;button v-on:click=&#39;handle&#39;&gt;计算&lt;/button&gt;
-        &lt;span v-text=&#39;result&#39;&gt;计算结果：&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                a: &#39;&#39;,
-                b: &#39;&#39;,
-                result: &#39;&#39;
-            },
-            methods: {
-                handle: function() {
-                    this.result = parseInt(this.a) + parseInt(this.b);
-                }
-            }
-        })
-    &lt;/script&gt;</code></pre><h3 id="tab栏切换"><a href="#tab栏切换" class="headerlink" title="tab栏切换"></a>tab栏切换</h3><ul>
-<li>实现静态dUI效果： 用传统的方式实现标签结构和样式</li>
-<li>基于数据重构UI效果：将静态的结构和样式重构基于Vue模板语法的形式，处理事件绑定和逻辑控制</li>
-</ul>
-<pre><code>    &lt;div id=&quot;app&quot;&gt;
-        &lt;div class=&quot;tab&quot;&gt;
-            &lt;ul&gt;
-                &lt;li v-on:click=&#39;change(index)&#39; :class=&#39;currentIndex==index?&quot;active&quot;:&quot;&quot;&#39; :key=&#39;item.id&#39; v-for=&#39;(item,index) in list&#39;&gt;{{item.title}} &lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;div :class=&#39;currentIndex==index?&quot;current&quot;:&quot;&quot;&#39; :key=&#39;item.id&#39; v-for=&#39;(item,index) in list&#39;&gt;
-                &lt;img :src=&quot;item.path&quot;&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
-    &lt;script&gt;
-        var vm = new Vue({
-            el: &#39;#app&#39;,
-            data: {
-                currentIndex: 0, //选项卡的当前索引
-                list: [{
-                    id: 1,
-                    title: &#39;apple&#39;,
-                    path: &#39;images/01.jpg&#39;
-                }, {
-                    id: 2,
-                    title: &#39;orange&#39;,
-                    path: &#39;images/02.jpg&#39;
-                }, {
-                    id: 3,
-                    title: &#39;lemon&#39;,
-                    path: &#39;images/03.jpg&#39;
-                }]
-            },
-            methods: {
-                change: function(index) {
-                    this.currentIndex = index;
-                }
-            }
-        })
-    &lt;/script&gt;</code></pre><p>声明式编程：模板的结构和最终显示的效果基本一致</p>
-<h2 id="Vue常用特性"><a href="#Vue常用特性" class="headerlink" title="Vue常用特性"></a>Vue常用特性</h2><p>目标：能够说出Vue的常用特性</p>
-<h3 id="表单操作"><a href="#表单操作" class="headerlink" title="表单操作"></a>表单操作</h3><ul>
-<li>input单行文本   直接值文本域中添加v-model=’uname’,然后再到data里面给uname初始值</li>
-<li>textarea多行文本   直接值文本域中添加v-model=’dect’,然后再到data里面给dect初始值</li>
-<li>select下拉多选   单选方式 v-model=”occupation” 再到data里给一个初始值，多选方式 v-model=”occupation” multiple 数组的形式给初始值（给每个选项一个单独的value值）</li>
-<li>redio单选框  v-model=”gender  ，data中给初始值（每个选项给一个value值）</li>
-<li>checkbox多选框   v-model=”hobby” data里以数组的方式给一个初始值（每个选项给一个单独的value值）</li>
-</ul>
-<h4 id="表单修饰符"><a href="#表单修饰符" class="headerlink" title="表单修饰符"></a>表单修饰符</h4><ul>
-<li>number：转化为数值</li>
-<li>trim：去掉开始和结尾空格</li>
-<li>lazy：将input事件切换为change事件</li>
-</ul>
-<pre><code>&lt;input type=&quot;text&quot; v-model.number=&#39;age&#39;&gt;</code></pre><h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><p>当内置指令不满足要求时我们需要自定义指令</p>
-<h4 id="自定义的语法规则"><a href="#自定义的语法规则" class="headerlink" title="自定义的语法规则"></a>自定义的语法规则</h4><pre><code>        //自定义获得焦点指令 
-        Vue.directive(&#39;focus&#39;, {
-            inserted: function(el) {
-                //el表示指令所绑定的元素
-                el.focus();
-            }
-        });</code></pre><h4 id="自定义的指令用法"><a href="#自定义的指令用法" class="headerlink" title="自定义的指令用法"></a>自定义的指令用法</h4><pre><code>        &lt;input type=&quot;text&quot; v-focus&gt;</code></pre><h4 id="带参数的自定义属性"><a href="#带参数的自定义属性" class="headerlink" title="带参数的自定义属性"></a>带参数的自定义属性</h4><pre><code>            directives: {
-                color: {
-                    bind: function(el, binding) {
-                        el.style.backgroundColor = binding.value;
-                    }
-                },
-                focus: {     //定义在实例中的局部指令
-                    inserted: function(el) {
-                        el.focus();
-                    }
-                }
-            }</code></pre><h4 id="指令的用法"><a href="#指令的用法" class="headerlink" title="指令的用法"></a>指令的用法</h4><pre><code>        &lt;input type=&quot;text&quot; v-color=&quot;msg&quot;&gt;
-        &lt;input type=&quot;text&quot; v-focus&gt;</code></pre><h3 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h3><p>表达式可能比较复杂的时候，使用计算属性可以使模板内容更加简洁</p>
-<p>计算属性的用法</p>
-<pre><code>            computed: {
-                reverseString: function() {
-                    return this.msg.split(&#39;&#39;).reverse().join(&#39;&#39;); //反转字符串
-                }
-            }</code></pre><h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><p>格式化数据，比如将字符串格式转换为首字符大写，将日期格式 转化为指定的格式</p>
-<h4 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h4><pre><code>      Vue.filter(&#39;upper&#39;, function(val) {
-            return val.charAt(0).toUpperCase() + val.slice(1); //将第一个字母转换为大写slice字符截取
-        });</code></pre><h4 id="过滤器的用法"><a href="#过滤器的用法" class="headerlink" title="过滤器的用法"></a>过滤器的用法</h4><pre><code>        &lt;div&gt;{{msg|upper}}&lt;/div&gt;
-        &lt;div&gt;{{msg|upper|lower}}&lt;/div&gt;
-        &lt;div :abc=&quot;msg|upper&quot;&gt;测试&lt;/div&gt;</code></pre><h4 id="局部过滤器"><a href="#局部过滤器" class="headerlink" title="局部过滤器"></a>局部过滤器</h4><pre><code>            filters: {
-                upper: function(val) {
-                    return val.charAt(0).toUpperCase() + val.slice(1);
-                }
-            }</code></pre><h4 id="带参数的过滤器"><a href="#带参数的过滤器" class="headerlink" title="带参数的过滤器"></a>带参数的过滤器</h4><pre><code>Vue.filter(&#39;format&#39;,function(Value,arg)){
-    //value就是过滤器传过来的参数
-}</code></pre><h4 id="过滤器的使用"><a href="#过滤器的使用" class="headerlink" title="过滤器的使用"></a>过滤器的使用</h4><pre><code>&lt;div&gt;{{data|format('yyyy-MM-dd')}}&lt;/div&gt;</code></pre><h3 id="侦听器"><a href="#侦听器" class="headerlink" title="侦听器"></a>侦听器</h3><p>在数据变化使执行异步或开销较大的操作可以使用侦听器</p>
-<p>侦听器的用法</p>
-<pre><code>            methods: {
-                checkName: function(uname) {
-                    //使用定时任务模拟接口调用
-                    var that = this;
-                    setTimeout(function() {
-                        if (uname == &#39;admin&#39;) {
-                            that.tip = &#39;用户名已存在，请更换一个&#39;;
-                        } else {
-                            that.tip = &#39;用户名可以使用&#39;;
-                        }
-                    }, 1000);
-                }
-            },
-            watch: {
-                uname: function(val) {
-                    //调用后台接口验证用户名的合法性
-                    this.checkName(val);
-                    //修改提示信息
-                    this.tip = &#39;用户名正在验证…&#39;;
-                }
-            }</code></pre><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><h4 id="主要阶段"><a href="#主要阶段" class="headerlink" title="主要阶段"></a>主要阶段</h4><ul>
+                <h3 id="数据与方法"><a href="#数据与方法" class="headerlink" title="数据与方法"></a><a href="https://cn.vuejs.org/v2/guide/instance.html#数据与方法" target="_blank" rel="noopener">数据与方法</a></h3><p>当一个 Vue 实例被创建时，它将 数据 对象中的所有的 属性加入到 Vue 的<strong>响应式系统</strong>中。当这些 属性 的值发生改变时，视图将会产生“响应”，即匹配更新为新的值。值得注意的是只有当实例被创建时就已经存在于数据中的属性才是<strong>响应式</strong>的。也就是说如果你添加一个新的属性，那么对于这个新添加的属性的改动不会触发任何试图的更新</p>
+<p>使用 <code>Object.freeze()</code>，这会阻止修改现有的 属性，也意味着响应系统无法再<em>追踪</em>变化。</p>
+<p>除了数据 属性，Vue 实例还暴露了一些有用的实例 属性与方法。它们都有前缀 <code>$</code>，以便与用户定义的 属性 区分开来。<a href="https://cn.vuejs.org/v2/api/#实例-property" target="_blank" rel="noopener">API 参考</a></p>
+<h3 id="实例生命周期钩子"><a href="#实例生命周期钩子" class="headerlink" title="实例生命周期钩子"></a><a href="https://cn.vuejs.org/v2/guide/instance.html#实例生命周期钩子" target="_blank" rel="noopener">实例生命周期钩子</a></h3><ul>
 <li>挂载（初始化相关属性）</li>
 </ul>
 <ol>
-<li>beforeCreate   在实例初始化之后，数据观测和事件配置之前被调用</li>
-<li>created    在实例创建完成后立即被调用</li>
-<li>beforeMount   在挂载开始之前被调用</li>
-<li>mounted   被新创建的vm.$el替换，并挂载到实例上去时候调用该钩子</li>
+<li>beforeCreate 在实例初始化之后，数据观测和事件配置之前被调用</li>
+<li>created 在实例创建完成后立即被调用</li>
+<li>beforeMount 在挂载开始之前被调用</li>
+<li>mounted 被新创建的vm.$el替换，并挂载到实例上去时候调用该钩子</li>
 </ol>
 <ul>
 <li>更新（元素或组件的变更操作）</li>
 </ul>
 <ol>
-<li>beforeUpdate  数据更新使调用，发生在虚拟DOM打补丁之前</li>
+<li>beforeUpdate 数据更新使调用，发生在虚拟DOM打补丁之前</li>
 <li>updated 由于数据更改导致虚拟DOM重新渲染和打补丁在这之后会调用该钩子</li>
 </ol>
 <ul>
 <li>销毁（销毁相关属性）关属性）</li>
 </ul>
 <ol>
-<li>beforeDestroy  实例销毁之前调用</li>
-<li>destroyed  实例销毁之后调用</li>
+<li>beforeDestroy 实例销毁之前调用</li>
+<li>destroyed 实例销毁之后调用</li>
 </ol>
-<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p>目标：能够基于Vue实现案例效果</p>
+<p>不要在选项 property 或回调上使用箭头函数因为箭头函数并没有 <code>this</code>，<code>this</code> 会作为变量一直向上级词法作用域查找，直至找到为止，经常导致错误</p>
+<h3 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h3><p>Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。</p>
+<h4 id="插值"><a href="#插值" class="headerlink" title="插值"></a><a href="https://cn.vuejs.org/v2/guide/syntax.html#插值" target="_blank" rel="noopener">插值</a></h4><p><a href="https://cn.vuejs.org/v2/guide/syntax.html#文本" target="_blank" rel="noopener">文本</a>：数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值</p>
+<p><a href="https://cn.vuejs.org/v2/api/#v-once" target="_blank" rel="noopener">v-once 指令</a>，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。但请留心这会影响到该节点上的其它数据绑定</p>
+<p><a href="https://cn.vuejs.org/v2/api/#v-html" target="_blank" rel="noopener"><code>v-html</code> 指令</a>：双大括号会将数据解释为普通文本，而非 HTML 代码。v-html输出真正的 HTML（站点上动态渲染的任意 HTML 可能会非常危险，因为它很容易导致 <a href="https://en.wikipedia.org/wiki/Cross-site_scripting" target="_blank" rel="noopener">XSS 攻击</a>）</p>
+<p><a href="https://cn.vuejs.org/v2/api/#v-bind" target="_blank" rel="noopener"><code>v-bind</code> 指令</a>：绑定html属性</p>
+<p>对于以上所有的数据绑定，Vue.js 都提供了完全的 JavaScript 表达式支持。有个限制就是，每个绑定都只能包含<strong>单个表达式</strong></p>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a><a href="https://cn.vuejs.org/v2/guide/syntax.html#指令" target="_blank" rel="noopener">指令</a></h3><p>指令 (Directives) 是带有 <code>v-</code> 前缀的特殊 attribute。</p>
+<p>一些指令能够接收一个“参数”，在指令名称之后以冒号表示。</p>
+<p>v-bind可以绑定动态参数，你可以使用动态参数为一个动态的事件名绑定处理函数</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name"><span class="token namespace">v-bind:</span>[attributeName]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>url<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name"><span class="token namespace">v-on:</span>[eventName]</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doSomething<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span></code></pre>
+<h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a><a href="https://cn.vuejs.org/v2/guide/syntax.html#修饰符" target="_blank" rel="noopener">修饰符</a></h4><p>修饰符 (modifier) 是以半角句号 <code>.</code> 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name"><span class="token namespace">v-on:</span>submit.prevent</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>onSubmit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></code></pre>
+<p><a href="https://cn.vuejs.org/v2/guide/syntax.html#v-bind-缩写" target="_blank" rel="noopener"><code>v-bind</code> 缩写</a>为<code>:</code>,<a href="https://cn.vuejs.org/v2/guide/syntax.html#v-on-缩写" target="_blank" rel="noopener"><code>v-on</code> 缩写</a>为<code>@</code></p>
+<h3 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a><a href="https://cn.vuejs.org/v2/guide/computed.html#计算属性" target="_blank" rel="noopener">计算属性</a></h3><p>模板内的表达式非常便利，但是设计它们的初衷是用于简单运算的。在模板中放入太多的逻辑会让模板过重且难以维护。所以，对于任何复杂逻辑，你都应当使用<strong>计算属性</strong>。</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Original message: "{{ message }}"<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Computed reversed message: "{{ reversedMessage }}"<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> vm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token punctuation">:</span> <span class="token string">'#example'</span><span class="token punctuation">,</span>
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    message<span class="token punctuation">:</span> <span class="token string">'Hello'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 计算属性的 getter</span>
+    reversedMessage<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// `this` 指向 vm 实例</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>我们可以将同一函数定义为一个方法(methods)而不是一个计算属性。两种方式的最终结果确实是完全相同的。然而，不同的是<strong>计算属性是基于它们的响应式依赖进行缓存的</strong>。只在相关响应式依赖发生改变时它们才会重新求值。</p>
+<p>观察和响应 Vue 实例上的数据变动：<strong>侦听属性</strong>。当你有一些数据需要随着其它数据变动而变动时，你很容易滥用 <code>watch</code>,通常更好的做法是使用计算属性而不是命令式的 <code>watch</code> 回调</p>
+<p>计算属性默认只有 getter，不过在需要时你也可以提供一个 setter</p>
+<h3 id="侦听器"><a href="#侦听器" class="headerlink" title="侦听器"></a><a href="https://cn.vuejs.org/v2/guide/computed.html#侦听器" target="_blank" rel="noopener">侦听器</a></h3><p>虽然计算属性在大多数情况下更合适，但有时也需要一个自定义的侦听器。当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。除了 <code>watch</code> 选项之外，还可以使用命令式的 <a href="https://cn.vuejs.org/v2/api/#vm-watch" target="_blank" rel="noopener">vm.$watch API</a></p>
 
             </div>
             <hr/>
@@ -861,7 +572,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.iamys.club/2020/06/20/vue%E5%9F%BA%E7%A1%80/">https://www.iamys.club/2020/06/20/vue%E5%9F%BA%E7%A1%80/</a>
+                    <a href="https://www.iamys.club/2020/08/05/Vue/">https://www.iamys.club/2020/08/05/Vue/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -898,11 +609,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/vue/">
-                                    <span class="chip bg-color">vue</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1094,33 +801,77 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/06/25/git/">
+                <a href="/2020/09/23/%E6%89%BE%E5%88%B0%E6%95%B0%E7%BB%84%E4%B8%AD%E7%AC%A6%E5%90%88%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%95%B0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git常用命令">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="超级简历一面">
                         
-                        <span class="card-title">git常用命令</span>
+                        <span class="card-title">超级简历一面</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            git常用命令git是一个版本管理系统VCS，它可以在任何时间点，将文档的状态作为更新记录保存起来，也可以在任何时间点将更新记录恢复回来。
-git工作流程工作目录
-被git管理的项目目录
+                            找到数组中符合条件的数findfind方法，用于找出第一个符合条件的数组成员。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。
 
-暂存区
-临时存放被修改文件
-
-git仓库
-用于存放
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-23
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    前端面试
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="chip bg-color">面试题</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/08/04/%E5%85%B3%E4%BA%8EES6/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="关于ES6">
+                        
+                        <span class="card-title">关于ES6</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            let命令ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+for循环的计数器，就很合适使用let命令。
+let在for循环还有一个特别之处，就是设置循环变量的那部分是一个父
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1136,57 +887,8 @@ git仓库
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/06/20/%E5%A4%A7%E6%95%B0%E6%8D%AE2020/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="初识爬虫">
-                        
-                        <span class="card-title">初识爬虫</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            项目分析利用大数据实验环境完成一个真实的项目。以房天下西安站二手房源数据为分析对象，使用用Numpy + Pandas库对数据进行探索性分析。首先通过Pandas对象将其从Excel电子表格中导入到数据框中。然后，对房源数据进行清洗。最后，
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
-                                    大数据
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/python%E7%88%AC%E8%99%AB/">
-                        <span class="chip bg-color">python爬虫</span>
+                    <a href="/tags/ES6/">
+                        <span class="chip bg-color">ES6</span>
                     </a>
                     
                 </div>
