@@ -1,0 +1,1563 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="初识vue, HTML,CSS,JavaScript,JQuery,React,Vue.js,node.js,git,github,hexo">
+    <meta name="description" content="专注于Web前端,分享生活,分享知识">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>初识vue | XiaoQi&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+    
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+    <body>
+        <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">XiaoQi's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">XiaoQi's Blog</div>
+        <div class="logo-desc">
+            
+            专注于Web前端,分享生活,分享知识
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+    
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+    
+    .github-corner svg {
+        color: #ff00cc;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+    
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+    
+    .github-corner .octo-arm {
+        animation: none;
+    }
+    
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+            
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">初识vue</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+        
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                web前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-06-20
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-07-31
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    13 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="vue模块语法"><a href="#vue模块语法" class="headerlink" title="vue模块语法"></a>vue模块语法</h1><h2 id="Vue概述"><a href="#Vue概述" class="headerlink" title="Vue概述"></a>Vue概述</h2><p>声明式渲染&gt;组件系统&gt;客户端路由&gt;集中式状态管理&gt;项目构建</p>
+<p>优点：易用、灵活、高效</p>
+<h2 id="Vue基本使用"><a href="#Vue基本使用" class="headerlink" title="Vue基本使用"></a>Vue基本使用</h2><p>目标：能够说出Vue基本用法</p>
+<h3 id="vue的基本使用步骤"><a href="#vue的基本使用步骤" class="headerlink" title="vue的基本使用步骤"></a>vue的基本使用步骤</h3><ol>
+<li>提供标签填充数据</li>
+<li>引入vue.js库文件</li>
+<li>可以使用vue的语法做功能</li>
+<li>把vue提供的数据填充到标签中</li>
+</ol>
+<pre><code>  &lt;div id=&quot;app&quot;&gt;
+        &lt;div&gt;{{msg}} &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var vm = new Vue({
+            el: &#39;#app&#39;,
+            data: {
+                msg: &#39;Hello Vue&#39; //在页面中打印这段字符
+            }
+        });
+    &lt;/script&gt;</code></pre><h3 id="细节分析："><a href="#细节分析：" class="headerlink" title="细节分析："></a>细节分析：</h3><ol>
+<li>实例参数分析</li>
+</ol>
+<ul>
+<li>el：元素的挂载位置（值可以是css选择器，也可以是DOM元素）</li>
+<li>data：模型数据（值是一个对象）</li>
+</ul>
+<ol start="2">
+<li>插值表达式用法</li>
+</ol>
+<ul>
+<li>将数据填充到HTML标签中</li>
+<li>插值表达式支持基本计算</li>
+</ul>
+<ol start="3">
+<li>vue代码运行原理分析</li>
+</ol>
+<ul>
+<li>vue代码通过可以通过vue框架编译成原生js代码</li>
+</ul>
+<h2 id="Vue模板语法"><a href="#Vue模板语法" class="headerlink" title="Vue模板语法"></a>Vue模板语法</h2><p>目标：能够说出Vue的模板语法</p>
+<h3 id="模板语法概述"><a href="#模板语法概述" class="headerlink" title="模板语法概述"></a>模板语法概述</h3><h4 id="如何理解前端渲染："><a href="#如何理解前端渲染：" class="headerlink" title="如何理解前端渲染："></a>如何理解前端渲染：</h4><p>把数据填充得HTML中</p>
+<h4 id="前端渲染的方式"><a href="#前端渲染的方式" class="headerlink" title="前端渲染的方式"></a>前端渲染的方式</h4><ul>
+<li>原生js拼接字符串</li>
+<li>使用前端模板引擎</li>
+<li>使用vue特有的模板语法</li>
+</ul>
+<h4 id="模板语法概述-1"><a href="#模板语法概述-1" class="headerlink" title="模板语法概述"></a>模板语法概述</h4><ul>
+<li>插值表达式</li>
+<li>指令</li>
+<li>事件绑定</li>
+<li>属性绑定</li>
+<li>样式绑定</li>
+<li>分支循环结构</li>
+</ul>
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h4 id="什么是指令"><a href="#什么是指令" class="headerlink" title="什么是指令"></a>什么是指令</h4><ul>
+<li>指令的本质就是自定义属性</li>
+<li>指令的格式:以v-开始</li>
+</ul>
+<h4 id="v-cloak指令用法"><a href="#v-cloak指令用法" class="headerlink" title="v-cloak指令用法"></a>v-cloak指令用法</h4><p>先提供样式,再在插值表达式中添加v-cloak指令</p>
+<pre><code>    &lt;style&gt;
+        [v-cloak] {
+            display: none;
+        }
+    &lt;/style&gt;</code></pre><pre><code>    &lt;div id=&quot;app&quot;&gt;
+        &lt;div v-cloak&gt;{{msg}}&lt;/div&gt;
+    &lt;/div&gt;</code></pre><ul>
+<li>插值表达式存在的问题:闪动</li>
+<li>如何解决该问题:使用v-cloak指令</li>
+<li>解决问题的原理:先隐藏,替换好值之后显示最终的值</li>
+</ul>
+<h4 id="数据绑定指令"><a href="#数据绑定指令" class="headerlink" title="数据绑定指令"></a>数据绑定指令</h4><ul>
+<li>v-text填充纯文本   相比插值表达式更加简洁</li>
+<li>v-html填充HTMl片段  存在安全问题  只能本网站内部可以用</li>
+<li>v-pre填充原始信息  显示原始信息,跳过编译过程</li>
+</ul>
+<h4 id="数据的响应式"><a href="#数据的响应式" class="headerlink" title="数据的响应式"></a>数据的响应式</h4><ul>
+<li>如何理解响应式?  h5中的响应式就是屏幕尺寸变化导致的样式变化,数据的响应式就是数据的变化导致页面内容的变化</li>
+<li>什么是数据绑定?将数据填充到标签中</li>
+<li>v-once 只编译一次,显示内容之后不再具有响应式功能</li>
+</ul>
+<pre><code>        &lt;div v-once&gt;{{info}} &lt;/div&gt;</code></pre><h3 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h3><h4 id="什么是双向数据绑定"><a href="#什么是双向数据绑定" class="headerlink" title="什么是双向数据绑定?"></a>什么是双向数据绑定?</h4><p>当在表单输入域输入字符是页面的内容也会有所变化.</p>
+<h4 id="双向数据绑定分析"><a href="#双向数据绑定分析" class="headerlink" title="双向数据绑定分析"></a>双向数据绑定分析</h4><p>v-model指令</p>
+<pre><code>    &lt;div id=&quot;app&quot;&gt;
+        &lt;div v-text=&#39;uname&#39;&gt;&lt;/div&gt;
+        &lt;input type=&quot;text&quot; v-model=&#39;uname&#39;&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var vm = new Vue({
+            el: &#39;#app&#39;,
+            data: {
+                uname: &#39;&#39;
+            }
+        })
+    &lt;/script&gt;</code></pre><h4 id="MVVM设计思想"><a href="#MVVM设计思想" class="headerlink" title="MVVM设计思想"></a>MVVM设计思想</h4><p>M(model)  模型  js对象</p>
+<p>V(view)    视图  页面的DOM</p>
+<p>VM(View-Model)  视图模型  Vue DOM监听+数据绑定</p>
+<p>视图和模型可以通过视图模型相互访问,也就是DOM元素和js对象通过Vue相互转换</p>
+<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><h4 id="vue如何处理事件"><a href="#vue如何处理事件" class="headerlink" title="vue如何处理事件"></a>vue如何处理事件</h4><p>用v-on指令实现事件绑定</p>
+<h4 id="事件函数的调用方式"><a href="#事件函数的调用方式" class="headerlink" title="事件函数的调用方式"></a>事件函数的调用方式</h4><h4 id="事件函数参数的传递"><a href="#事件函数参数的传递" class="headerlink" title="事件函数参数的传递"></a>事件函数参数的传递</h4><pre><code>    &lt;div id=&quot;app&quot;&gt;
+        &lt;div&gt;{{num}} &lt;/div&gt;
+        &lt;button v-on:click=&#39;num++&#39;&gt;点击3&lt;/button&gt;
+        &lt;!-- 事件绑定简写形式 --&gt;
+        &lt;button @click=&#39;num++&#39;&gt;点击4&lt;/button&gt;
+        &lt;!-- 事件绑定函数名 默认会传递事件对象  它为第一个参数 --&gt;
+        &lt;button v-on:click=handle1&gt;点击1&lt;/button&gt;
+        &lt;!-- 事件绑定函数调用 可以传递参数 事件对象必须是最后一个参数 参数名必须是$event --&gt;
+        &lt;button v-on:click=handle2(123,456,$event)&gt;点击2&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;js/vue .js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var vm = new Vue({
+            el: &#39;#app&#39;,
+            data: {
+                num: 0
+            },
+            methods: {
+                handle1: function(event) {
+                    console.log(event.target.innerHTML);
+                },
+                handle2: function(a, b, event) {
+                    // 调用参数必须写this，它指向实例对象
+                    this.num++
+                        console.log(a, b, event.target.innerHTML);
+                }
+            }
+        });
+    &lt;/script&gt;</code></pre><h4 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h4><p>.stop阻止冒泡</p>
+<pre><code>&lt;a v-on:click.stop=&#39;handle&#39;&gt;&lt;/a&gt;</code></pre><p>.prevent 阻止默认行为</p>
+<pre><code>&lt;a v-on:click.prevent=&#39;handle&#39;&gt;&lt;/a&gt;</code></pre><h4 id="按键修饰符"><a href="#按键修饰符" class="headerlink" title="按键修饰符"></a>按键修饰符</h4><p>.enter回车键</p>
+<pre><code>&lt;input v-on:keyup.enter=&#39;submit&#39;&gt;</code></pre><p>.delete删除键</p>
+<pre><code>&lt;input v-on:keyup.delete=&#39;handle&#39;&gt;</code></pre><h4 id="自定义按键修饰符"><a href="#自定义按键修饰符" class="headerlink" title="自定义按键修饰符"></a>自定义按键修饰符</h4><p>全局config.keyCodes对象</p>
+<pre><code>Vue.config.keyCodes.f1=112</code></pre><h3 id="属性绑定"><a href="#属性绑定" class="headerlink" title="属性绑定"></a>属性绑定</h3><h4 id="Vue如何动态处理数据"><a href="#Vue如何动态处理数据" class="headerlink" title="Vue如何动态处理数据"></a>Vue如何动态处理数据</h4><p>v-bind指令实现动态绑定数据</p>
+<pre><code>    &lt;div id=&quot;app&quot;&gt;
+        &lt;!-- v-bind动态绑定属性:是它的缩写 --&gt;
+        &lt;a v-bind:href=&quot;url&quot;&gt;百度&lt;/a&gt;
+        &lt;!-- &lt;a :href=&quot;url&quot;&gt;百度&lt;/a&gt; --&gt;
+        &lt;button v-on:click=&#39;handle&#39;&gt;切换&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var vm = new Vue({
+            el: &#39;#app&#39;,
+            data: {
+                url: &#39;http//www.baidu.com&#39;
+            },
+            methods: {
+                handle: function() {
+                    this.url = &#39;http://itcast.cn&#39;;
+                }
+            }
+        })
+    &lt;/script&gt;</code></pre><h4 id="v-model的底层实现原理"><a href="#v-model的底层实现原理" class="headerlink" title="v-model的底层实现原理"></a>v-model的底层实现原理</h4><pre><code>    &lt;div id=&quot;app&quot;&gt;
+        &lt;div&gt;{{msg}} &lt;/div&gt;
+        &lt;input type=&quot;text&quot; v-bind:value=&quot;msg&quot; v-on:input=&quot;handle&quot;&gt;  //v-bind v-on
+    &lt;/div&gt;
+    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var vm = new Vue({
+            el: &#39;#app&#39;,
+            data: {
+                msg: &#39;hello&#39;
+            },
+            methods: {
+                handle: function(event) {
+                    this.msg = event.target.value;
+                }
+            }
+        })
+    &lt;/script&gt;</code></pre><pre><code>        &lt;input type=&quot;text&quot; v-bind:value=&quot;msg&quot; v-on:input=&#39;msg=$event.target.value&#39;&gt;</code></pre><pre><code>        &lt;input type=&quot;text&quot; v-model=&#39;msg&#39;&gt;</code></pre><h3 id="样式绑定"><a href="#样式绑定" class="headerlink" title="样式绑定"></a>样式绑定</h3><h4 id="class样式处理"><a href="#class样式处理" class="headerlink" title="class样式处理"></a>class样式处理</h4><p>对象语法</p>
+<pre><code>&lt;div v-bind:class=&quot;{active:isActive}&quot;&gt;&lt;/div&gt;</code></pre><p>数组语法</p>
+<pre><code>&lt;div v-bind:class=&quot;[activeClass,errorClass]&quot;&gt;&lt;/div&gt;</code></pre><h4 id="style样式处理"><a href="#style样式处理" class="headerlink" title="style样式处理"></a>style样式处理</h4><p>对象语法</p>
+<pre><code>&lt;div v-bind:style=&quot;{color:activeColor,fontSize:fontSize} &quot;&gt;&lt;/div&gt;</code></pre><p>数组语法</p>
+<pre><code>&lt;div v-bind:style=&quot;[beseStyle,overrideingStyles]&quot;&gt;&lt;/div&gt;</code></pre><h3 id="分支循环结构"><a href="#分支循环结构" class="headerlink" title="分支循环结构"></a>分支循环结构</h3><h4 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h4><h4 id="v-if和v-show的区别"><a href="#v-if和v-show的区别" class="headerlink" title="v-if和v-show的区别"></a>v-if和v-show的区别</h4><h4 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h4><p>v-for遍历数组</p>
+<pre><code>&lt;li v-for=&#39;item in list&#39;&gt;{{item}}+{{index}}&lt;/li&gt;</code></pre><p>key的作用：帮助Vue区分不同的元素，从而提高性能</p>
+<pre><code>&lt;li :key=&#39;item.id&#39; v-for=&#39;{item,index} in list&#39;&gt;{{item}}+{{index}}&lt;/li&gt;</code></pre><h2 id="基础案例"><a href="#基础案例" class="headerlink" title="基础案例"></a>基础案例</h2><h3 id="简易计算器"><a href="#简易计算器" class="headerlink" title="简易计算器"></a>简易计算器</h3><ul>
+<li>通过v-nodel指令实现数值a和数值b的绑定</li>
+<li>给计算按钮绑定事件,实现计算逻辑</li>
+<li>将计算结果绑定到对应位置</li>
+</ul>
+<pre><code>    &lt;div id=&quot;app&quot;&gt;
+        &lt;h1&gt;简单计算器&lt;/h1&gt;
+        数字1：&lt;input type=&quot;text&quot; v-model=&#39;a&#39;&gt;&lt;br&gt; 数字2：
+        &lt;input type=&quot;text&quot; v-model=&#39;b&#39;&gt;&lt;br&gt;
+        &lt;button v-on:click=&#39;handle&#39;&gt;计算&lt;/button&gt;
+        &lt;span v-text=&#39;result&#39;&gt;计算结果：&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var vm = new Vue({
+            el: &#39;#app&#39;,
+            data: {
+                a: &#39;&#39;,
+                b: &#39;&#39;,
+                result: &#39;&#39;
+            },
+            methods: {
+                handle: function() {
+                    this.result = parseInt(this.a) + parseInt(this.b);
+                }
+            }
+        })
+    &lt;/script&gt;</code></pre><h3 id="tab栏切换"><a href="#tab栏切换" class="headerlink" title="tab栏切换"></a>tab栏切换</h3><ul>
+<li>实现静态dUI效果： 用传统的方式实现标签结构和样式</li>
+<li>基于数据重构UI效果：将静态的结构和样式重构基于Vue模板语法的形式，处理事件绑定和逻辑控制</li>
+</ul>
+<pre><code>    &lt;div id=&quot;app&quot;&gt;
+        &lt;div class=&quot;tab&quot;&gt;
+            &lt;ul&gt;
+                &lt;li v-on:click=&#39;change(index)&#39; :class=&#39;currentIndex==index?&quot;active&quot;:&quot;&quot;&#39; :key=&#39;item.id&#39; v-for=&#39;(item,index) in list&#39;&gt;{{item.title}} &lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div :class=&#39;currentIndex==index?&quot;current&quot;:&quot;&quot;&#39; :key=&#39;item.id&#39; v-for=&#39;(item,index) in list&#39;&gt;
+                &lt;img :src=&quot;item.path&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=&quot;../js/vue .js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var vm = new Vue({
+            el: &#39;#app&#39;,
+            data: {
+                currentIndex: 0, //选项卡的当前索引
+                list: [{
+                    id: 1,
+                    title: &#39;apple&#39;,
+                    path: &#39;images/01.jpg&#39;
+                }, {
+                    id: 2,
+                    title: &#39;orange&#39;,
+                    path: &#39;images/02.jpg&#39;
+                }, {
+                    id: 3,
+                    title: &#39;lemon&#39;,
+                    path: &#39;images/03.jpg&#39;
+                }]
+            },
+            methods: {
+                change: function(index) {
+                    this.currentIndex = index;
+                }
+            }
+        })
+    &lt;/script&gt;</code></pre><p>声明式编程：模板的结构和最终显示的效果基本一致</p>
+<h2 id="Vue常用特性"><a href="#Vue常用特性" class="headerlink" title="Vue常用特性"></a>Vue常用特性</h2><p>目标：能够说出Vue的常用特性</p>
+<h3 id="表单操作"><a href="#表单操作" class="headerlink" title="表单操作"></a>表单操作</h3><ul>
+<li>input单行文本   直接值文本域中添加v-model=’uname’,然后再到data里面给uname初始值</li>
+<li>textarea多行文本   直接值文本域中添加v-model=’dect’,然后再到data里面给dect初始值</li>
+<li>select下拉多选   单选方式 v-model=”occupation” 再到data里给一个初始值，多选方式 v-model=”occupation” multiple 数组的形式给初始值（给每个选项一个单独的value值）</li>
+<li>redio单选框  v-model=”gender  ，data中给初始值（每个选项给一个value值）</li>
+<li>checkbox多选框   v-model=”hobby” data里以数组的方式给一个初始值（每个选项给一个单独的value值）</li>
+</ul>
+<h4 id="表单修饰符"><a href="#表单修饰符" class="headerlink" title="表单修饰符"></a>表单修饰符</h4><ul>
+<li>number：转化为数值</li>
+<li>trim：去掉开始和结尾空格</li>
+<li>lazy：将input事件切换为change事件</li>
+</ul>
+<pre><code>&lt;input type=&quot;text&quot; v-model.number=&#39;age&#39;&gt;</code></pre><h3 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h3><p>当内置指令不满足要求时我们需要自定义指令</p>
+<h4 id="自定义的语法规则"><a href="#自定义的语法规则" class="headerlink" title="自定义的语法规则"></a>自定义的语法规则</h4><pre><code>        //自定义获得焦点指令 
+        Vue.directive(&#39;focus&#39;, {
+            inserted: function(el) {
+                //el表示指令所绑定的元素
+                el.focus();
+            }
+        });</code></pre><h4 id="自定义的指令用法"><a href="#自定义的指令用法" class="headerlink" title="自定义的指令用法"></a>自定义的指令用法</h4><pre><code>        &lt;input type=&quot;text&quot; v-focus&gt;</code></pre><h4 id="带参数的自定义属性"><a href="#带参数的自定义属性" class="headerlink" title="带参数的自定义属性"></a>带参数的自定义属性</h4><pre><code>            directives: {
+                color: {
+                    bind: function(el, binding) {
+                        el.style.backgroundColor = binding.value;
+                    }
+                },
+                focus: {     //定义在实例中的局部指令
+                    inserted: function(el) {
+                        el.focus();
+                    }
+                }
+            }</code></pre><h4 id="指令的用法"><a href="#指令的用法" class="headerlink" title="指令的用法"></a>指令的用法</h4><pre><code>        &lt;input type=&quot;text&quot; v-color=&quot;msg&quot;&gt;
+        &lt;input type=&quot;text&quot; v-focus&gt;</code></pre><h3 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h3><p>表达式可能比较复杂的时候，使用计算属性可以使模板内容更加简洁</p>
+<p>计算属性的用法</p>
+<pre><code>            computed: {
+                reverseString: function() {
+                    return this.msg.split(&#39;&#39;).reverse().join(&#39;&#39;); //反转字符串
+                }
+            }</code></pre><h3 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h3><p>格式化数据，比如将字符串格式转换为首字符大写，将日期格式 转化为指定的格式</p>
+<h4 id="自定义过滤器"><a href="#自定义过滤器" class="headerlink" title="自定义过滤器"></a>自定义过滤器</h4><pre><code>      Vue.filter(&#39;upper&#39;, function(val) {
+            return val.charAt(0).toUpperCase() + val.slice(1); //将第一个字母转换为大写slice字符截取
+        });</code></pre><h4 id="过滤器的用法"><a href="#过滤器的用法" class="headerlink" title="过滤器的用法"></a>过滤器的用法</h4><pre><code>        &lt;div&gt;{{msg|upper}}&lt;/div&gt;
+        &lt;div&gt;{{msg|upper|lower}}&lt;/div&gt;
+        &lt;div :abc=&quot;msg|upper&quot;&gt;测试&lt;/div&gt;</code></pre><h4 id="局部过滤器"><a href="#局部过滤器" class="headerlink" title="局部过滤器"></a>局部过滤器</h4><pre><code>            filters: {
+                upper: function(val) {
+                    return val.charAt(0).toUpperCase() + val.slice(1);
+                }
+            }</code></pre><h4 id="带参数的过滤器"><a href="#带参数的过滤器" class="headerlink" title="带参数的过滤器"></a>带参数的过滤器</h4><pre><code>Vue.filter(&#39;format&#39;,function(Value,arg)){
+    //value就是过滤器传过来的参数
+}</code></pre><h4 id="过滤器的使用"><a href="#过滤器的使用" class="headerlink" title="过滤器的使用"></a>过滤器的使用</h4><pre><code>&lt;div&gt;{{data|format('yyyy-MM-dd')}}&lt;/div&gt;</code></pre><h3 id="侦听器"><a href="#侦听器" class="headerlink" title="侦听器"></a>侦听器</h3><p>在数据变化使执行异步或开销较大的操作可以使用侦听器</p>
+<p>侦听器的用法</p>
+<pre><code>            methods: {
+                checkName: function(uname) {
+                    //使用定时任务模拟接口调用
+                    var that = this;
+                    setTimeout(function() {
+                        if (uname == &#39;admin&#39;) {
+                            that.tip = &#39;用户名已存在，请更换一个&#39;;
+                        } else {
+                            that.tip = &#39;用户名可以使用&#39;;
+                        }
+                    }, 1000);
+                }
+            },
+            watch: {
+                uname: function(val) {
+                    //调用后台接口验证用户名的合法性
+                    this.checkName(val);
+                    //修改提示信息
+                    this.tip = &#39;用户名正在验证…&#39;;
+                }
+            }</code></pre><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><h4 id="主要阶段"><a href="#主要阶段" class="headerlink" title="主要阶段"></a>主要阶段</h4><ul>
+<li>挂载（初始化相关属性）</li>
+</ul>
+<ol>
+<li>beforeCreate   在实例初始化之后，数据观测和事件配置之前被调用</li>
+<li>created    在实例创建完成后立即被调用</li>
+<li>beforeMount   在挂载开始之前被调用</li>
+<li>mounted   被新创建的vm.$el替换，并挂载到实例上去时候调用该钩子</li>
+</ol>
+<ul>
+<li>更新（元素或组件的变更操作）</li>
+</ul>
+<ol>
+<li>beforeUpdate  数据更新使调用，发生在虚拟DOM打补丁之前</li>
+<li>updated 由于数据更改导致虚拟DOM重新渲染和打补丁在这之后会调用该钩子</li>
+</ol>
+<ul>
+<li>销毁（销毁相关属性）关属性）</li>
+</ul>
+<ol>
+<li>beforeDestroy  实例销毁之前调用</li>
+<li>destroyed  实例销毁之后调用</li>
+</ol>
+<h2 id="综合案例"><a href="#综合案例" class="headerlink" title="综合案例"></a>综合案例</h2><p>目标：能够基于Vue实现案例效果</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.iamys.club" rel="external nofollow noreferrer">XiaoQi</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.iamys.club/2020/06/20/vue%E5%9F%BA%E7%A1%80/">https://www.iamys.club/2020/06/20/vue%E5%9F%BA%E7%A1%80/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://www.iamys.club" target="_blank">XiaoQi</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    <div class="livere-card card" data-aos="fade-up">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" class="card-content" data-id="city" data-uid="MTAyMC80OTU0Mi8yNjAzMw==">
+        <script type="text/javascript">
+            (function (d, s) {
+                let j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript。</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</div>
+    
+
+    
+	
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/06/25/git/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git常用命令">
+                        
+                        <span class="card-title">git常用命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            git常用命令git是一个版本管理系统VCS，它可以在任何时间点，将文档的状态作为更新记录保存起来，也可以在任何时间点将更新记录恢复回来。
+git工作流程工作目录
+被git管理的项目目录
+
+暂存区
+临时存放被修改文件
+
+git仓库
+用于存放
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    web前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06/20/%E5%A4%A7%E6%95%B0%E6%8D%AE2020/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="初识爬虫">
+                        
+                        <span class="card-title">初识爬虫</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            项目分析利用大数据实验环境完成一个真实的项目。以房天下西安站二手房源数据为分析对象，使用用Numpy + Pandas库对数据进行探索性分析。首先通过Pandas对象将其从Excel电子表格中导入到数据框中。然后，对房源数据进行清洗。最后，
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
+                                    大数据
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/python%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">python爬虫</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: XiaoQi&#39;s Blog<br />'
+            + '文章作者: XiaoQi<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+                <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://www.iamys.club" target="_blank">XiaoQi</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">60.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "4";
+                    var startDate = "6";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/manitoYang97" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1678271576@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1678271576" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1678271576" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+                    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+                        <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+                            <script src="/libs/materialize/materialize.min.js"></script>
+                            <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+                            <script src="/libs/aos/aos.js"></script>
+                            <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+                            <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+                            <script src="/js/matery.js"></script>
+
+
+                            <!-- Baidu Analytics -->
+
+                                <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+                                    
+                                        <script src="/libs/others/clicklove.js" async="async"></script>
+                                        
+                                            
+                                                <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+                                                
+
+                                                    
+
+                                                            
+
+                                                                    
+                                                                        <script type="text/javascript" color="0,0,255" pointColor="0,0,255" opacity='0.7' zIndex="-1" count="99" src="/libs/background/canvas-nest.js"></script>
+                                                                        
+
+                                                                            
+                                                                                
+                                                                                    <script type="text/javascript" size="150" alpha='0.6' zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+                                                                                    
+
+                                                                                        
+
+                                                                                                
+                                                                                                    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+                                                                                                    
+
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
