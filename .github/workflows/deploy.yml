@@ -24,7 +24,9 @@ jobs:
 
       # 步骤3：安装依赖
       - name: Install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install hexo-theme-next
 
       # 步骤4：生成静态文件
       - name: Generate static files
