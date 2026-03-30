@@ -1,0 +1,40 @@
+name: Deploy Hexo Blog
+
+on:
+  push:
+    branches:
+      - hexo  # 当推送到 hexo 分支时触发
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 步骤1：检出源码
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          ref: hexo
+
+      # 步骤2：安装 Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      # 步骤3：安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 步骤4：生成静态文件
+      - name: Generate static files
+        run: npx hexo generate
+
+      # 步骤5：部署到 master 分支
+      - name: Deploy to master
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: ./public

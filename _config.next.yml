@@ -1,0 +1,148 @@
+# NexT Configuration
+# Theme: https://theme-next.js.org/
+
+# Theme Scheme
+scheme: Gemini
+
+# Menu Configuration
+menu:
+  home: / || fa fa-home
+  archives: /archives/ || fa fa-archive
+  categories: /categories/ || fa fa-th
+  tags: /tags/ || fa fa-tags
+  about: /about/ || fa fa-user
+
+# Social Links
+social:
+  GitHub: https://github.com/manitoYang97 || fab fa-github
+
+# Code Highlight
+codeblock:
+  theme:
+    light: default
+    dark: stackoverflow-dark
+
+# Post Meta
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: false
+  categories: true
+
+# Font
+font:
+  enable: false
+
+# Footer
+footer:
+  since: 2020
+  powered: false
+
+# SEO
+seo: true
+index_with_subtitle: true
+
+# Avatar
+avatar:
+  url:
+  rounded: true
+  opacity: 1
+  rotated: false
+
+# Site Favicon
+favicon:
+  small: /images/favicon-16x16-next.png
+  medium: /images/favicon-32x32-next.png
+  apple_touch_icon: /images/apple-touch-icon-next.png
+  safari_pinned_tab: /images/logo.svg
+
+# Creative Commons
+creative_commons:
+  license: by-nc-sa
+  sidebar: false
+  post: false
+  language: deed.zh
+
+# Local Search
+local_search:
+  enable: true
+  trigger: auto
+  top_n_per_article: 1
+  unescape: false
+  preload: false
+
+# Motion
+motion:
+  enable: true
+  async: false
+  transition:
+    post_block: fadeIn
+    post_header: fadeInDown
+    post_body: fadeInDown
+    coll_header: fadeInLeft
+    sidebar: fadeInUp
+
+# Wechat Subscriber
+wechat_subscriber:
+  enable: false
+
+# PDF
+pdf:
+  enable: false
+
+# Mermaid
+mermaid:
+  enable: false
+
+# pjax
+pjax: false
+
+# Lazyload
+lazyload: true
+
+# Pangu
+pangu: false
+
+# Comments
+comments:
+  style: tabs
+  active:
+  storage: true
+  lazyload: false
+  nav:
+
+# Math
+math:
+  enable: false
+
+# MediumZoom
+mediumzoom: false
+
+# Fancybox
+fancybox: false
+
+# Pangu
+pangu: false
+
+# Quicklink
+quicklink:
+  enable: false
+
+# BookMark
+bookmark:
+  enable: false
+
+# GitHub Banner
+github_banner:
+  enable: false
+
+# Font Awesome
+font_awesome:
+  icons:
+    enable: true
+  brands:
+    enable: true
+  regular:
+    enable: true
+  solid:
+    enable: true
